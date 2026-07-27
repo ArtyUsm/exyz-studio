@@ -82,7 +82,7 @@
     <section aria-labelledby="form-h" style="max-width:1240px;margin:0 auto;padding:36px 32px 96px;">
       <h2 id="form-h" style="position:absolute;left:-9999px;">Start a conversation</h2>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:48px;align-items:start;">
-        <form onSubmit="{{handleSubmit}}" style="display:flex;flex-direction:column;gap:20px;">
+        <form data-contact-form="" style="display:flex;flex-direction:column;gap:20px;">
           <input type="hidden" name="access_key" value="24b969d2-4ec9-4cd9-bb02-1d4012014841">
           <input type="hidden" name="subject" value="New project inquiry — EXYZ.Studio">
           <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px;">
@@ -124,10 +124,8 @@
           <label for="msg" style="font-family:'JetBrains Mono',monospace;letter-spacing:0.06em;text-transform:uppercase;font-size:.72rem;color:#9b9b9b;">Project Description
             <textarea id="msg" name="msg" rows="6" placeholder="Tell us about your game, requirements, and art style..." class="exyz-input" style="width:100%;margin-top:8px;padding:13px 14px;background:#141416;border:1px solid rgba(255,255,255,0.12);color:#f2f2f0;border-radius:6px;font-family:'IBM Plex Sans',sans-serif;font-size:.95rem;resize:vertical;box-sizing:border-box;"></textarea>
           </label>
-          <button type="submit" disabled="{{sending}}" class="exyz-btn-a" style="align-self:flex-start;display:inline-block;padding:15px 26px;font-family:'JetBrains Mono',monospace;font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;border-radius:6px;border:1px solid #eb6c2b;background:#eb6c2b;color:#0a0a0b;font-weight:700;cursor:pointer;transition:all .15s;">{{submitLabel}}</button>
-          <sc-if value="{{status}}" hint-placeholder-val="{{null}}">
-            <p style="margin:0;font-family:'JetBrains Mono',monospace;font-size:.82rem;color:{{statusColor}};">{{status}}</p>
-          </sc-if>
+          <button type="submit" class="exyz-btn-a" style="align-self:flex-start;display:inline-block;padding:15px 26px;font-family:'JetBrains Mono',monospace;font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;border-radius:6px;border:1px solid #eb6c2b;background:#eb6c2b;color:#0a0a0b;font-weight:700;cursor:pointer;transition:all .15s;">Send Message</button>
+          <p data-form-status="" role="status" style="display:none;margin:0;font-family:'JetBrains Mono',monospace;font-size:.85rem;color:#9b9b9b;"></p>
         </form>
 
         <div>
@@ -161,8 +159,8 @@
           <h4 style="font-family:'JetBrains Mono',monospace;letter-spacing:0.04em;text-transform:uppercase;font-size:.85rem;margin-bottom:14px;">Services</h4>
           <a href="/asset-production" style="display:block;color:#9b9b9b;font-size:.88rem;padding:4px 0;text-decoration:none;">Game Asset Production</a>
           <a href="/video-creatives" style="display:block;color:#9b9b9b;font-size:.88rem;padding:4px 0;text-decoration:none;">Video Creatives &amp; Playable Ads</a>
-          <a href="video-creatives.dc.html#3d-animation" style="display:block;color:#9b9b9b;font-size:.88rem;padding:4px 0;text-decoration:none;">3D Animation</a>
-          <a href="video-creatives.dc.html#2d-motion" style="display:block;color:#9b9b9b;font-size:.88rem;padding:4px 0;text-decoration:none;">2D Motion Graphics</a>
+          <a href="/video-creatives#3d-animation" style="display:block;color:#9b9b9b;font-size:.88rem;padding:4px 0;text-decoration:none;">3D Animation</a>
+          <a href="/video-creatives#2d-motion" style="display:block;color:#9b9b9b;font-size:.88rem;padding:4px 0;text-decoration:none;">2D Motion Graphics</a>
         </div>
         <div>
           <h4 style="font-family:'JetBrains Mono',monospace;letter-spacing:0.04em;text-transform:uppercase;font-size:.85rem;margin-bottom:14px;">Studio</h4>
@@ -180,40 +178,27 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
-  state = { sending: false, status: null, statusColor: '#9b9b9b' };
-
-  handleSubmit = async (e) => {
-    e.preventDefault();
-    const form = e.target;
-    const data = new FormData(form);
-    this.setState({ sending: true, status: 'Sending…', statusColor: '#9b9b9b' });
-    try {
-      const res = await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        headers: { Accept: 'application/json' },
-        body: data
-      });
-      const json = await res.json();
-      if (json.success) {
-        this.setState({ sending: false, status: "Thanks — we'll be in touch within 24 hours.", statusColor: '#6fcf7f' });
-        form.reset();
-      } else {
-        this.setState({ sending: false, status: json.message || 'Something went wrong. Please try again.', statusColor: '#ff6b6b' });
-      }
-    } catch (err) {
-      this.setState({ sending: false, status: 'Network error — please try again.', statusColor: '#ff6b6b' });
-    }
-  };
-
-  renderVals() {
-    return {
-      sending: this.state.sending,
-      status: this.state.status,
-      statusColor: this.state.statusColor,
-      submitLabel: this.state.sending ? 'Sending…' : 'Send Message',
-      handleSubmit: this.handleSubmit
-    };
+  componentDidMount() {
+    const form = document.querySelector('[data-contact-form]');
+    if (!form) return;
+    const btn = form.querySelector('button[type="submit"]') || form.querySelector('button');
+    const status = document.querySelector('[data-form-status]');
+    const setStatus = (msg, color) => { if (status) { status.textContent = msg; status.style.color = color; status.style.display = msg ? 'block' : 'none'; } };
+    form.addEventListener('submit', async e => {
+      e.preventDefault();
+      const data = new FormData(form);
+      if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
+      setStatus('Sending…', '#9b9b9b');
+      try {
+        const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', headers: { Accept: 'application/json' }, body: data });
+        const json = await res.json();
+        if (json.success) { setStatus("Thanks — we'll be in touch within 24 hours.", '#6fcf7f'); form.reset(); }
+        else setStatus(json.message || 'Something went wrong. Please try again.', '#ff6b6b');
+      } catch (err) { setStatus('Network error — please try again.', '#ff6b6b'); }
+      if (btn) { btn.disabled = false; btn.textContent = 'Send Message'; }
+    });
   }
+  renderVals() { return {}; }
 }
 </script>
 </body>

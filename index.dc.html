@@ -50,6 +50,7 @@
 .exyz-viewmore:hover{ border-color:rgba(255,255,255,0.4) !important; color:#f2f2f0 !important; }
 image-slot{ display:block; }
 image-slot::part(frame){ background:transparent !important; color:#9b9b9b !important; }
+@media (max-width:699px){[data-testi-item]{flex:0 0 100% !important;min-width:100% !important;padding-right:0 !important;}}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "EXYZ.Studio", "url": "https://www.exyz.studio/", "logo": "https://www.exyz.studio/logo.png", "description": "EXYZ.Studio designs 2D/3D game assets and produces video creatives, playable ads, and trailers for mobile game studios.", "address": {"@type": "PostalAddress", "addressLocality": "Riga", "addressCountry": "LV"}, "areaServed": "Worldwide", "knowsAbout": ["Game asset production", "2D game art", "3D game art", "Video creatives for mobile games", "Playable ads", "UGC ads", "3D animation", "Motion graphics"], "sameAs": ["https://www.instagram.com/exyz.studio/"]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Do you only work on game assets, or only on video creatives?", "acceptedAnswer": {"@type": "Answer", "text": "Both, by design. Most clients start with one and move to the other once they see the same team keeps the visual style consistent — assets built for the game become the raw material for the ads that market it."}}, {"@type": "Question", "name": "What file formats and engines do you deliver into?", "acceptedAnswer": {"@type": "Answer", "text": "2D and 3D source files (.psd, .aep, .blend, .ma/.mb) plus engine-ready exports for Unity, Unreal, and Spine. If you already have a pipeline or brand guidelines, we adapt to it rather than asking you to adapt to us."}}, {"@type": "Question", "name": "How fast can you turn around a video creative?", "acceptedAnswer": {"@type": "Answer", "text": "Performance-focused cuts typically ship in days once source assets are ready; full cinematic trailers take longer depending on scene complexity. We scope timelines per project rather than quoting one number for everything."}}, {"@type": "Question", "name": "Can you start before our game has any assets at all?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — we regularly join projects at the concept stage, when a game exists only as a design doc, and build the first characters, UI, and environment art from there."}}, {"@type": "Question", "name": "What genres do you have the most experience in?", "acceptedAnswer": {"@type": "Answer", "text": "Strategy, battlers, puzzle, RPG, slots, and casual titles make up most of our project history, though the same 2D/3D and motion skills apply to adjacent categories like entertainment apps."}}, {"@type": "Question", "name": "Do you offer ongoing support or only one-off projects?", "acceptedAnswer": {"@type": "Answer", "text": "Both. Some clients bring a single campaign; most stay on a monthly retainer so the same team keeps producing assets and creatives as the game evolves."}}]}</script>
@@ -90,7 +91,7 @@ image-slot::part(frame){ background:transparent !important; color:#9b9b9b !impor
       <div style="position:relative;overflow:hidden;border-radius:10px;height:min(66vw,680px);min-height:420px;">
         <div style="position:absolute;inset:0;overflow:hidden;pointer-events:none;">
           <image-slot id="hero-video-poster" style="position:absolute;inset:0;width:100%;height:100%;" shape="rect" fit="cover" placeholder="Hero reel poster frame"></image-slot>
-          <video data-src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/CreativeProductionReel1106.mp4" preload="none" autoplay="true" muted="true" loop="true" playsinline="true" disablepictureinpicture="true" controls="false" ref="{{deferHero}}" aria-label="EXYZ.Studio creative production showreel" style="position:absolute;top:50%;left:50%;width:100%;height:100%;object-fit:cover;transform:translate(-50%,-50%);pointer-events:none;opacity:1;"></video>
+          <video data-src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/CreativeProductionReel1106.mp4" preload="none" autoplay="true" muted="true" loop="true" playsinline="true" disablepictureinpicture="true" controls="false" data-defer-hero="" aria-label="EXYZ.Studio creative production showreel" style="position:absolute;top:50%;left:50%;width:100%;height:100%;object-fit:cover;transform:translate(-50%,-50%);pointer-events:none;opacity:1;"></video>
         <div class="exyz-hero-fade" style="position:absolute;left:0;top:50%;transform:translateY(-50%);width:min(680px,88vw);padding:52px clamp(20px,6vw,48px);box-sizing:border-box;background:linear-gradient(90deg, rgba(10,10,11,0.88) 0%, rgba(10,10,11,0.6) 62%, rgba(10,10,11,0.15) 86%, rgba(10,10,11,0) 100%);pointer-events:none;">
           <h1 style="font-family:'Space Grotesk',sans-serif;font-weight:700;line-height:1.04;letter-spacing:-0.02em;margin:0;font-size:clamp(1.6rem,4.6vw,3.6rem);max-width:14ch;">Art that ships.<br>Creative that sells.</h1><p style="max-width:48ch;font-size:clamp(.85rem,2.2vw,1.05rem);color:#b7b7b7;margin-top:18px;">Premium 3D &amp; 2D game assets and marketing creative, built for studios that won't settle.</p>
         </div></div>
@@ -245,8 +246,8 @@ image-slot::part(frame){ background:transparent !important; color:#9b9b9b !impor
             </figcaption>
           </figure>
         </div>
-        <button aria-label="Previous assets" onClick="{{stripPrev}}" style="position:absolute;top:50%;left:-22px;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;background:#141416;border:1px solid rgba(255,255,255,0.14);color:#f2f2f0;font-size:1.4rem;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2;" style-hover="background:#1c1c1f;border-color:rgba(235,108,43,0.5);">‹</button>
-        <button aria-label="Next assets" onClick="{{stripNext}}" style="position:absolute;top:50%;right:-22px;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;background:#141416;border:1px solid rgba(255,255,255,0.14);color:#f2f2f0;font-size:1.4rem;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2;" style-hover="background:#1c1c1f;border-color:rgba(235,108,43,0.5);">›</button>
+        <button aria-label="Previous assets" data-strip-prev="" style="position:absolute;top:50%;left:-22px;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;background:#141416;border:1px solid rgba(255,255,255,0.14);color:#f2f2f0;font-size:1.4rem;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2;" style-hover="background:#1c1c1f;border-color:rgba(235,108,43,0.5);">‹</button>
+        <button aria-label="Next assets" data-strip-next="" style="position:absolute;top:50%;right:-22px;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;background:#141416;border:1px solid rgba(255,255,255,0.14);color:#f2f2f0;font-size:1.4rem;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2;" style-hover="background:#1c1c1f;border-color:rgba(235,108,43,0.5);">›</button>
       </div>
       <div style="display:flex;justify-content:center;margin-top:28px;">
         <a href="/asset-production" class="exyz-viewmore" style="display:inline-block;padding:16px 32px;font-family:'JetBrains Mono',monospace;font-size:0.95rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#f5f5f5;border:1px solid rgba(255,255,255,0.28);border-radius:10px;text-decoration:none;transition:border-color .15s,color .15s;">Load more</a>
@@ -261,134 +262,134 @@ image-slot::part(frame){ background:transparent !important; color:#9b9b9b !impor
       <div style="position:relative;" data-strip-wrap="">
         <div class="exyz-strip" data-strip="" style="border-radius:18px;">
           <figure class="exyz-card" style="margin:0;background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:18px;overflow:hidden;transition:transform .18s,border-color .18s;">
-            <div aria-label="Open Shiba - Main Trailer" onClick="{{openVideoCard}}" onMouseEnter="{{hoverPlay}}" onMouseLeave="{{hoverStop}}" data-src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Shiba - Main Trailer.mp4" data-title="Shiba - Main Trailer" style="display:block;width:100%;aspect-ratio:16/10;cursor:pointer;position:relative;overflow:hidden;">
+            <div aria-label="Open Shiba - Main Trailer" data-video-card="" data-src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Shiba - Main Trailer.mp4" data-title="Shiba - Main Trailer" style="display:block;width:100%;aspect-ratio:16/10;cursor:pointer;position:relative;overflow:hidden;">
               <image-slot id="video-18-poster" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;" shape="rect" fit="cover" placeholder="Main Trailer thumbnail"></image-slot>
-              <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Shiba - Main Trailer.mp4" preload="metadata" muted="true" loop="true" playsinline="true" ref="{{primeVideo}}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;"></video>
+              <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Shiba - Main Trailer.mp4" preload="metadata" muted="true" loop="true" playsinline="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;"></video>
             </div>
             <figcaption style="padding:14px 18px 18px;border-top:1px solid rgba(255,255,255,0.08);"><span style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.95rem;text-transform:uppercase;letter-spacing:.01em;">Shiba - Main Trailer</span></figcaption>
           </figure>
           <figure class="exyz-card" style="margin:0;background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:18px;overflow:hidden;transition:transform .18s,border-color .18s;">
-            <div aria-label="Open WaP - Warzone" onClick="{{openVideoCard}}" onMouseEnter="{{hoverPlay}}" onMouseLeave="{{hoverStop}}" data-src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/WaP - Warzone.mp4" data-title="WaP - Warzone" style="display:block;width:100%;aspect-ratio:16/10;cursor:pointer;position:relative;overflow:hidden;">
+            <div aria-label="Open WaP - Warzone" data-video-card="" data-src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/WaP - Warzone.mp4" data-title="WaP - Warzone" style="display:block;width:100%;aspect-ratio:16/10;cursor:pointer;position:relative;overflow:hidden;">
               <image-slot id="video-1-poster" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;" shape="rect" fit="cover" placeholder="Warzone thumbnail"></image-slot>
-              <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/WaP - Warzone.mp4" preload="metadata" muted="true" loop="true" playsinline="true" ref="{{primeVideo}}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;"></video>
+              <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/WaP - Warzone.mp4" preload="metadata" muted="true" loop="true" playsinline="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;"></video>
             </div>
             <figcaption style="padding:14px 18px 18px;border-top:1px solid rgba(255,255,255,0.08);"><span style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.95rem;text-transform:uppercase;letter-spacing:.01em;">WaP - Warzone</span></figcaption>
           </figure>
           <figure class="exyz-card" style="margin:0;background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:18px;overflow:hidden;transition:transform .18s,border-color .18s;">
-            <div aria-label="Open Shiba - Mob Snake" onClick="{{openVideoCard}}" onMouseEnter="{{hoverPlay}}" onMouseLeave="{{hoverStop}}" data-src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Shiba - Mob Snake.mp4" data-title="Shiba - Mob Snake" style="display:block;width:100%;aspect-ratio:16/10;cursor:pointer;position:relative;overflow:hidden;">
+            <div aria-label="Open Shiba - Mob Snake" data-video-card="" data-src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Shiba - Mob Snake.mp4" data-title="Shiba - Mob Snake" style="display:block;width:100%;aspect-ratio:16/10;cursor:pointer;position:relative;overflow:hidden;">
               <image-slot id="video-2-poster" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;" shape="rect" fit="cover" placeholder="Mob Snake thumbnail"></image-slot>
-              <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Shiba - Mob Snake.mp4" preload="metadata" muted="true" loop="true" playsinline="true" ref="{{primeVideo}}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;"></video>
+              <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Shiba - Mob Snake.mp4" preload="metadata" muted="true" loop="true" playsinline="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;"></video>
             </div>
             <figcaption style="padding:14px 18px 18px;border-top:1px solid rgba(255,255,255,0.08);"><span style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.95rem;text-transform:uppercase;letter-spacing:.01em;">Shiba - Mob Snake</span></figcaption>
           </figure>
           <figure class="exyz-card" style="margin:0;background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:18px;overflow:hidden;transition:transform .18s,border-color .18s;">
-            <div aria-label="Open Firstborn - Castle Siege" onClick="{{openVideoCard}}" onMouseEnter="{{hoverPlay}}" onMouseLeave="{{hoverStop}}" data-src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Firstborn - Castle Siege.mp4" data-title="Firstborn - Castle Siege" style="display:block;width:100%;aspect-ratio:16/10;cursor:pointer;position:relative;overflow:hidden;">
+            <div aria-label="Open Firstborn - Castle Siege" data-video-card="" data-src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Firstborn - Castle Siege.mp4" data-title="Firstborn - Castle Siege" style="display:block;width:100%;aspect-ratio:16/10;cursor:pointer;position:relative;overflow:hidden;">
               <image-slot id="video-3-poster" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;" shape="rect" fit="cover" placeholder="Castle Siege thumbnail"></image-slot>
-              <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Firstborn - Castle Siege.mp4" preload="metadata" muted="true" loop="true" playsinline="true" ref="{{primeVideo}}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;"></video>
+              <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Firstborn - Castle Siege.mp4" preload="metadata" muted="true" loop="true" playsinline="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;"></video>
             </div>
             <figcaption style="padding:14px 18px 18px;border-top:1px solid rgba(255,255,255,0.08);"><span style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.95rem;text-transform:uppercase;letter-spacing:.01em;">Firstborn - Castle Siege</span></figcaption>
           </figure>
           <figure class="exyz-card" style="margin:0;background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:18px;overflow:hidden;transition:transform .18s,border-color .18s;">
-            <div aria-label="Open Word Puzzle - PVP" onClick="{{openVideoCard}}" onMouseEnter="{{hoverPlay}}" onMouseLeave="{{hoverStop}}" data-src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Word Puzzle - PVP.mp4" data-title="Word Puzzle - PVP" style="display:block;width:100%;aspect-ratio:16/10;cursor:pointer;position:relative;overflow:hidden;">
+            <div aria-label="Open Word Puzzle - PVP" data-video-card="" data-src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Word Puzzle - PVP.mp4" data-title="Word Puzzle - PVP" style="display:block;width:100%;aspect-ratio:16/10;cursor:pointer;position:relative;overflow:hidden;">
               <image-slot id="video-4-poster" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;" shape="rect" fit="cover" placeholder="PVP thumbnail"></image-slot>
-              <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Word Puzzle - PVP.mp4" preload="metadata" muted="true" loop="true" playsinline="true" ref="{{primeVideo}}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;"></video>
+              <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Word Puzzle - PVP.mp4" preload="metadata" muted="true" loop="true" playsinline="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;"></video>
             </div>
             <figcaption style="padding:14px 18px 18px;border-top:1px solid rgba(255,255,255,0.08);"><span style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.95rem;text-transform:uppercase;letter-spacing:.01em;">Word Puzzle - PVP</span></figcaption>
           </figure>
           <figure class="exyz-card" style="margin:0;background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:18px;overflow:hidden;transition:transform .18s,border-color .18s;">
-            <div aria-label="Open Shiba - Buffed 99LVL" onClick="{{openVideoCard}}" onMouseEnter="{{hoverPlay}}" onMouseLeave="{{hoverStop}}" data-src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Shiba - Buffed 99LVL.mp4" data-title="Shiba - Buffed 99LVL" style="display:block;width:100%;aspect-ratio:16/10;cursor:pointer;position:relative;overflow:hidden;">
+            <div aria-label="Open Shiba - Buffed 99LVL" data-video-card="" data-src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Shiba - Buffed 99LVL.mp4" data-title="Shiba - Buffed 99LVL" style="display:block;width:100%;aspect-ratio:16/10;cursor:pointer;position:relative;overflow:hidden;">
               <image-slot id="video-5-poster" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;" shape="rect" fit="cover" placeholder="Buffed 99LVL thumbnail"></image-slot>
-              <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Shiba - Buffed 99LVL.mp4" preload="metadata" muted="true" loop="true" playsinline="true" ref="{{primeVideo}}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;"></video>
+              <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Shiba - Buffed 99LVL.mp4" preload="metadata" muted="true" loop="true" playsinline="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;"></video>
             </div>
             <figcaption style="padding:14px 18px 18px;border-top:1px solid rgba(255,255,255,0.08);"><span style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.95rem;text-transform:uppercase;letter-spacing:.01em;">Shiba - Buffed 99LVL</span></figcaption>
           </figure>
           <figure class="exyz-card" style="margin:0;background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:18px;overflow:hidden;transition:transform .18s,border-color .18s;">
-            <div aria-label="Open WaP - Toxic Waters" onClick="{{openVideoCard}}" onMouseEnter="{{hoverPlay}}" onMouseLeave="{{hoverStop}}" data-src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/WaP - Toxic Waters.mp4" data-title="WaP - Toxic Waters" style="display:block;width:100%;aspect-ratio:16/10;cursor:pointer;position:relative;overflow:hidden;">
+            <div aria-label="Open WaP - Toxic Waters" data-video-card="" data-src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/WaP - Toxic Waters.mp4" data-title="WaP - Toxic Waters" style="display:block;width:100%;aspect-ratio:16/10;cursor:pointer;position:relative;overflow:hidden;">
               <image-slot id="video-6-poster" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;" shape="rect" fit="cover" placeholder="Toxic Waters thumbnail"></image-slot>
-              <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/WaP - Toxic Waters.mp4" preload="metadata" muted="true" loop="true" playsinline="true" ref="{{primeVideo}}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;"></video>
+              <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/WaP - Toxic Waters.mp4" preload="metadata" muted="true" loop="true" playsinline="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;"></video>
             </div>
             <figcaption style="padding:14px 18px 18px;border-top:1px solid rgba(255,255,255,0.08);"><span style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.95rem;text-transform:uppercase;letter-spacing:.01em;">WaP - Toxic Waters</span></figcaption>
           </figure>
           <figure class="exyz-card" style="margin:0;background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:18px;overflow:hidden;transition:transform .18s,border-color .18s;">
-            <div aria-label="Open Firstborn - Gameplay" onClick="{{openVideoCard}}" onMouseEnter="{{hoverPlay}}" onMouseLeave="{{hoverStop}}" data-src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Firstborn - Gameplay.mp4" data-title="Firstborn - Gameplay" style="display:block;width:100%;aspect-ratio:16/10;cursor:pointer;position:relative;overflow:hidden;">
+            <div aria-label="Open Firstborn - Gameplay" data-video-card="" data-src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Firstborn - Gameplay.mp4" data-title="Firstborn - Gameplay" style="display:block;width:100%;aspect-ratio:16/10;cursor:pointer;position:relative;overflow:hidden;">
               <image-slot id="video-7-poster" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;" shape="rect" fit="cover" placeholder="Gameplay thumbnail"></image-slot>
-              <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Firstborn - Gameplay.mp4" preload="metadata" muted="true" loop="true" playsinline="true" ref="{{primeVideo}}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;"></video>
+              <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Firstborn - Gameplay.mp4" preload="metadata" muted="true" loop="true" playsinline="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;"></video>
             </div>
             <figcaption style="padding:14px 18px 18px;border-top:1px solid rgba(255,255,255,0.08);"><span style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.95rem;text-transform:uppercase;letter-spacing:.01em;">Firstborn - Gameplay</span></figcaption>
           </figure>
           <figure class="exyz-card" style="margin:0;background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:18px;overflow:hidden;transition:transform .18s,border-color .18s;">
-            <div aria-label="Open Word Puzzle - Shopping" onClick="{{openVideoCard}}" onMouseEnter="{{hoverPlay}}" onMouseLeave="{{hoverStop}}" data-src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Word Puzzle - Shopping.mp4" data-title="Word Puzzle - Shopping" style="display:block;width:100%;aspect-ratio:16/10;cursor:pointer;position:relative;overflow:hidden;">
+            <div aria-label="Open Word Puzzle - Shopping" data-video-card="" data-src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Word Puzzle - Shopping.mp4" data-title="Word Puzzle - Shopping" style="display:block;width:100%;aspect-ratio:16/10;cursor:pointer;position:relative;overflow:hidden;">
               <image-slot id="video-8-poster" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;" shape="rect" fit="cover" placeholder="Shopping thumbnail"></image-slot>
-              <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Word Puzzle - Shopping.mp4" preload="metadata" muted="true" loop="true" playsinline="true" ref="{{primeVideo}}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;"></video>
+              <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Word Puzzle - Shopping.mp4" preload="metadata" muted="true" loop="true" playsinline="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;"></video>
             </div>
             <figcaption style="padding:14px 18px 18px;border-top:1px solid rgba(255,255,255,0.08);"><span style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.95rem;text-transform:uppercase;letter-spacing:.01em;">Word Puzzle - Shopping</span></figcaption>
           </figure>
           <figure class="exyz-card" style="margin:0;background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:18px;overflow:hidden;transition:transform .18s,border-color .18s;">
-            <div aria-label="Open Shiba - Dungeon" onClick="{{openVideoCard}}" onMouseEnter="{{hoverPlay}}" onMouseLeave="{{hoverStop}}" data-src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Shiba - Dungeon.mp4" data-title="Shiba - Dungeon" style="display:block;width:100%;aspect-ratio:16/10;cursor:pointer;position:relative;overflow:hidden;">
+            <div aria-label="Open Shiba - Dungeon" data-video-card="" data-src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Shiba - Dungeon.mp4" data-title="Shiba - Dungeon" style="display:block;width:100%;aspect-ratio:16/10;cursor:pointer;position:relative;overflow:hidden;">
               <image-slot id="video-9-poster" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;" shape="rect" fit="cover" placeholder="Dungeon thumbnail"></image-slot>
-              <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Shiba - Dungeon.mp4" preload="metadata" muted="true" loop="true" playsinline="true" ref="{{primeVideo}}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;"></video>
+              <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Shiba - Dungeon.mp4" preload="metadata" muted="true" loop="true" playsinline="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;"></video>
             </div>
             <figcaption style="padding:14px 18px 18px;border-top:1px solid rgba(255,255,255,0.08);"><span style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.95rem;text-transform:uppercase;letter-spacing:.01em;">Shiba - Dungeon</span></figcaption>
           </figure>
           <figure class="exyz-card" style="margin:0;background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:18px;overflow:hidden;transition:transform .18s,border-color .18s;">
-            <div aria-label="Open WaP - Supply Transportation" onClick="{{openVideoCard}}" onMouseEnter="{{hoverPlay}}" onMouseLeave="{{hoverStop}}" data-src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/WaP - Supply Transportation.mp4" data-title="WaP - Supply Transportation" style="display:block;width:100%;aspect-ratio:16/10;cursor:pointer;position:relative;overflow:hidden;">
+            <div aria-label="Open WaP - Supply Transportation" data-video-card="" data-src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/WaP - Supply Transportation.mp4" data-title="WaP - Supply Transportation" style="display:block;width:100%;aspect-ratio:16/10;cursor:pointer;position:relative;overflow:hidden;">
               <image-slot id="video-10-poster" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;" shape="rect" fit="cover" placeholder="Supply Transportation thumbnail"></image-slot>
-              <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/WaP - Supply Transportation.mp4" preload="metadata" muted="true" loop="true" playsinline="true" ref="{{primeVideo}}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;"></video>
+              <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/WaP - Supply Transportation.mp4" preload="metadata" muted="true" loop="true" playsinline="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;"></video>
             </div>
             <figcaption style="padding:14px 18px 18px;border-top:1px solid rgba(255,255,255,0.08);"><span style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.95rem;text-transform:uppercase;letter-spacing:.01em;">WaP - Supply Transportation</span></figcaption>
           </figure>
           <figure class="exyz-card" style="margin:0;background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:18px;overflow:hidden;transition:transform .18s,border-color .18s;">
-            <div aria-label="Open Firstborn - Viking Origin" onClick="{{openVideoCard}}" onMouseEnter="{{hoverPlay}}" onMouseLeave="{{hoverStop}}" data-src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Firstborn - Viking Origin.mp4" data-title="Firstborn - Viking Origin" style="display:block;width:100%;aspect-ratio:16/10;cursor:pointer;position:relative;overflow:hidden;">
+            <div aria-label="Open Firstborn - Viking Origin" data-video-card="" data-src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Firstborn - Viking Origin.mp4" data-title="Firstborn - Viking Origin" style="display:block;width:100%;aspect-ratio:16/10;cursor:pointer;position:relative;overflow:hidden;">
               <image-slot id="video-11-poster" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;" shape="rect" fit="cover" placeholder="Viking Origin thumbnail"></image-slot>
-              <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Firstborn - Viking Origin.mp4" preload="metadata" muted="true" loop="true" playsinline="true" ref="{{primeVideo}}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;"></video>
+              <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Firstborn - Viking Origin.mp4" preload="metadata" muted="true" loop="true" playsinline="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;"></video>
             </div>
             <figcaption style="padding:14px 18px 18px;border-top:1px solid rgba(255,255,255,0.08);"><span style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.95rem;text-transform:uppercase;letter-spacing:.01em;">Firstborn - Viking Origin</span></figcaption>
           </figure>
           <figure class="exyz-card" style="margin:0;background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:18px;overflow:hidden;transition:transform .18s,border-color .18s;">
-            <div aria-label="Open Word Puzzle - USA" onClick="{{openVideoCard}}" onMouseEnter="{{hoverPlay}}" onMouseLeave="{{hoverStop}}" data-src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Word Puzzle - USA.mp4" data-title="Word Puzzle - USA" style="display:block;width:100%;aspect-ratio:16/10;cursor:pointer;position:relative;overflow:hidden;">
+            <div aria-label="Open Word Puzzle - USA" data-video-card="" data-src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Word Puzzle - USA.mp4" data-title="Word Puzzle - USA" style="display:block;width:100%;aspect-ratio:16/10;cursor:pointer;position:relative;overflow:hidden;">
               <image-slot id="video-12-poster" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;" shape="rect" fit="cover" placeholder="USA thumbnail"></image-slot>
-              <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Word Puzzle - USA.mp4" preload="metadata" muted="true" loop="true" playsinline="true" ref="{{primeVideo}}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;"></video>
+              <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Word Puzzle - USA.mp4" preload="metadata" muted="true" loop="true" playsinline="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;"></video>
             </div>
             <figcaption style="padding:14px 18px 18px;border-top:1px solid rgba(255,255,255,0.08);"><span style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.95rem;text-transform:uppercase;letter-spacing:.01em;">Word Puzzle - USA</span></figcaption>
           </figure>
           <figure class="exyz-card" style="margin:0;background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:18px;overflow:hidden;transition:transform .18s,border-color .18s;">
-            <div aria-label="Open Shiba - Burning Village" onClick="{{openVideoCard}}" onMouseEnter="{{hoverPlay}}" onMouseLeave="{{hoverStop}}" data-src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Shiba - Burning Village.mp4" data-title="Shiba - Burning Village" style="display:block;width:100%;aspect-ratio:16/10;cursor:pointer;position:relative;overflow:hidden;">
+            <div aria-label="Open Shiba - Burning Village" data-video-card="" data-src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Shiba - Burning Village.mp4" data-title="Shiba - Burning Village" style="display:block;width:100%;aspect-ratio:16/10;cursor:pointer;position:relative;overflow:hidden;">
               <image-slot id="video-13-poster" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;" shape="rect" fit="cover" placeholder="Burning Village thumbnail"></image-slot>
-              <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Shiba - Burning Village.mp4" preload="metadata" muted="true" loop="true" playsinline="true" ref="{{primeVideo}}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;"></video>
+              <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Shiba - Burning Village.mp4" preload="metadata" muted="true" loop="true" playsinline="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;"></video>
             </div>
             <figcaption style="padding:14px 18px 18px;border-top:1px solid rgba(255,255,255,0.08);"><span style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.95rem;text-transform:uppercase;letter-spacing:.01em;">Shiba - Burning Village</span></figcaption>
           </figure>
           <figure class="exyz-card" style="margin:0;background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:18px;overflow:hidden;transition:transform .18s,border-color .18s;">
-            <div aria-label="Open WaP - Ambush" onClick="{{openVideoCard}}" onMouseEnter="{{hoverPlay}}" onMouseLeave="{{hoverStop}}" data-src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/WaP - Ambush.mp4" data-title="WaP - Ambush" style="display:block;width:100%;aspect-ratio:16/10;cursor:pointer;position:relative;overflow:hidden;">
+            <div aria-label="Open WaP - Ambush" data-video-card="" data-src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/WaP - Ambush.mp4" data-title="WaP - Ambush" style="display:block;width:100%;aspect-ratio:16/10;cursor:pointer;position:relative;overflow:hidden;">
               <image-slot id="video-14-poster" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;" shape="rect" fit="cover" placeholder="Ambush thumbnail"></image-slot>
-              <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/WaP - Ambush.mp4" preload="metadata" muted="true" loop="true" playsinline="true" ref="{{primeVideo}}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;"></video>
+              <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/WaP - Ambush.mp4" preload="metadata" muted="true" loop="true" playsinline="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;"></video>
             </div>
             <figcaption style="padding:14px 18px 18px;border-top:1px solid rgba(255,255,255,0.08);"><span style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.95rem;text-transform:uppercase;letter-spacing:.01em;">WaP - Ambush</span></figcaption>
           </figure>
           <figure class="exyz-card" style="margin:0;background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:18px;overflow:hidden;transition:transform .18s,border-color .18s;">
-            <div aria-label="Open Firstborn - Packshot" onClick="{{openVideoCard}}" onMouseEnter="{{hoverPlay}}" onMouseLeave="{{hoverStop}}" data-src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Firstborn - Packshot.mp4" data-title="Firstborn - Packshot" style="display:block;width:100%;aspect-ratio:16/10;cursor:pointer;position:relative;overflow:hidden;">
+            <div aria-label="Open Firstborn - Packshot" data-video-card="" data-src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Firstborn - Packshot.mp4" data-title="Firstborn - Packshot" style="display:block;width:100%;aspect-ratio:16/10;cursor:pointer;position:relative;overflow:hidden;">
               <image-slot id="video-15-poster" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;" shape="rect" fit="cover" placeholder="Packshot thumbnail"></image-slot>
-              <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Firstborn - Packshot.mp4" preload="metadata" muted="true" loop="true" playsinline="true" ref="{{primeVideo}}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;"></video>
+              <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Firstborn - Packshot.mp4" preload="metadata" muted="true" loop="true" playsinline="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;"></video>
             </div>
             <figcaption style="padding:14px 18px 18px;border-top:1px solid rgba(255,255,255,0.08);"><span style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.95rem;text-transform:uppercase;letter-spacing:.01em;">Firstborn - Packshot</span></figcaption>
           </figure>
           <figure class="exyz-card" style="margin:0;background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:18px;overflow:hidden;transition:transform .18s,border-color .18s;">
-            <div aria-label="Open ArcaneRush - Orc LVL99" onClick="{{openVideoCard}}" onMouseEnter="{{hoverPlay}}" onMouseLeave="{{hoverStop}}" data-src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/ArcaneRush - Orc LVL99.mp4" data-title="ArcaneRush - Orc LVL99" style="display:block;width:100%;aspect-ratio:16/10;cursor:pointer;position:relative;overflow:hidden;">
+            <div aria-label="Open ArcaneRush - Orc LVL99" data-video-card="" data-src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/ArcaneRush - Orc LVL99.mp4" data-title="ArcaneRush - Orc LVL99" style="display:block;width:100%;aspect-ratio:16/10;cursor:pointer;position:relative;overflow:hidden;">
               <image-slot id="video-16-poster" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;" shape="rect" fit="cover" placeholder="Orc LVL99 thumbnail"></image-slot>
-              <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/ArcaneRush - Orc LVL99.mp4" preload="metadata" muted="true" loop="true" playsinline="true" ref="{{primeVideo}}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;"></video>
+              <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/ArcaneRush - Orc LVL99.mp4" preload="metadata" muted="true" loop="true" playsinline="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;"></video>
             </div>
             <figcaption style="padding:14px 18px 18px;border-top:1px solid rgba(255,255,255,0.08);"><span style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.95rem;text-transform:uppercase;letter-spacing:.01em;">ArcaneRush - Orc LVL99</span></figcaption>
           </figure>
           <figure class="exyz-card" style="margin:0;background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:18px;overflow:hidden;transition:transform .18s,border-color .18s;">
-            <div aria-label="Open Crowds - Medieval Magic" onClick="{{openVideoCard}}" onMouseEnter="{{hoverPlay}}" onMouseLeave="{{hoverStop}}" data-src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Crowds - Medieval Magic.mp4" data-title="Crowds - Medieval Magic" style="display:block;width:100%;aspect-ratio:16/10;cursor:pointer;position:relative;overflow:hidden;">
+            <div aria-label="Open Crowds - Medieval Magic" data-video-card="" data-src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Crowds - Medieval Magic.mp4" data-title="Crowds - Medieval Magic" style="display:block;width:100%;aspect-ratio:16/10;cursor:pointer;position:relative;overflow:hidden;">
               <image-slot id="video-17-poster" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;" shape="rect" fit="cover" placeholder="Medieval Magic thumbnail"></image-slot>
-              <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Crowds - Medieval Magic.mp4" preload="metadata" muted="true" loop="true" playsinline="true" ref="{{primeVideo}}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;"></video>
+              <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Crowds - Medieval Magic.mp4" preload="metadata" muted="true" loop="true" playsinline="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;"></video>
             </div>
             <figcaption style="padding:14px 18px 18px;border-top:1px solid rgba(255,255,255,0.08);"><span style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.95rem;text-transform:uppercase;letter-spacing:.01em;">Crowds - Medieval Magic</span></figcaption>
           </figure>
         </div>
-        <button aria-label="Previous videos" onClick="{{stripPrev}}" style="position:absolute;top:50%;left:-22px;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;background:#141416;border:1px solid rgba(255,255,255,0.14);color:#f2f2f0;font-size:1.4rem;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2;" style-hover="background:#1c1c1f;border-color:rgba(124,58,237,0.5);">‹</button>
-        <button aria-label="Next videos" onClick="{{stripNext}}" style="position:absolute;top:50%;right:-22px;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;background:#141416;border:1px solid rgba(255,255,255,0.14);color:#f2f2f0;font-size:1.4rem;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2;" style-hover="background:#1c1c1f;border-color:rgba(124,58,237,0.5);">›</button>
+        <button aria-label="Previous videos" data-strip-prev="" style="position:absolute;top:50%;left:-22px;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;background:#141416;border:1px solid rgba(255,255,255,0.14);color:#f2f2f0;font-size:1.4rem;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2;" style-hover="background:#1c1c1f;border-color:rgba(124,58,237,0.5);">‹</button>
+        <button aria-label="Next videos" data-strip-next="" style="position:absolute;top:50%;right:-22px;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;background:#141416;border:1px solid rgba(255,255,255,0.14);color:#f2f2f0;font-size:1.4rem;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2;" style-hover="background:#1c1c1f;border-color:rgba(124,58,237,0.5);">›</button>
       </div>
       <div style="display:flex;justify-content:center;margin-top:28px;">
         <a href="/video-creatives" class="exyz-viewmore" style="display:inline-block;padding:16px 32px;font-family:'JetBrains Mono',monospace;font-size:0.95rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#f5f5f5;border:1px solid rgba(255,255,255,0.28);border-radius:10px;text-decoration:none;transition:border-color .15s,color .15s;">Load more</a>
@@ -422,32 +423,31 @@ image-slot::part(frame){ background:transparent !important; color:#9b9b9b !impor
     <section aria-label="Testimonials" style="max-width:1240px;margin:0 auto;padding:64px 32px 40px;border-top:1px solid rgba(255,255,255,0.08);">
       <div style="font-family:'Space Grotesk',sans-serif;font-size:2.6rem;color:#eb6c2b;line-height:1;margin-bottom:8px;">“</div>
       <div style="position:relative;">
-        <div style="overflow:hidden;" onPointerDown="{{onTestiDown}}" onPointerMove="{{onTestiMove}}" onPointerUp="{{onTestiUp}}" onPointerLeave="{{onTestiUp}}">
-          <div style="{{testiTrackStyle}}">
-            <div style="{{testiItemStyle}}">
+        <div style="overflow:hidden;" data-testi-view="">
+          <div data-testi-track="" style="display:flex;cursor:grab;transition:transform .45s cubic-bezier(.22,1,.36,1);touch-action:pan-y;">
+            <div data-testi-item="" style="flex:0 0 50%;min-width:50%;box-sizing:border-box;padding-right:48px;">
               <p style="font-size:1.02rem;color:#c7c7c7;margin:0 0 20px;">We worked with EXYZ Studio for about a year on Shiba Story Go, and they were a genuine pleasure to collaborate with throughout. They played a key role in defining the game's art style, including many of the enemy designs, and also produced ad creative for our user acquisition campaigns. Across all of it, they delivered consistently high-quality work, hit tight deadlines reliably, and were always quick to respond to our communications. They took direction and feedback gracefully and turned revisions around fast without losing momentum. Beyond the craft, they were dependable communicators and real partners, the kind of studio you can hand an ambiguous brief and trust to come back with something better than you imagined. I'd happily work with them again and recommend them without hesitation to any team looking for a talented, reliable art partner.</p>
               <span style="display:block;font-family:'JetBrains Mono',monospace;font-weight:600;font-size:.85rem;color:#eb6c2b;">WILLIAM SCHMITT</span>
               <span style="font-family:'JetBrains Mono',monospace;font-size:.8rem;color:#8a8a8a;">Head of Studio at Proof of Play</span>
             </div>
-            <div style="{{testiItemStyle}}">
+            <div data-testi-item="" style="flex:0 0 50%;min-width:50%;box-sizing:border-box;padding-right:48px;">
               <p style="font-size:1.02rem;color:#c7c7c7;margin:0 0 20px;">EXYZ was our primary creative and art partner on Shiba Story Go!, developing everything from characters and environments to cinematics, trailers, and full ad campaigns. Throughout, they were the best kind of partner: one that makes you better than you were before. Repeatedly, Arty, and Alex and the team took half-baked ideas, rolled with last-minute pivots and always came back with results that exceeded our expectations. I would work with them again in a heartbeat, and recommend them without reservation.</p>
               <span style="display:block;font-family:'JetBrains Mono',monospace;font-weight:600;font-size:.85rem;color:#eb6c2b;">AARON B. MURRAY</span>
               <span style="font-family:'JetBrains Mono',monospace;font-size:.8rem;color:#8a8a8a;">Sr. Art Director at Proof of Play</span>
             </div>
-            <div style="{{testiItemStyle}}">
+            <div data-testi-item="" style="flex:0 0 50%;min-width:50%;box-sizing:border-box;padding-right:48px;">
               <p style="font-size:1.02rem;color:#c7c7c7;margin:0 0 20px;">I spent much of this year working with Artyoms and EXYZ as they provided the art production backbone for our project, Shiba Story Go. During this process they worked with us to develop the art style, ad creative, and established new production process to meet our breakneck needs. Artyoms was a big part of that, giving daily updates on the status of assets, communicating questions and issues quickly and clearly, and was an equal partner in figuring out how best to meet what the project demanded when negotiating the tricky balance between quality and speed. That level of communication with the studio was especially notable given the large time differences and members of our team spread across multiple time zones in North America. We rarely lost time because of this as Artyoms anticipated future needs effectively and helped us set them up for success. Given the opportunity, I greatly look forward to working with Artyoms and EXYZ again in the future.</p>
               <span style="display:block;font-family:'JetBrains Mono',monospace;font-weight:600;font-size:.85rem;color:#eb6c2b;">COLIN MAGERLE</span>
               <span style="font-family:'JetBrains Mono',monospace;font-size:.8rem;color:#8a8a8a;">Associate Producer and Designer at Proof of Play</span>
             </div>
           </div>
         </div>
-        <button aria-label="Previous testimonial" onClick="{{prevTesti}}" style="position:absolute;top:50%;left:-22px;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;background:#141416;border:1px solid rgba(255,255,255,0.14);color:#f2f2f0;font-size:1.4rem;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2;" style-hover="background:#1c1c1f;border-color:rgba(235,108,43,0.5);">‹</button>
-        <button aria-label="Next testimonial" onClick="{{nextTesti}}" style="position:absolute;top:50%;right:-22px;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;background:#141416;border:1px solid rgba(255,255,255,0.14);color:#f2f2f0;font-size:1.4rem;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2;" style-hover="background:#1c1c1f;border-color:rgba(235,108,43,0.5);">›</button>
+        <button aria-label="Previous testimonial" data-testi-prev="" style="position:absolute;top:50%;left:-22px;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;background:#141416;border:1px solid rgba(255,255,255,0.14);color:#f2f2f0;font-size:1.4rem;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2;" style-hover="background:#1c1c1f;border-color:rgba(235,108,43,0.5);">‹</button>
+        <button aria-label="Next testimonial" data-testi-next="" style="position:absolute;top:50%;right:-22px;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;background:#141416;border:1px solid rgba(255,255,255,0.14);color:#f2f2f0;font-size:1.4rem;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2;" style-hover="background:#1c1c1f;border-color:rgba(235,108,43,0.5);">›</button>
       </div>
       <div style="display:flex;gap:8px;margin-top:28px;">
-        <sc-for list="{{testiDots}}" as="dot" hint-placeholder-count="3">
-          <button aria-label="Go to testimonial" onClick="{{dot.go}}" style="width:8px;height:8px;border-radius:50%;background:{{dot.color}};display:inline-block;border:none;padding:0;cursor:pointer;"></button>
-        </sc-for>
+        <button aria-label="Go to testimonial 1" data-testi-dot="" style="width:8px;height:8px;border-radius:50%;background:#eb6c2b;display:inline-block;border:none;padding:0;cursor:pointer;"></button>
+        <button aria-label="Go to testimonial 2" data-testi-dot="" style="width:8px;height:8px;border-radius:50%;background:#3a3a3c;display:inline-block;border:none;padding:0;cursor:pointer;"></button>
       </div>
     </section>
 
@@ -504,152 +504,99 @@ image-slot::part(frame){ background:transparent !important; color:#9b9b9b !impor
     </div>
   </footer>
 
-  <sc-if value="{{modalOpen}}" hint-placeholder-val="{{false}}">
-    <div onClick="{{closeModal}}" style="position:fixed;inset:0;background:rgba(6,6,7,0.92);backdrop-filter:blur(6px);z-index:100;display:flex;align-items:center;justify-content:center;padding:5vw;">
-      <div onClick="{{stopPropagation}}" style="position:relative;width:min(1100px,90vw);">
-        <video src="{{modalUrl}}" controls="true" controlsList="nodownload noremoteplayback" disablepictureinpicture="true" autoplay="true" playsinline="true" style="width:100%;max-height:82vh;display:block;background:#000;border-radius:12px;box-shadow:0 24px 80px rgba(0,0,0,0.6);"></video>
+  <div data-modal="" style="display:none;position:fixed;inset:0;background:rgba(6,6,7,0.92);backdrop-filter:blur(6px);z-index:100;align-items:center;justify-content:center;padding:5vw;">
+      <div data-modal-inner="" style="position:relative;width:min(1100px,90vw);">
+        <video data-modal-video="" controls="true" controlsList="nodownload noremoteplayback" disablepictureinpicture="true" playsinline="true" style="width:100%;max-height:82vh;display:block;background:#000;border-radius:12px;box-shadow:0 24px 80px rgba(0,0,0,0.6);"></video>
         <div style="display:flex;align-items:center;justify-content:space-between;margin-top:14px;">
-          <span style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.95rem;color:#f2f2f0;text-transform:uppercase;letter-spacing:.01em;">{{modalName}}</span>
-          <button aria-label="Close" onClick="{{closeModal}}" style="all:unset;width:40px;height:40px;border-radius:50%;background:#141416;border:1px solid rgba(255,255,255,0.14);color:#f2f2f0;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:1.2rem;line-height:1;">&#10005;</button>
+          <span data-modal-name="" style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.95rem;color:#f2f2f0;text-transform:uppercase;letter-spacing:.01em;"></span>
+          <button aria-label="Close" data-modal-close="" style="all:unset;width:40px;height:40px;border-radius:50%;background:#141416;border:1px solid rgba(255,255,255,0.14);color:#f2f2f0;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:1.2rem;line-height:1;">&#10005;</button>
         </div>
       </div>
     </div>
-  </sc-if>
 </div>
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
-  state = {
-    modalOpen: false, modalUrl: '', modalName: '',
-    testiIdx: 0, testiDrag: 0, testiDragging: false, testiStartX: 0,
-    testiPerView: (typeof window !== 'undefined' && window.innerWidth < 700) ? 1 : 2
-  };
-  testiCount = 3;
-
   componentDidMount() {
-    window.addEventListener('resize', this.onTestiResize);
+    const $ = s => document.querySelector(s);
+    const $$ = s => Array.from(document.querySelectorAll(s));
+    const hero = $('[data-defer-hero]');
+    if (hero && !hero._exyzDeferred) {
+      hero._exyzDeferred = true;
+      const start = () => { if (!hero.isConnected) return; hero.src = hero.dataset.src; const p = hero.play(); if (p && p.catch) p.catch(() => {}); };
+      if (document.readyState === 'complete') requestAnimationFrame(start); else window.addEventListener('load', start, { once: true });
+    }
+    $$('[data-strip-prev],[data-strip-next]').forEach(btn => btn.addEventListener('click', () => {
+      const wrap = btn.closest('[data-strip-wrap]');
+      const strip = wrap && wrap.querySelector('[data-strip]');
+      if (strip) strip.scrollBy({ left: (btn.hasAttribute('data-strip-next') ? 1 : -1) * (strip.clientWidth + 22), behavior: 'smooth' });
+    }));
+    $$('[data-video-card]').forEach(card => {
+      const v = card.querySelector('video');
+      if (v && !v._exyzPrimed) {
+        v._exyzPrimed = true;
+        const seek = () => { if (v.currentTime === 0) { try { v.currentTime = 0.01; } catch (e) {} } };
+        v.addEventListener('loadedmetadata', seek, { once: true });
+        if (v.readyState >= 1) seek(); else { try { v.load(); } catch (e) {} }
+      }
+      card.addEventListener('mouseenter', () => { if (v) { const p = v.play(); if (p && p.catch) p.catch(() => {}); } });
+      card.addEventListener('mouseleave', () => { if (v) { v.pause(); v.currentTime = 0; } });
+      card.addEventListener('click', () => this._openModal(card.dataset.src, card.dataset.title));
+    });
+    this._modal = $('[data-modal]');
+    if (this._modal) {
+      this._mv = this._modal.querySelector('[data-modal-video]');
+      this._mn = this._modal.querySelector('[data-modal-name]');
+      this._modal.addEventListener('click', () => this._closeModal());
+      this._modal.querySelector('[data-modal-inner]').addEventListener('click', e => e.stopPropagation());
+      this._modal.querySelector('[data-modal-close]').addEventListener('click', () => this._closeModal());
+      this._esc = e => { if (e.key === 'Escape') this._closeModal(); };
+      document.addEventListener('keydown', this._esc);
+    }
+    this._ti = 0;
+    const view = $('[data-testi-view]'), track = $('[data-testi-track]');
+    if (view && track) {
+      const dots = $$('[data-testi-dot]');
+      const count = $$('[data-testi-item]').length;
+      const perView = () => window.innerWidth < 700 ? 1 : 2;
+      const maxIdx = () => Math.max(0, count - perView());
+      const apply = (drag, anim) => {
+        track.style.transition = anim === false ? 'none' : 'transform .45s cubic-bezier(.22,1,.36,1)';
+        track.style.transform = 'translateX(calc(' + (-this._ti * (100 / perView())) + '% + ' + (drag || 0) + 'px))';
+        dots.forEach((d, i) => d.style.background = i === this._ti ? '#eb6c2b' : '#3a3a3c');
+      };
+      const go = i => { this._ti = Math.min(Math.max(i, 0), maxIdx()); apply(); };
+      const prevB = $('[data-testi-prev]'), nextB = $('[data-testi-next]');
+      if (prevB) prevB.addEventListener('click', () => go(this._ti - 1));
+      if (nextB) nextB.addEventListener('click', () => go(this._ti + 1));
+      dots.forEach((d, i) => d.addEventListener('click', () => go(i)));
+      let dragging = false, startX = 0, drag = 0;
+      view.addEventListener('pointerdown', e => { dragging = true; startX = e.clientX; drag = 0; track.style.cursor = 'grabbing'; });
+      view.addEventListener('pointermove', e => { if (!dragging) return; drag = e.clientX - startX; apply(drag, false); });
+      const up = () => { if (!dragging) return; dragging = false; track.style.cursor = 'grab'; if (drag < -60) go(this._ti + 1); else if (drag > 60) go(this._ti - 1); else apply(); drag = 0; };
+      view.addEventListener('pointerup', up);
+      view.addEventListener('pointerleave', up);
+      this._onResize = () => go(this._ti);
+      window.addEventListener('resize', this._onResize);
+    }
   }
   componentWillUnmount() {
-    window.removeEventListener('resize', this.onTestiResize);
+    if (this._onResize) window.removeEventListener('resize', this._onResize);
+    if (this._esc) document.removeEventListener('keydown', this._esc);
   }
-  onTestiResize = () => {
-    const perView = window.innerWidth < 700 ? 1 : 2;
-    if (perView !== this.state.testiPerView) {
-      const maxIdx = Math.max(0, this.testiCount - perView);
-      this.setState({ testiPerView: perView, testiIdx: Math.min(this.state.testiIdx, maxIdx) });
-    }
-  };
-
-  goToTesti(i) {
-    const maxIdx = Math.max(0, this.testiCount - this.state.testiPerView);
-    this.setState({ testiIdx: Math.min(Math.max(i, 0), maxIdx) });
+  _openModal(src, name) {
+    if (!this._modal) return;
+    this._mv.src = src || '';
+    this._mn.textContent = name || '';
+    this._modal.style.display = 'flex';
+    const p = this._mv.play(); if (p && p.catch) p.catch(() => {});
   }
-  prevTesti = () => this.goToTesti(this.state.testiIdx - 1);
-  nextTesti = () => this.goToTesti(this.state.testiIdx + 1);
-  onTestiDown = (e) => {
-    const x = e.touches ? e.touches[0].clientX : e.clientX;
-    this.setState({ testiDragging: true, testiStartX: x, testiDrag: 0 });
-  };
-  onTestiMove = (e) => {
-    if (!this.state.testiDragging) return;
-    const x = e.touches ? e.touches[0].clientX : e.clientX;
-    this.setState({ testiDrag: x - this.state.testiStartX });
-  };
-  onTestiUp = () => {
-    if (!this.state.testiDragging) return;
-    const d = this.state.testiDrag;
-    this.setState({ testiDragging: false, testiDrag: 0 });
-    if (d < -60) this.goToTesti(this.state.testiIdx + 1);
-    else if (d > 60) this.goToTesti(this.state.testiIdx - 1);
-  };
-
-  // Defers hero reel load until the page has finished loading (LCP: poster shows first).
-  deferHero = (el) => {
-    if (!el || el._exyzDeferred) return;
-    el._exyzDeferred = true;
-    const start = () => {
-      if (!el.isConnected) return;
-      el.src = el.dataset.src;
-      const p = el.play();
-      if (p && p.catch) p.catch(() => {});
-    };
-    if (document.readyState === 'complete') requestAnimationFrame(start);
-    else window.addEventListener('load', start, { once: true });
-  };
-
-  stripPrev = (e) => this._scrollStrip(e, -1);
-  stripNext = (e) => this._scrollStrip(e, 1);
-  _scrollStrip(e, dir) {
-    const wrap = e.currentTarget.closest('[data-strip-wrap]');
-    const strip = wrap && wrap.querySelector('[data-strip]');
-    if (strip) strip.scrollBy({ left: dir * (strip.clientWidth + 22), behavior: 'smooth' });
+  _closeModal() {
+    if (!this._modal) return;
+    this._mv.pause(); this._mv.removeAttribute('src');
+    this._modal.style.display = 'none';
   }
-
-  primeVideo = (el) => {
-    if (!el || el._exyzPrimed) return;
-    el._exyzPrimed = true;
-    const seekToFrame = () => {
-      if (el.currentTime === 0) {
-        try { el.currentTime = 0.01; } catch (err) {}
-      }
-    };
-    el.addEventListener('loadedmetadata', seekToFrame, { once: true });
-    if (el.readyState >= 1) seekToFrame();
-    else { try { el.load(); } catch (err) {} }
-  };
-
-  hoverPlay = (e) => {
-    const v = e.currentTarget.querySelector('video');
-    if (v) { const p = v.play(); if (p && p.catch) p.catch(() => {}); }
-  };
-  hoverStop = (e) => {
-    const v = e.currentTarget.querySelector('video');
-    if (v) { v.pause(); v.currentTime = 0; }
-  };
-
-  openVideoCard = (e) => {
-    const d = e.currentTarget.dataset;
-    this.setState({ modalOpen: true, modalUrl: d.src, modalName: d.title });
-  };
-  closeModal = () => this.setState({ modalOpen: false, modalUrl: '', modalName: '' });
-
-  renderVals() {
-    return {
-      deferHero: this.deferHero,
-      stripPrev: this.stripPrev,
-      stripNext: this.stripNext,
-      primeVideo: this.primeVideo,
-      hoverPlay: this.hoverPlay,
-      hoverStop: this.hoverStop,
-      openVideoCard: this.openVideoCard,
-      modalOpen: this.state.modalOpen,
-      modalUrl: this.state.modalUrl,
-      modalName: this.state.modalName,
-      closeModal: this.closeModal,
-      stopPropagation: (e) => e.stopPropagation(),
-      testiItemStyle: {
-        flex: '0 0 ' + (100 / this.state.testiPerView) + '%',
-        minWidth: (100 / this.state.testiPerView) + '%',
-        boxSizing: 'border-box',
-        paddingRight: this.state.testiPerView === 1 ? '0px' : '48px'
-      },
-      testiTrackStyle: {
-        display: 'flex',
-        cursor: this.state.testiDragging ? 'grabbing' : 'grab',
-        transition: this.state.testiDragging ? 'none' : 'transform .45s cubic-bezier(.22,1,.36,1)',
-        transform: 'translateX(calc(' + (-this.state.testiIdx * (100 / this.state.testiPerView)) + '% + ' + this.state.testiDrag + 'px))'
-      },
-      testiDots: Array.from({ length: Math.max(1, this.testiCount - 1) }, (_, i) => ({
-        color: i === this.state.testiIdx ? '#eb6c2b' : '#3a3a3c',
-        go: () => this.goToTesti(i)
-      })),
-      prevTesti: this.prevTesti,
-      nextTesti: this.nextTesti,
-      onTestiDown: this.onTestiDown,
-      onTestiMove: this.onTestiMove,
-      onTestiUp: this.onTestiUp
-    };
-  }
+  renderVals() { return {}; }
 }
 </script>
 </body>

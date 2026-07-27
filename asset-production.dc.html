@@ -203,7 +203,7 @@ image-slot::part(frame){ background:#141416 !important; }
           <h2 style="font-family:'Gabarito',sans-serif;font-weight:700;font-size:1rem;margin:0;letter-spacing:.01em;">Level: Mystery Forest</h2>
           <span style="display:block;font-family:'JetBrains Mono',monospace;font-size:.66rem;letter-spacing:.06em;color:#9b9b9b;text-transform:uppercase;margin-top:6px;">Project: Shiba Story Go!</span>
         </div>
-        <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/2d-assets/Forest_Location.mp4" style="display:block;width:100%;height:auto;aspect-ratio:1168/618;object-fit:cover;" autoPlay="{{true}}" muted="{{true}}" loop="{{true}}" playsInline="{{true}}" preload="auto" ref="{{playVideo}}"></video>
+        <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/2d-assets/Forest_Location.mp4" style="display:block;width:100%;height:auto;aspect-ratio:1168/618;object-fit:cover;" muted="true" loop="true" playsinline="true" preload="auto"></video>
       </div>
     </section>
 
@@ -246,7 +246,7 @@ image-slot::part(frame){ background:#141416 !important; }
       </div>
     </section>
 
-      <sc-if value="{{showBatch0}}" hint-placeholder-val="{{false}}">
+      <div data-batch="0" style="display:none;">
         <section aria-label="More assets" style="max-width:1240px;margin:0 auto;padding:0 32px 22px;">
           <div class="exyz-pairrow">
             <div style="background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:28px;">
@@ -377,12 +377,12 @@ image-slot::part(frame){ background:#141416 !important; }
               <h2 style="font-family:'Gabarito',sans-serif;font-weight:700;font-size:1rem;margin:0;letter-spacing:.01em;">Level: Skull Island</h2>
               <span style="display:block;font-family:'JetBrains Mono',monospace;font-size:.66rem;letter-spacing:.06em;color:#9b9b9b;text-transform:uppercase;margin-top:6px;">Project: Shiba Story Go!</span>
             </div>
-            <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/2d-assets/Skull_island_Location.mp4" style="display:block;width:100%;height:auto;aspect-ratio:1168/618;object-fit:cover;" autoPlay="{{true}}" muted="{{true}}" loop="{{true}}" playsInline="{{true}}" preload="metadata" aria-label="Level: Skull Island animated background" ref="{{playVideo}}"></video>
+            <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/2d-assets/Skull_island_Location.mp4" style="display:block;width:100%;height:auto;aspect-ratio:1168/618;object-fit:cover;" muted="true" loop="true" playsinline="true" preload="metadata" aria-label="Level: Skull Island animated background"></video>
           </div>
         </section>
-      </sc-if>
+      </div>
 
-      <sc-if value="{{showBatch1}}" hint-placeholder-val="{{false}}">
+      <div data-batch="1" style="display:none;">
         <section aria-label="More assets" style="max-width:1240px;margin:0 auto;padding:0 32px 22px;">
           <div class="exyz-pairrow">
             <div style="background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:28px;">
@@ -513,12 +513,12 @@ image-slot::part(frame){ background:#141416 !important; }
               <h2 style="font-family:'Gabarito',sans-serif;font-weight:700;font-size:1rem;margin:0;letter-spacing:.01em;">Level: Dark Forest</h2>
               <span style="display:block;font-family:'JetBrains Mono',monospace;font-size:.66rem;letter-spacing:.06em;color:#9b9b9b;text-transform:uppercase;margin-top:6px;">Project: Shiba Story Go!</span>
             </div>
-            <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/2d-assets/DarkForest_Location.mp4" style="display:block;width:100%;height:auto;aspect-ratio:1168/618;object-fit:cover;" autoPlay="{{true}}" muted="{{true}}" loop="{{true}}" playsInline="{{true}}" preload="metadata" aria-label="Level: Dark Forest animated background" ref="{{playVideo}}"></video>
+            <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/2d-assets/DarkForest_Location.mp4" style="display:block;width:100%;height:auto;aspect-ratio:1168/618;object-fit:cover;" muted="true" loop="true" playsinline="true" preload="metadata" aria-label="Level: Dark Forest animated background"></video>
           </div>
         </section>
-      </sc-if>
+      </div>
 
-      <sc-if value="{{showBatch2}}" hint-placeholder-val="{{false}}">
+      <div data-batch="2" style="display:none;">
         <section aria-label="More assets" style="max-width:1240px;margin:0 auto;padding:0 32px 22px;">
           <div class="exyz-pairrow">
             <div style="background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:28px;">
@@ -649,12 +649,12 @@ image-slot::part(frame){ background:#141416 !important; }
               <h2 style="font-family:'Gabarito',sans-serif;font-weight:700;font-size:1rem;margin:0;letter-spacing:.01em;">Level: Lava Land</h2>
               <span style="display:block;font-family:'JetBrains Mono',monospace;font-size:.66rem;letter-spacing:.06em;color:#9b9b9b;text-transform:uppercase;margin-top:6px;">Project: Shiba Story Go!</span>
             </div>
-            <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/LavaLand_Location.mp4" style="display:block;width:100%;height:auto;aspect-ratio:1168/618;object-fit:cover;" autoPlay="{{true}}" muted="{{true}}" loop="{{true}}" playsInline="{{true}}" preload="metadata" aria-label="Level: Lava Land animated background" ref="{{playVideo}}"></video>
+            <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/LavaLand_Location.mp4" style="display:block;width:100%;height:auto;aspect-ratio:1168/618;object-fit:cover;" muted="true" loop="true" playsinline="true" preload="metadata" aria-label="Level: Lava Land animated background"></video>
           </div>
         </section>
-      </sc-if>
+      </div>
 
-      <sc-if value="{{showBatch3}}" hint-placeholder-val="{{false}}">
+      <div data-batch="3" style="display:none;">
         <section aria-label="More assets" style="max-width:1240px;margin:0 auto;padding:0 32px 22px;">
           <div class="exyz-pairrow">
             <div style="background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:28px;">
@@ -785,12 +785,12 @@ image-slot::part(frame){ background:#141416 !important; }
               <h2 style="font-family:'Gabarito',sans-serif;font-weight:700;font-size:1rem;margin:0;letter-spacing:.01em;">Level: Winter</h2>
               <span style="display:block;font-family:'JetBrains Mono',monospace;font-size:.66rem;letter-spacing:.06em;color:#9b9b9b;text-transform:uppercase;margin-top:6px;">Project: Shiba Story Go!</span>
             </div>
-            <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/Winter_Location.mp4" style="display:block;width:100%;height:auto;aspect-ratio:1168/618;object-fit:cover;" autoPlay="{{true}}" muted="{{true}}" loop="{{true}}" playsInline="{{true}}" preload="metadata" aria-label="Level: Winter animated background" ref="{{playVideo}}"></video>
+            <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/Winter_Location.mp4" style="display:block;width:100%;height:auto;aspect-ratio:1168/618;object-fit:cover;" muted="true" loop="true" playsinline="true" preload="metadata" aria-label="Level: Winter animated background"></video>
           </div>
         </section>
-      </sc-if>
+      </div>
 
-      <sc-if value="{{showBatch4}}" hint-placeholder-val="{{false}}">
+      <div data-batch="4" style="display:none;">
         <section aria-label="More assets" style="max-width:1240px;margin:0 auto;padding:0 32px 22px;">
           <div class="exyz-pairrow">
             <div style="background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:28px;">
@@ -853,7 +853,7 @@ image-slot::part(frame){ background:#141416 !important; }
             </div>
           </div>
         </section>
-      </sc-if>
+      </div>
 
 
     <section aria-labelledby="seo-ap-h" style="max-width:1240px;margin:0 auto;padding:26px 32px 40px;">
@@ -867,11 +867,11 @@ image-slot::part(frame){ background:#141416 !important; }
       </div>
     </section>
 
-    <sc-if value="{{showLoadMore}}" hint-placeholder-val="{{true}}">
+    <div data-loadmore-wrap="">
     <section aria-label="Load more" style="max-width:1240px;margin:0 auto;padding:0 32px 64px;display:flex;justify-content:center;">
-      <button onClick="{{loadMore}}" style="font-family:'JetBrains Mono',monospace;font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#f2f2f0;background:transparent;border:1px solid rgba(255,255,255,0.18);padding:14px 32px;border-radius:6px;cursor:pointer;transition:border-color .15s,background .15s;" style-hover="border-color:#eb6c2b;background:rgba(235,108,43,0.08);">Load More</button>
+      <button data-loadmore="" style="font-family:'JetBrains Mono',monospace;font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#f2f2f0;background:transparent;border:1px solid rgba(255,255,255,0.18);padding:14px 32px;border-radius:6px;cursor:pointer;transition:border-color .15s,background .15s;" style-hover="border-color:#eb6c2b;background:rgba(235,108,43,0.08);">Load More</button>
     </section>
-    </sc-if>
+    </div>
   </main>
 
   <footer style="padding:72px 0 40px;">
@@ -906,23 +906,23 @@ image-slot::part(frame){ background:#141416 !important; }
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
-  state = { extraCount: 0 };
+  renderVals() { return {}; }
 
-  renderVals() {
-    const n = this.state.extraCount;
-    return {
-      showBatch0: n > 0,
-      showBatch1: n > 1,
-      showBatch2: n > 2,
-      showBatch3: n > 3,
-      showBatch4: n > 4,
-      showLoadMore: n < 5,
-      loadMore: () => this.setState(s => ({ extraCount: Math.min(s.extraCount + 1, 5) })),
-      playVideo: (el) => { if (el) { const p = el.play(); if (p && p.catch) p.catch(() => {}); } }
-    };
+  _wireStatic() {
+    const all = () => Array.from(document.querySelectorAll('[data-batch]'));
+    const play = v => { const p = v.play(); if (p && p.catch) p.catch(() => {}); };
+    Array.from(document.querySelectorAll('video')).filter(v => !v.closest('[data-batch]')).forEach(play);
+    const btn = document.querySelector('[data-loadmore]');
+    const wrap = document.querySelector('[data-loadmore-wrap]');
+    if (btn) btn.addEventListener('click', () => {
+      const next = all().find(b => b.style.display === 'none');
+      if (next) { next.style.display = ''; next.querySelectorAll('video').forEach(play); }
+      if (!all().some(b => b.style.display === 'none') && wrap) wrap.style.display = 'none';
+    });
   }
 
   componentDidMount() {
+    this._wireStatic();
     this._spineInited = this._spineInited || new Set();
     this._initSpinePlayers();
     this._spineMountObserver = setInterval(() => this._initSpinePlayers(), 400);
