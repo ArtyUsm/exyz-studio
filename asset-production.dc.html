@@ -44,12 +44,15 @@
 }
 .exyz-nav a:hover{ color:#f5f5f5 !important; }
 .exyz-btn-a:hover{ background:#ff7f3f !important; }
+.exyz-pairrow{ display:flex; gap:22px; }
+.exyz-pairrow > *{ flex:0 0 calc(50% - 11px); min-width:0; box-sizing:border-box; }
+@media (max-width:700px){ .exyz-pairrow{ flex-direction:column; } .exyz-pairrow > *{ flex:none; } }
 image-slot{ display:block; }
 image-slot::part(frame){ background:#141416 !important; }
 [data-gallery-zoom] image-slot::part(image){ transition:transform .35s cubic-bezier(.22,.61,.36,1); }
 [data-gallery-zoom]:hover image-slot::part(image){ transform:translate(-50%,-50%) scale(1.06); }
 </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "EXYZ.Studio", "url": "https://www.exyz.studio/", "logo": "https://www.exyz.studio/logo.png", "description": "EXYZ.Studio designs 2D/3D game assets and produces video creatives, playable ads, and trailers for mobile game studios.", "areaServed": "Worldwide", "knowsAbout": ["Game asset production", "2D game art", "3D game art", "Video creatives for mobile games", "Playable ads", "UGC ads", "3D animation", "Motion graphics"], "sameAs": ["https://www.instagram.com/exyz.studio/"]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "EXYZ.Studio", "url": "https://www.exyz.studio/", "logo": "https://www.exyz.studio/logo.png", "address": {"@type": "PostalAddress", "addressLocality": "Riga", "addressCountry": "LV"}, "description": "EXYZ.Studio designs 2D/3D game assets and produces video creatives, playable ads, and trailers for mobile game studios.", "areaServed": "Worldwide", "knowsAbout": ["Game asset production", "2D game art", "3D game art", "Video creatives for mobile games", "Playable ads", "UGC ads", "3D animation", "Motion graphics"], "sameAs": ["https://www.instagram.com/exyz.studio/"]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "serviceType": "Game Asset Production", "provider": {"@type": "Organization", "name": "EXYZ.Studio", "url": "https://www.exyz.studio/"}, "areaServed": "Worldwide", "description": "Concept art, character design, levels, and 2D Spine animations for mobile games."}</script>
 <script>
   window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
@@ -71,14 +74,14 @@ image-slot::part(frame){ background:#141416 !important; }
 
   <header style="position:sticky;top:0;z-index:50;background:rgba(10,10,11,0.9);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,0.08);">
     <div style="max-width:1240px;margin:0 auto;padding:14px 32px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 24px;row-gap:12px;">
-      <a href="index.dc.html" style="display:flex;align-items:center;gap:10px;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.1rem;letter-spacing:-0.01em;color:#f2f2f0;text-decoration:none;">
-        <img src="exyz-logo.png" alt="" style="width:30px;height:30px;display:block;" />EXYZ.STUDIO
+      <a href="/" style="display:flex;align-items:center;gap:10px;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.1rem;letter-spacing:-0.01em;color:#f2f2f0;text-decoration:none;">
+        <img src="exyz-logo.png" alt="EXYZ.Studio" style="width:30px;height:30px;display:block;" />EXYZ.STUDIO
       </a>
       <nav class="exyz-nav" aria-label="Primary" style="display:flex;gap:20px 28px;align-items:center;flex-wrap:wrap;justify-content:flex-end;">
-        <a href="asset-production.dc.html" aria-current="page" style="font-family:'JetBrains Mono',monospace;font-size:.74rem;text-transform:uppercase;letter-spacing:.08em;color:#f2f2f0;text-decoration:none;transition:color .15s;">Asset Production</a>
-        <a href="video-creatives.dc.html" style="font-family:'JetBrains Mono',monospace;font-size:.74rem;text-transform:uppercase;letter-spacing:.08em;color:#9b9b9b;text-decoration:none;transition:color .15s;">Video Creatives</a>
-        <a href="contact.dc.html" style="font-family:'JetBrains Mono',monospace;font-size:.74rem;text-transform:uppercase;letter-spacing:.08em;color:#9b9b9b;text-decoration:none;transition:color .15s;">Contact</a>
-        <a href="contact.dc.html" class="exyz-btn-a" style="font-family:'JetBrains Mono',monospace;font-size:.74rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#0a0a0b;background:#eb6c2b;padding:11px 20px;border-radius:5px;text-decoration:none;transition:background .15s;">Start a Project</a>
+        <a href="/asset-production" aria-current="page" style="font-family:'JetBrains Mono',monospace;font-size:.74rem;text-transform:uppercase;letter-spacing:.08em;color:#f2f2f0;text-decoration:none;transition:color .15s;">Asset Production</a>
+        <a href="/video-creatives" style="font-family:'JetBrains Mono',monospace;font-size:.74rem;text-transform:uppercase;letter-spacing:.08em;color:#9b9b9b;text-decoration:none;transition:color .15s;">Video Creatives</a>
+        <a href="/contact" style="font-family:'JetBrains Mono',monospace;font-size:.74rem;text-transform:uppercase;letter-spacing:.08em;color:#9b9b9b;text-decoration:none;transition:color .15s;">Contact</a>
+        <a href="/contact" class="exyz-btn-a" style="font-family:'JetBrains Mono',monospace;font-size:.74rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#0a0a0b;background:#eb6c2b;padding:11px 20px;border-radius:5px;text-decoration:none;transition:background .15s;">Start a Project</a>
       </nav>
     </div>
   </header>
@@ -87,11 +90,10 @@ image-slot::part(frame){ background:#141416 !important; }
       <h1 style="font-family:'Space Grotesk',sans-serif;font-weight:800;line-height:1;letter-spacing:-0.02em;margin:0;font-size:clamp(2.6rem,6vw,4.6rem);text-transform:uppercase;">Asset Production</h1>
       <p style="max-width:46ch;font-size:1.05rem;color:#b7b7b7;margin:22px 0 0;">From concept art and character design to detailed environments and fluid Spine animations — we create production-ready 2D game assets that bring your vision to life.</p>
       <div style="display:flex;gap:28px;flex-wrap:wrap;margin-top:26px;">
-        <sc-for list="{{tags}}" as="tag" hint-placeholder-count="4">
-          <span style="display:flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:#9b9b9b;">
-            <span style="width:6px;height:6px;background:#eb6c2b;display:inline-block;"></span>{{tag}}
-          </span>
-        </sc-for>
+        <span style="display:flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:#9b9b9b;"><span style="width:6px;height:6px;background:#eb6c2b;display:inline-block;"></span>Concept Art</span>
+        <span style="display:flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:#9b9b9b;"><span style="width:6px;height:6px;background:#eb6c2b;display:inline-block;"></span>Character Design</span>
+        <span style="display:flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:#9b9b9b;"><span style="width:6px;height:6px;background:#eb6c2b;display:inline-block;"></span>Levels</span>
+        <span style="display:flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:#9b9b9b;"><span style="width:6px;height:6px;background:#eb6c2b;display:inline-block;"></span>2D Spine Animations</span>
       </div>
     </section>
 
@@ -102,12 +104,30 @@ image-slot::part(frame){ background:#141416 !important; }
           <span style="display: block; font-family: Gabarito; font-size: .68rem; letter-spacing: .06em; color: #7a7a7a; text-transform: uppercase; margin-top: 6px">Project: Shiba Story Go!</span>
         </div>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:20px;">
-          <sc-for list="{{shibaSkins}}" as="skin" hint-placeholder-count="6">
-            <div data-gallery-zoom="" style="overflow:hidden;border-radius:8px;">
-              <image-slot id="{{skin.id}}" style="width:100%;height:auto;aspect-ratio:4/5;" shape="rect" fit="contain" placeholder="{{skin.ph}}"></image-slot>
-              <span style="display:block;text-align:center;font-family:'Gabarito',sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;margin-top:10px;">{{skin.name}}</span>
-            </div>
-          </sc-for>
+          <div data-gallery-zoom="" style="overflow:hidden;border-radius:8px;">
+            <image-slot id="shiba-default" style="width:100%;height:auto;aspect-ratio:4/5;" shape="rect" fit="contain" placeholder="Shiba default skin, full body"></image-slot>
+            <span style="display:block;text-align:center;font-family:'Gabarito',sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;margin-top:10px;">Default Skin</span>
+          </div>
+          <div data-gallery-zoom="" style="overflow:hidden;border-radius:8px;">
+            <image-slot id="shiba-sheep" style="width:100%;height:auto;aspect-ratio:4/5;" shape="rect" fit="contain" placeholder="Shiba sheep skin, full body"></image-slot>
+            <span style="display:block;text-align:center;font-family:'Gabarito',sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;margin-top:10px;">Sheep Skin</span>
+          </div>
+          <div data-gallery-zoom="" style="overflow:hidden;border-radius:8px;">
+            <image-slot id="shiba-raincoat" style="width:100%;height:auto;aspect-ratio:4/5;" shape="rect" fit="contain" placeholder="Shiba raincoat skin, full body"></image-slot>
+            <span style="display:block;text-align:center;font-family:'Gabarito',sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;margin-top:10px;">Raincoat Skin</span>
+          </div>
+          <div data-gallery-zoom="" style="overflow:hidden;border-radius:8px;">
+            <image-slot id="shiba-cowboy" style="width:100%;height:auto;aspect-ratio:4/5;" shape="rect" fit="contain" placeholder="Shiba cowboy skin, full body"></image-slot>
+            <span style="display:block;text-align:center;font-family:'Gabarito',sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;margin-top:10px;">Cowboy Skin</span>
+          </div>
+          <div data-gallery-zoom="" style="overflow:hidden;border-radius:8px;">
+            <image-slot id="shiba-dark-mage" style="width:100%;height:auto;aspect-ratio:4/5;" shape="rect" fit="contain" placeholder="Shiba dark mage skin, full body"></image-slot>
+            <span style="display:block;text-align:center;font-family:'Gabarito',sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;margin-top:10px;">Dark Mage Skin</span>
+          </div>
+          <div data-gallery-zoom="" style="overflow:hidden;border-radius:8px;">
+            <image-slot id="shiba-dragon" style="width:100%;height:auto;aspect-ratio:4/5;" shape="rect" fit="contain" placeholder="Shiba dragon skin, full body"></image-slot>
+            <span style="display:block;text-align:center;font-family:'Gabarito',sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;margin-top:10px;">Dragon Skin</span>
+          </div>
         </div>
       </div>
     </section>
@@ -190,25 +210,25 @@ image-slot::part(frame){ background:#141416 !important; }
     <section aria-label="More assets" style="max-width:1240px;margin:0 auto;padding:0 32px 22px;">
       <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:22px;">
         <div style="background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:28px;">
-          <h2 style="font-family:'Gabarito',sans-serif;font-weight:700;font-size:1.05rem;margin:0 0 16px;letter-spacing:.01em;">Character: General</h2>
+          <h2 style="font-family:'Gabarito',sans-serif;font-weight:700;font-size:1.05rem;margin:0 0 16px;letter-spacing:.01em;">Character: General — Style 1</h2>
           <div data-gallery-zoom="" style="aspect-ratio:9/16;overflow:hidden;border-radius:8px;position:relative;">
             <image-slot id="inserted-1-general" style="width:100%;height:100%;" shape="rect" fit="contain" placeholder="Character: General, full body"></image-slot>
           </div>
         </div>
         <div style="background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:28px;">
-          <h2 style="font-family:'Gabarito',sans-serif;font-weight:700;font-size:1.05rem;margin:0 0 16px;letter-spacing:.01em;">Character: Soldier</h2>
+          <h2 style="font-family:'Gabarito',sans-serif;font-weight:700;font-size:1.05rem;margin:0 0 16px;letter-spacing:.01em;">Character: Soldier — Style 1</h2>
           <div data-gallery-zoom="" style="aspect-ratio:9/16;overflow:hidden;border-radius:8px;position:relative;">
             <image-slot id="inserted-1-soldier" style="width:100%;height:100%;" shape="rect" fit="contain" placeholder="Character: Soldier, full body"></image-slot>
           </div>
         </div>
         <div style="background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:28px;">
-          <h2 style="font-family:'Gabarito',sans-serif;font-weight:700;font-size:1.05rem;margin:0 0 16px;letter-spacing:.01em;">Character: General</h2>
+          <h2 style="font-family:'Gabarito',sans-serif;font-weight:700;font-size:1.05rem;margin:0 0 16px;letter-spacing:.01em;">Character: General — Style 2</h2>
           <div data-gallery-zoom="" style="aspect-ratio:9/16;overflow:hidden;border-radius:8px;position:relative;">
             <image-slot id="inserted-2-general" style="width:100%;height:100%;" shape="rect" fit="contain" placeholder="Character: General, full body"></image-slot>
           </div>
         </div>
         <div style="background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:28px;">
-          <h2 style="font-family:'Gabarito',sans-serif;font-weight:700;font-size:1.05rem;margin:0 0 16px;letter-spacing:.01em;">Character: Soldier</h2>
+          <h2 style="font-family:'Gabarito',sans-serif;font-weight:700;font-size:1.05rem;margin:0 0 16px;letter-spacing:.01em;">Character: Soldier — Style 2</h2>
           <div data-gallery-zoom="" style="aspect-ratio:9/16;overflow:hidden;border-radius:8px;position:relative;">
             <image-slot id="inserted-2-soldier" style="width:100%;height:100%;" shape="rect" fit="contain" placeholder="Character: Soldier, full body"></image-slot>
           </div>
@@ -226,208 +246,626 @@ image-slot::part(frame){ background:#141416 !important; }
       </div>
     </section>
 
-    <sc-for list="{{extraBatches}}" as="batch" hint-placeholder-count="0">
-      <section aria-label="More assets" style="max-width:1240px;margin:0 auto;padding:0 32px 22px;">
-        <div style="position:relative;">
-        <div style="overflow:hidden;" onPointerDown="{{batch.row1.onDown}}" onPointerMove="{{batch.row1.onMove}}" onPointerUp="{{batch.row1.onUp}}" onPointerLeave="{{batch.row1.onUp}}">
-        <div style="{{batch.row1.trackStyle}}">
-          <div style="{{batch.row1.cardWrapStyle}}"><div style="background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:28px;">
-            <div style="display:grid;grid-template-columns:1fr 1.55fr;gap:18px;align-items:stretch;">
-              <div style="display:flex;flex-direction:column;">
-                <div style="margin-bottom:22px;">
-                  <h2 style="font-family:'Gabarito',sans-serif;font-weight:700;font-size:1.05rem;margin:0;letter-spacing:.01em;">{{batch.row1.leftName}}</h2>
-                  <span style="display: block; font-family: Gabarito; font-size: .68rem; letter-spacing: .06em; color: #7a7a7a; text-transform: uppercase; margin-top: 6px">{{batch.row1.leftProject}}</span>
+      <sc-if value="{{showBatch0}}" hint-placeholder-val="{{false}}">
+        <section aria-label="More assets" style="max-width:1240px;margin:0 auto;padding:0 32px 22px;">
+          <div class="exyz-pairrow">
+            <div style="background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:28px;">
+              <div style="display:grid;grid-template-columns:1fr 1.55fr;gap:18px;align-items:stretch;">
+                <div style="display:flex;flex-direction:column;">
+                  <div style="margin-bottom:22px;">
+                    <h2 style="font-family:'Gabarito',sans-serif;font-weight:700;font-size:1.05rem;margin:0;letter-spacing:.01em;">Character: Prince</h2>
+                    <span style="display: block; font-family: Gabarito; font-size: .68rem; letter-spacing: .06em; color: #7a7a7a; text-transform: uppercase; margin-top: 6px">Project: Shiba Story Go!</span>
+                  </div>
+                  <div data-gallery-zoom="" style="aspect-ratio:1/1;overflow:hidden;border-radius:8px;position:relative;">
+                    <image-slot id="extra-1-sketch" style="width:100%;height:100%;" shape="rect" fit="contain" placeholder="Prince sketch, full body"></image-slot>
+                  </div>
+                  <span style="display:block;text-align:center;font-family:'Gabarito',sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;margin-top:auto;padding-top:10px;">Sketch</span>
                 </div>
-                <div data-gallery-zoom="" style="aspect-ratio:1/1;overflow:hidden;border-radius:8px;position:relative;">
-                  <image-slot id="{{batch.row1.leftSketchId}}" style="width:100%;height:100%;" shape="rect" fit="contain" placeholder="New sketch, full body"></image-slot>
-                </div>
-                <span style="display:block;text-align:center;font-family:'Gabarito',sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;margin-top:auto;padding-top:10px;">Sketch</span>
-              </div>
-              <sc-if value="{{batch.row1.leftSpineKey}}" hint-placeholder-val="{{false}}">
                 <div style="display:flex;flex-direction:column;">
                   <div style="flex:1;position:relative;width:100%;background:#141416;border-radius:8px;overflow:hidden;">
-                    <div class="spine-mount" data-spine-mount="{{batch.row1.leftSpineKey}}" style="position:absolute;inset:0;"></div>
-                    <div class="spine-anim-switcher" data-spine-switcher="{{batch.row1.leftSpineKey}}" style="position:absolute;inset:0;z-index:3;display:flex;align-items:center;justify-content:space-between;padding:0 10px;box-sizing:border-box;pointer-events:none;">
-                      <button type="button" class="spine-anim-prev" data-spine-prev="{{batch.row1.leftSpineKey}}" aria-label="Previous animation" style="flex:0 0 auto;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:transparent;border:none;border-radius:0;color:#f2f2f0;cursor:pointer;pointer-events:auto;">
+                    <div class="spine-mount" data-spine-mount="prince" style="position:absolute;inset:0;"></div>
+                    <div class="spine-anim-switcher" data-spine-switcher="prince" style="position:absolute;inset:0;z-index:3;display:flex;align-items:center;justify-content:space-between;padding:0 10px;box-sizing:border-box;pointer-events:none;">
+                      <button type="button" class="spine-anim-prev" data-spine-prev="prince" aria-label="Previous animation" style="flex:0 0 auto;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:transparent;border:none;border-radius:0;color:#f2f2f0;cursor:pointer;pointer-events:auto;">
                         <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 1L1 7L7 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
                       </button>
-                      <span class="spine-anim-label" data-spine-label="{{batch.row1.leftSpineKey}}" style="display:none;"></span>
-                      <button type="button" class="spine-anim-next" data-spine-next="{{batch.row1.leftSpineKey}}" aria-label="Next animation" style="flex:0 0 auto;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:transparent;border:none;border-radius:0;color:#f2f2f0;cursor:pointer;pointer-events:auto;">
+                      <span class="spine-anim-label" data-spine-label="prince" style="display:none;"></span>
+                      <button type="button" class="spine-anim-next" data-spine-next="prince" aria-label="Next animation" style="flex:0 0 auto;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:transparent;border:none;border-radius:0;color:#f2f2f0;cursor:pointer;pointer-events:auto;">
                         <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L7 7L1 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
                       </button>
                     </div>
                   </div>
                   <span style="display:block;text-align:center;font-family:'Gabarito',sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;margin-top:auto;padding-top:10px;">Animated Final</span>
                 </div>
-              </sc-if>
-              <sc-if value="{{batch.row1.leftNoSpine}}" hint-placeholder-val="{{true}}">
-                <div style="display:flex;flex-direction:column;">
-                  <div data-gallery-zoom="" style="aspect-ratio:1/1;overflow:hidden;border-radius:8px;position:relative;">
-                    <image-slot id="{{batch.row1.leftFinalId}}" style="width:100%;height:100%;" shape="rect" fit="contain" placeholder="New animated final, full body"></image-slot>
-                  </div>
-                  <span style="display:block;text-align:center;font-family:'Gabarito',sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;margin-top:auto;padding-top:10px;">Animated Final</span>
-                </div>
-              </sc-if>
-            </div>
-          </div></div>
-          <div style="{{batch.row1.cardWrapStyle}}"><div style="background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:28px;">
-            <div style="display:grid;grid-template-columns:1fr 1.55fr;gap:18px;align-items:stretch;">
-              <div style="display:flex;flex-direction:column;">
-                <div style="margin-bottom:22px;">
-                  <h2 style="font-family:'Gabarito',sans-serif;font-weight:700;font-size:1.05rem;margin:0;letter-spacing:.01em;">{{batch.row1.rightName}}</h2>
-                  <span style="display: block; font-family: Gabarito; font-size: .68rem; letter-spacing: .06em; color: #7a7a7a; text-transform: uppercase; margin-top: 6px">{{batch.row1.rightProject}}</span>
-                </div>
-                <div data-gallery-zoom="" style="aspect-ratio:1/1;overflow:hidden;border-radius:8px;position:relative;">
-                  <image-slot id="{{batch.row1.rightSketchId}}" style="width:100%;height:100%;" shape="rect" fit="contain" placeholder="New sketch, full body"></image-slot>
-                </div>
-                <span style="display:block;text-align:center;font-family:'Gabarito',sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;margin-top:auto;padding-top:10px;">Sketch</span>
               </div>
-              <sc-if value="{{batch.row1.rightSpineKey}}" hint-placeholder-val="{{false}}">
+            </div>
+            <div style="background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:28px;">
+              <div style="display:grid;grid-template-columns:1fr 1.55fr;gap:18px;align-items:stretch;">
+                <div style="display:flex;flex-direction:column;">
+                  <div style="margin-bottom:22px;">
+                    <h2 style="font-family:'Gabarito',sans-serif;font-weight:700;font-size:1.05rem;margin:0;letter-spacing:.01em;">Character: NPC Librarian</h2>
+                    <span style="display: block; font-family: Gabarito; font-size: .68rem; letter-spacing: .06em; color: #7a7a7a; text-transform: uppercase; margin-top: 6px">Project: Shiba Story Go!</span>
+                  </div>
+                  <div data-gallery-zoom="" style="aspect-ratio:1/1;overflow:hidden;border-radius:8px;position:relative;">
+                    <image-slot id="extra-2-sketch" style="width:100%;height:100%;" shape="rect" fit="contain" placeholder="NPC Librarian sketch, full body"></image-slot>
+                  </div>
+                  <span style="display:block;text-align:center;font-family:'Gabarito',sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;margin-top:auto;padding-top:10px;">Sketch</span>
+                </div>
                 <div style="display:flex;flex-direction:column;">
                   <div style="flex:1;position:relative;width:100%;background:#141416;border-radius:8px;overflow:hidden;">
-                    <div class="spine-mount" data-spine-mount="{{batch.row1.rightSpineKey}}" style="position:absolute;inset:0;"></div>
-                    <div class="spine-anim-switcher" data-spine-switcher="{{batch.row1.rightSpineKey}}" style="position:absolute;inset:0;z-index:3;display:flex;align-items:center;justify-content:space-between;padding:0 10px;box-sizing:border-box;pointer-events:none;">
-                      <button type="button" class="spine-anim-prev" data-spine-prev="{{batch.row1.rightSpineKey}}" aria-label="Previous animation" style="flex:0 0 auto;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:transparent;border:none;border-radius:0;color:#f2f2f0;cursor:pointer;pointer-events:auto;">
+                    <div class="spine-mount" data-spine-mount="librarian" style="position:absolute;inset:0;"></div>
+                    <div class="spine-anim-switcher" data-spine-switcher="librarian" style="position:absolute;inset:0;z-index:3;display:flex;align-items:center;justify-content:space-between;padding:0 10px;box-sizing:border-box;pointer-events:none;">
+                      <button type="button" class="spine-anim-prev" data-spine-prev="librarian" aria-label="Previous animation" style="flex:0 0 auto;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:transparent;border:none;border-radius:0;color:#f2f2f0;cursor:pointer;pointer-events:auto;">
                         <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 1L1 7L7 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
                       </button>
-                      <span class="spine-anim-label" data-spine-label="{{batch.row1.rightSpineKey}}" style="display:none;"></span>
-                      <button type="button" class="spine-anim-next" data-spine-next="{{batch.row1.rightSpineKey}}" aria-label="Next animation" style="flex:0 0 auto;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:transparent;border:none;border-radius:0;color:#f2f2f0;cursor:pointer;pointer-events:auto;">
+                      <span class="spine-anim-label" data-spine-label="librarian" style="display:none;"></span>
+                      <button type="button" class="spine-anim-next" data-spine-next="librarian" aria-label="Next animation" style="flex:0 0 auto;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:transparent;border:none;border-radius:0;color:#f2f2f0;cursor:pointer;pointer-events:auto;">
                         <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L7 7L1 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
                       </button>
                     </div>
                   </div>
                   <span style="display:block;text-align:center;font-family:'Gabarito',sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;margin-top:auto;padding-top:10px;">Animated Final</span>
                 </div>
-              </sc-if>
-              <sc-if value="{{batch.row1.rightNoSpine}}" hint-placeholder-val="{{true}}">
-                <div style="display:flex;flex-direction:column;">
-                  <div data-gallery-zoom="" style="aspect-ratio:1/1;overflow:hidden;border-radius:8px;position:relative;">
-                    <image-slot id="{{batch.row1.rightFinalId}}" style="width:100%;height:100%;" shape="rect" fit="contain" placeholder="New animated final, full body"></image-slot>
-                  </div>
-                  <span style="display:block;text-align:center;font-family:'Gabarito',sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;margin-top:auto;padding-top:10px;">Animated Final</span>
-                </div>
-              </sc-if>
-            </div>
-          </div></div>
-        </div>
-        </div>
-        <sc-if value="{{batch.row1.showArrows}}" hint-placeholder-val="{{false}}">
-          <button aria-label="Previous character" onClick="{{batch.row1.prev}}" style="position:absolute;top:50%;left:4px;transform:translateY(-50%);width:36px;height:36px;border-radius:50%;background:#1c1c1f;border:1px solid rgba(255,255,255,0.16);color:#f2f2f0;font-size:1.2rem;line-height:1;cursor:pointer;z-index:2;display:flex;align-items:center;justify-content:center;">‹</button>
-          <button aria-label="Next character" onClick="{{batch.row1.next}}" style="position:absolute;top:50%;right:4px;transform:translateY(-50%);width:36px;height:36px;border-radius:50%;background:#1c1c1f;border:1px solid rgba(255,255,255,0.16);color:#f2f2f0;font-size:1.2rem;line-height:1;cursor:pointer;z-index:2;display:flex;align-items:center;justify-content:center;">›</button>
-        </sc-if>
-        </div>
-      </section>
-
-      <sc-if value="{{batch.showRow2}}" hint-placeholder-val="{{true}}">
-      <section aria-label="More assets" style="max-width:1240px;margin:0 auto;padding:0 32px 22px;">
-        <div style="position:relative;">
-        <div style="overflow:hidden;" onPointerDown="{{batch.row2.onDown}}" onPointerMove="{{batch.row2.onMove}}" onPointerUp="{{batch.row2.onUp}}" onPointerLeave="{{batch.row2.onUp}}">
-        <div style="{{batch.row2.trackStyle}}">
-          <div style="{{batch.row2.cardWrapStyle}}"><div style="background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:28px;">
-            <div style="display:grid;grid-template-columns:1fr 1.55fr;gap:18px;align-items:stretch;">
-              <div style="display:flex;flex-direction:column;">
-                <div style="margin-bottom:22px;">
-                  <h2 style="font-family:'Gabarito',sans-serif;font-weight:700;font-size:1.05rem;margin:0;letter-spacing:.01em;">{{batch.row2.leftName}}</h2>
-                  <span style="display: block; font-family: Gabarito; font-size: .68rem; letter-spacing: .06em; color: #7a7a7a; text-transform: uppercase; margin-top: 6px">{{batch.row2.leftProject}}</span>
-                </div>
-                <div data-gallery-zoom="" style="aspect-ratio:1/1;overflow:hidden;border-radius:8px;position:relative;">
-                  <image-slot id="{{batch.row2.leftSketchId}}" style="width:100%;height:100%;" shape="rect" fit="contain" placeholder="New sketch, full body"></image-slot>
-                </div>
-                <span style="display:block;text-align:center;font-family:'Gabarito',sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;margin-top:auto;padding-top:10px;">Sketch</span>
               </div>
-              <sc-if value="{{batch.row2.leftSpineKey}}" hint-placeholder-val="{{false}}">
-                <div style="display:flex;flex-direction:column;">
-                  <div style="flex:1;position:relative;width:100%;background:#141416;border-radius:8px;overflow:hidden;">
-                    <div class="spine-mount" data-spine-mount="{{batch.row2.leftSpineKey}}" style="position:absolute;inset:0;"></div>
-                    <div class="spine-anim-switcher" data-spine-switcher="{{batch.row2.leftSpineKey}}" style="position:absolute;inset:0;z-index:3;display:flex;align-items:center;justify-content:space-between;padding:0 10px;box-sizing:border-box;pointer-events:none;">
-                      <button type="button" class="spine-anim-prev" data-spine-prev="{{batch.row2.leftSpineKey}}" aria-label="Previous animation" style="flex:0 0 auto;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:transparent;border:none;border-radius:0;color:#f2f2f0;cursor:pointer;pointer-events:auto;">
-                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 1L1 7L7 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-                      </button>
-                      <span class="spine-anim-label" data-spine-label="{{batch.row2.leftSpineKey}}" style="display:none;"></span>
-                      <button type="button" class="spine-anim-next" data-spine-next="{{batch.row2.leftSpineKey}}" aria-label="Next animation" style="flex:0 0 auto;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:transparent;border:none;border-radius:0;color:#f2f2f0;cursor:pointer;pointer-events:auto;">
-                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L7 7L1 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-                      </button>
-                    </div>
-                  </div>
-                  <span style="display:block;text-align:center;font-family:'Gabarito',sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;margin-top:auto;padding-top:10px;">Animated Final</span>
-                </div>
-              </sc-if>
-              <sc-if value="{{batch.row2.leftNoSpine}}" hint-placeholder-val="{{true}}">
-                <div style="display:flex;flex-direction:column;">
-                  <div data-gallery-zoom="" style="aspect-ratio:1/1;overflow:hidden;border-radius:8px;position:relative;">
-                    <image-slot id="{{batch.row2.leftFinalId}}" style="width:100%;height:100%;" shape="rect" fit="contain" placeholder="New animated final, full body"></image-slot>
-                  </div>
-                  <span style="display:block;text-align:center;font-family:'Gabarito',sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;margin-top:auto;padding-top:10px;">Animated Final</span>
-                </div>
-              </sc-if>
             </div>
-          </div></div>
-          <div style="{{batch.row2.cardWrapStyle}}"><div style="background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:28px;">
-            <div style="display:grid;grid-template-columns:1fr 1.55fr;gap:18px;align-items:stretch;">
-              <div style="display:flex;flex-direction:column;">
-                <div style="margin-bottom:22px;">
-                  <h2 style="font-family:'Gabarito',sans-serif;font-weight:700;font-size:1.05rem;margin:0;letter-spacing:.01em;">{{batch.row2.rightName}}</h2>
-                  <span style="display: block; font-family: Gabarito; font-size: .68rem; letter-spacing: .06em; color: #7a7a7a; text-transform: uppercase; margin-top: 6px">{{batch.row2.rightProject}}</span>
-                </div>
-                <div data-gallery-zoom="" style="aspect-ratio:1/1;overflow:hidden;border-radius:8px;position:relative;">
-                  <image-slot id="{{batch.row2.rightSketchId}}" style="width:100%;height:100%;" shape="rect" fit="contain" placeholder="New sketch, full body"></image-slot>
-                </div>
-                <span style="display:block;text-align:center;font-family:'Gabarito',sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;margin-top:auto;padding-top:10px;">Sketch</span>
-              </div>
-              <sc-if value="{{batch.row2.rightSpineKey}}" hint-placeholder-val="{{false}}">
-                <div style="display:flex;flex-direction:column;">
-                  <div style="flex:1;position:relative;width:100%;background:#141416;border-radius:8px;overflow:hidden;">
-                    <div class="spine-mount" data-spine-mount="{{batch.row2.rightSpineKey}}" style="position:absolute;inset:0;"></div>
-                    <div class="spine-anim-switcher" data-spine-switcher="{{batch.row2.rightSpineKey}}" style="position:absolute;inset:0;z-index:3;display:flex;align-items:center;justify-content:space-between;padding:0 10px;box-sizing:border-box;pointer-events:none;">
-                      <button type="button" class="spine-anim-prev" data-spine-prev="{{batch.row2.rightSpineKey}}" aria-label="Previous animation" style="flex:0 0 auto;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:transparent;border:none;border-radius:0;color:#f2f2f0;cursor:pointer;pointer-events:auto;">
-                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 1L1 7L7 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-                      </button>
-                      <span class="spine-anim-label" data-spine-label="{{batch.row2.rightSpineKey}}" style="display:none;"></span>
-                      <button type="button" class="spine-anim-next" data-spine-next="{{batch.row2.rightSpineKey}}" aria-label="Next animation" style="flex:0 0 auto;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:transparent;border:none;border-radius:0;color:#f2f2f0;cursor:pointer;pointer-events:auto;">
-                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L7 7L1 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-                      </button>
-                    </div>
-                  </div>
-                  <span style="display:block;text-align:center;font-family:'Gabarito',sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;margin-top:auto;padding-top:10px;">Animated Final</span>
-                </div>
-              </sc-if>
-              <sc-if value="{{batch.row2.rightNoSpine}}" hint-placeholder-val="{{true}}">
-                <div style="display:flex;flex-direction:column;">
-                  <div data-gallery-zoom="" style="aspect-ratio:1/1;overflow:hidden;border-radius:8px;position:relative;">
-                    <image-slot id="{{batch.row2.rightFinalId}}" style="width:100%;height:100%;" shape="rect" fit="contain" placeholder="New animated final, full body"></image-slot>
-                  </div>
-                  <span style="display:block;text-align:center;font-family:'Gabarito',sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;margin-top:auto;padding-top:10px;">Animated Final</span>
-                </div>
-              </sc-if>
-            </div>
-          </div></div>
-        </div>
-        </div>
-        <sc-if value="{{batch.row2.showArrows}}" hint-placeholder-val="{{false}}">
-          <button aria-label="Previous character" onClick="{{batch.row2.prev}}" style="position:absolute;top:50%;left:4px;transform:translateY(-50%);width:36px;height:36px;border-radius:50%;background:#1c1c1f;border:1px solid rgba(255,255,255,0.16);color:#f2f2f0;font-size:1.2rem;line-height:1;cursor:pointer;z-index:2;display:flex;align-items:center;justify-content:center;">‹</button>
-          <button aria-label="Next character" onClick="{{batch.row2.next}}" style="position:absolute;top:50%;right:4px;transform:translateY(-50%);width:36px;height:36px;border-radius:50%;background:#1c1c1f;border:1px solid rgba(255,255,255,0.16);color:#f2f2f0;font-size:1.2rem;line-height:1;cursor:pointer;z-index:2;display:flex;align-items:center;justify-content:center;">›</button>
-        </sc-if>
-        </div>
-      </section>
-      </sc-if>
-
-      <sc-if value="{{batch.showLevel}}" hint-placeholder-val="{{true}}">
-      <section aria-label="More assets — landscape" style="max-width:1240px;margin:0 auto;padding:0 32px 22px;">
-        <div data-gallery-zoom="" style="background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:14px;overflow:hidden;position:relative;">
-          <div style="position:absolute;top:20px;left:20px;z-index:2;background:rgba(10,10,11,0.82);backdrop-filter:blur(6px);border-radius:8px;padding:12px 18px;">
-            <h2 style="font-family:'Gabarito',sans-serif;font-weight:700;font-size:1rem;margin:0;letter-spacing:.01em;">{{batch.levelName}}</h2>
-            <span style="display:block;font-family:'JetBrains Mono',monospace;font-size:.66rem;letter-spacing:.06em;color:#9b9b9b;text-transform:uppercase;margin-top:6px;">{{batch.levelProject}}</span>
           </div>
-          <sc-if value="{{batch.levelVideo}}" hint-placeholder-val="{{false}}">
-            <video src="{{batch.levelVideo}}" style="display:block;width:100%;height:auto;aspect-ratio:1168/618;object-fit:cover;" autoPlay="{{true}}" muted="{{true}}" loop="{{true}}" playsInline="{{true}}" preload="auto" ref="{{playVideo}}"></video>
-          </sc-if>
-          <sc-if value="{{batch.levelNoVideo}}" hint-placeholder-val="{{true}}">
-            <image-slot id="{{batch.levelId}}" style="width:100%;height:auto;aspect-ratio:1168/618;" shape="rect" fit="cover" placeholder="New level background, full scene"></image-slot>
-          </sc-if>
-        </div>
-      </section>
+        </section>
+        <section aria-label="More assets" style="max-width:1240px;margin:0 auto;padding:0 32px 22px;">
+          <div class="exyz-pairrow">
+            <div style="background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:28px;">
+              <div style="display:grid;grid-template-columns:1fr 1.55fr;gap:18px;align-items:stretch;">
+                <div style="display:flex;flex-direction:column;">
+                  <div style="margin-bottom:22px;">
+                    <h2 style="font-family:'Gabarito',sans-serif;font-weight:700;font-size:1.05rem;margin:0;letter-spacing:.01em;">Character: Mushroom Eye</h2>
+                    <span style="display: block; font-family: Gabarito; font-size: .68rem; letter-spacing: .06em; color: #7a7a7a; text-transform: uppercase; margin-top: 6px">Project: Shiba Story Go!</span>
+                  </div>
+                  <div data-gallery-zoom="" style="aspect-ratio:1/1;overflow:hidden;border-radius:8px;position:relative;">
+                    <image-slot id="extra-3-sketch" style="width:100%;height:100%;" shape="rect" fit="contain" placeholder="Mushroom Eye sketch, full body"></image-slot>
+                  </div>
+                  <span style="display:block;text-align:center;font-family:'Gabarito',sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;margin-top:auto;padding-top:10px;">Sketch</span>
+                </div>
+                <div style="display:flex;flex-direction:column;">
+                  <div style="flex:1;position:relative;width:100%;background:#141416;border-radius:8px;overflow:hidden;">
+                    <div class="spine-mount" data-spine-mount="mushroomeye" style="position:absolute;inset:0;"></div>
+                    <div class="spine-anim-switcher" data-spine-switcher="mushroomeye" style="position:absolute;inset:0;z-index:3;display:flex;align-items:center;justify-content:space-between;padding:0 10px;box-sizing:border-box;pointer-events:none;">
+                      <button type="button" class="spine-anim-prev" data-spine-prev="mushroomeye" aria-label="Previous animation" style="flex:0 0 auto;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:transparent;border:none;border-radius:0;color:#f2f2f0;cursor:pointer;pointer-events:auto;">
+                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 1L1 7L7 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                      </button>
+                      <span class="spine-anim-label" data-spine-label="mushroomeye" style="display:none;"></span>
+                      <button type="button" class="spine-anim-next" data-spine-next="mushroomeye" aria-label="Next animation" style="flex:0 0 auto;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:transparent;border:none;border-radius:0;color:#f2f2f0;cursor:pointer;pointer-events:auto;">
+                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L7 7L1 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                      </button>
+                    </div>
+                  </div>
+                  <span style="display:block;text-align:center;font-family:'Gabarito',sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;margin-top:auto;padding-top:10px;">Animated Final</span>
+                </div>
+              </div>
+            </div>
+            <div style="background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:28px;">
+              <div style="display:grid;grid-template-columns:1fr 1.55fr;gap:18px;align-items:stretch;">
+                <div style="display:flex;flex-direction:column;">
+                  <div style="margin-bottom:22px;">
+                    <h2 style="font-family:'Gabarito',sans-serif;font-weight:700;font-size:1.05rem;margin:0;letter-spacing:.01em;">Character: Turtle Crab</h2>
+                    <span style="display: block; font-family: Gabarito; font-size: .68rem; letter-spacing: .06em; color: #7a7a7a; text-transform: uppercase; margin-top: 6px">Project: Shiba Story Go!</span>
+                  </div>
+                  <div data-gallery-zoom="" style="aspect-ratio:1/1;overflow:hidden;border-radius:8px;position:relative;">
+                    <image-slot id="extra-4-sketch" style="width:100%;height:100%;" shape="rect" fit="contain" placeholder="Turtle Crab sketch, full body"></image-slot>
+                  </div>
+                  <span style="display:block;text-align:center;font-family:'Gabarito',sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;margin-top:auto;padding-top:10px;">Sketch</span>
+                </div>
+                <div style="display:flex;flex-direction:column;">
+                  <div style="flex:1;position:relative;width:100%;background:#141416;border-radius:8px;overflow:hidden;">
+                    <div class="spine-mount" data-spine-mount="turtlecrab" style="position:absolute;inset:0;"></div>
+                    <div class="spine-anim-switcher" data-spine-switcher="turtlecrab" style="position:absolute;inset:0;z-index:3;display:flex;align-items:center;justify-content:space-between;padding:0 10px;box-sizing:border-box;pointer-events:none;">
+                      <button type="button" class="spine-anim-prev" data-spine-prev="turtlecrab" aria-label="Previous animation" style="flex:0 0 auto;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:transparent;border:none;border-radius:0;color:#f2f2f0;cursor:pointer;pointer-events:auto;">
+                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 1L1 7L7 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                      </button>
+                      <span class="spine-anim-label" data-spine-label="turtlecrab" style="display:none;"></span>
+                      <button type="button" class="spine-anim-next" data-spine-next="turtlecrab" aria-label="Next animation" style="flex:0 0 auto;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:transparent;border:none;border-radius:0;color:#f2f2f0;cursor:pointer;pointer-events:auto;">
+                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L7 7L1 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                      </button>
+                    </div>
+                  </div>
+                  <span style="display:block;text-align:center;font-family:'Gabarito',sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;margin-top:auto;padding-top:10px;">Animated Final</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section aria-label="More assets — landscape" style="max-width:1240px;margin:0 auto;padding:0 32px 22px;">
+          <div data-gallery-zoom="" style="background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:14px;overflow:hidden;position:relative;">
+            <div style="position:absolute;top:20px;left:20px;z-index:2;background:rgba(10,10,11,0.82);backdrop-filter:blur(6px);border-radius:8px;padding:12px 18px;">
+              <h2 style="font-family:'Gabarito',sans-serif;font-weight:700;font-size:1rem;margin:0;letter-spacing:.01em;">Level: Skull Island</h2>
+              <span style="display:block;font-family:'JetBrains Mono',monospace;font-size:.66rem;letter-spacing:.06em;color:#9b9b9b;text-transform:uppercase;margin-top:6px;">Project: Shiba Story Go!</span>
+            </div>
+            <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/2d-assets/Skull_island_Location.mp4" style="display:block;width:100%;height:auto;aspect-ratio:1168/618;object-fit:cover;" autoPlay="{{true}}" muted="{{true}}" loop="{{true}}" playsInline="{{true}}" preload="metadata" aria-label="Level: Skull Island animated background" ref="{{playVideo}}"></video>
+          </div>
+        </section>
       </sc-if>
-    </sc-for>
+
+      <sc-if value="{{showBatch1}}" hint-placeholder-val="{{false}}">
+        <section aria-label="More assets" style="max-width:1240px;margin:0 auto;padding:0 32px 22px;">
+          <div class="exyz-pairrow">
+            <div style="background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:28px;">
+              <div style="display:grid;grid-template-columns:1fr 1.55fr;gap:18px;align-items:stretch;">
+                <div style="display:flex;flex-direction:column;">
+                  <div style="margin-bottom:22px;">
+                    <h2 style="font-family:'Gabarito',sans-serif;font-weight:700;font-size:1.05rem;margin:0;letter-spacing:.01em;">Character: Masked Mage</h2>
+                    <span style="display: block; font-family: Gabarito; font-size: .68rem; letter-spacing: .06em; color: #7a7a7a; text-transform: uppercase; margin-top: 6px">Project: Shiba Story Go!</span>
+                  </div>
+                  <div data-gallery-zoom="" style="aspect-ratio:1/1;overflow:hidden;border-radius:8px;position:relative;">
+                    <image-slot id="extra-5-sketch" style="width:100%;height:100%;" shape="rect" fit="contain" placeholder="Masked Mage sketch, full body"></image-slot>
+                  </div>
+                  <span style="display:block;text-align:center;font-family:'Gabarito',sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;margin-top:auto;padding-top:10px;">Sketch</span>
+                </div>
+                <div style="display:flex;flex-direction:column;">
+                  <div style="flex:1;position:relative;width:100%;background:#141416;border-radius:8px;overflow:hidden;">
+                    <div class="spine-mount" data-spine-mount="maskedmage" style="position:absolute;inset:0;"></div>
+                    <div class="spine-anim-switcher" data-spine-switcher="maskedmage" style="position:absolute;inset:0;z-index:3;display:flex;align-items:center;justify-content:space-between;padding:0 10px;box-sizing:border-box;pointer-events:none;">
+                      <button type="button" class="spine-anim-prev" data-spine-prev="maskedmage" aria-label="Previous animation" style="flex:0 0 auto;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:transparent;border:none;border-radius:0;color:#f2f2f0;cursor:pointer;pointer-events:auto;">
+                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 1L1 7L7 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                      </button>
+                      <span class="spine-anim-label" data-spine-label="maskedmage" style="display:none;"></span>
+                      <button type="button" class="spine-anim-next" data-spine-next="maskedmage" aria-label="Next animation" style="flex:0 0 auto;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:transparent;border:none;border-radius:0;color:#f2f2f0;cursor:pointer;pointer-events:auto;">
+                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L7 7L1 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                      </button>
+                    </div>
+                  </div>
+                  <span style="display:block;text-align:center;font-family:'Gabarito',sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;margin-top:auto;padding-top:10px;">Animated Final</span>
+                </div>
+              </div>
+            </div>
+            <div style="background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:28px;">
+              <div style="display:grid;grid-template-columns:1fr 1.55fr;gap:18px;align-items:stretch;">
+                <div style="display:flex;flex-direction:column;">
+                  <div style="margin-bottom:22px;">
+                    <h2 style="font-family:'Gabarito',sans-serif;font-weight:700;font-size:1.05rem;margin:0;letter-spacing:.01em;">Character: Naga Sword</h2>
+                    <span style="display: block; font-family: Gabarito; font-size: .68rem; letter-spacing: .06em; color: #7a7a7a; text-transform: uppercase; margin-top: 6px">Project: Shiba Story Go!</span>
+                  </div>
+                  <div data-gallery-zoom="" style="aspect-ratio:1/1;overflow:hidden;border-radius:8px;position:relative;">
+                    <image-slot id="extra-6-sketch" style="width:100%;height:100%;" shape="rect" fit="contain" placeholder="Naga Sword sketch, full body"></image-slot>
+                  </div>
+                  <span style="display:block;text-align:center;font-family:'Gabarito',sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;margin-top:auto;padding-top:10px;">Sketch</span>
+                </div>
+                <div style="display:flex;flex-direction:column;">
+                  <div style="flex:1;position:relative;width:100%;background:#141416;border-radius:8px;overflow:hidden;">
+                    <div class="spine-mount" data-spine-mount="nagasword" style="position:absolute;inset:0;"></div>
+                    <div class="spine-anim-switcher" data-spine-switcher="nagasword" style="position:absolute;inset:0;z-index:3;display:flex;align-items:center;justify-content:space-between;padding:0 10px;box-sizing:border-box;pointer-events:none;">
+                      <button type="button" class="spine-anim-prev" data-spine-prev="nagasword" aria-label="Previous animation" style="flex:0 0 auto;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:transparent;border:none;border-radius:0;color:#f2f2f0;cursor:pointer;pointer-events:auto;">
+                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 1L1 7L7 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                      </button>
+                      <span class="spine-anim-label" data-spine-label="nagasword" style="display:none;"></span>
+                      <button type="button" class="spine-anim-next" data-spine-next="nagasword" aria-label="Next animation" style="flex:0 0 auto;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:transparent;border:none;border-radius:0;color:#f2f2f0;cursor:pointer;pointer-events:auto;">
+                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L7 7L1 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                      </button>
+                    </div>
+                  </div>
+                  <span style="display:block;text-align:center;font-family:'Gabarito',sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;margin-top:auto;padding-top:10px;">Animated Final</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section aria-label="More assets" style="max-width:1240px;margin:0 auto;padding:0 32px 22px;">
+          <div class="exyz-pairrow">
+            <div style="background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:28px;">
+              <div style="display:grid;grid-template-columns:1fr 1.55fr;gap:18px;align-items:stretch;">
+                <div style="display:flex;flex-direction:column;">
+                  <div style="margin-bottom:22px;">
+                    <h2 style="font-family:'Gabarito',sans-serif;font-weight:700;font-size:1.05rem;margin:0;letter-spacing:.01em;">Character: Mole</h2>
+                    <span style="display: block; font-family: Gabarito; font-size: .68rem; letter-spacing: .06em; color: #7a7a7a; text-transform: uppercase; margin-top: 6px">Project: Shiba Story Go!</span>
+                  </div>
+                  <div data-gallery-zoom="" style="aspect-ratio:1/1;overflow:hidden;border-radius:8px;position:relative;">
+                    <image-slot id="extra-7-sketch" style="width:100%;height:100%;" shape="rect" fit="contain" placeholder="Mole sketch, full body"></image-slot>
+                  </div>
+                  <span style="display:block;text-align:center;font-family:'Gabarito',sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;margin-top:auto;padding-top:10px;">Sketch</span>
+                </div>
+                <div style="display:flex;flex-direction:column;">
+                  <div style="flex:1;position:relative;width:100%;background:#141416;border-radius:8px;overflow:hidden;">
+                    <div class="spine-mount" data-spine-mount="armadillo" style="position:absolute;inset:0;"></div>
+                    <div class="spine-anim-switcher" data-spine-switcher="armadillo" style="position:absolute;inset:0;z-index:3;display:flex;align-items:center;justify-content:space-between;padding:0 10px;box-sizing:border-box;pointer-events:none;">
+                      <button type="button" class="spine-anim-prev" data-spine-prev="armadillo" aria-label="Previous animation" style="flex:0 0 auto;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:transparent;border:none;border-radius:0;color:#f2f2f0;cursor:pointer;pointer-events:auto;">
+                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 1L1 7L7 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                      </button>
+                      <span class="spine-anim-label" data-spine-label="armadillo" style="display:none;"></span>
+                      <button type="button" class="spine-anim-next" data-spine-next="armadillo" aria-label="Next animation" style="flex:0 0 auto;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:transparent;border:none;border-radius:0;color:#f2f2f0;cursor:pointer;pointer-events:auto;">
+                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L7 7L1 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                      </button>
+                    </div>
+                  </div>
+                  <span style="display:block;text-align:center;font-family:'Gabarito',sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;margin-top:auto;padding-top:10px;">Animated Final</span>
+                </div>
+              </div>
+            </div>
+            <div style="background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:28px;">
+              <div style="display:grid;grid-template-columns:1fr 1.55fr;gap:18px;align-items:stretch;">
+                <div style="display:flex;flex-direction:column;">
+                  <div style="margin-bottom:22px;">
+                    <h2 style="font-family:'Gabarito',sans-serif;font-weight:700;font-size:1.05rem;margin:0;letter-spacing:.01em;">Character: Wraith</h2>
+                    <span style="display: block; font-family: Gabarito; font-size: .68rem; letter-spacing: .06em; color: #7a7a7a; text-transform: uppercase; margin-top: 6px">Project: Shiba Story Go!</span>
+                  </div>
+                  <div data-gallery-zoom="" style="aspect-ratio:1/1;overflow:hidden;border-radius:8px;position:relative;">
+                    <image-slot id="extra-8-sketch" style="width:100%;height:100%;" shape="rect" fit="contain" placeholder="Wraith sketch, full body"></image-slot>
+                  </div>
+                  <span style="display:block;text-align:center;font-family:'Gabarito',sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;margin-top:auto;padding-top:10px;">Sketch</span>
+                </div>
+                <div style="display:flex;flex-direction:column;">
+                  <div style="flex:1;position:relative;width:100%;background:#141416;border-radius:8px;overflow:hidden;">
+                    <div class="spine-mount" data-spine-mount="wraith" style="position:absolute;inset:0;"></div>
+                    <div class="spine-anim-switcher" data-spine-switcher="wraith" style="position:absolute;inset:0;z-index:3;display:flex;align-items:center;justify-content:space-between;padding:0 10px;box-sizing:border-box;pointer-events:none;">
+                      <button type="button" class="spine-anim-prev" data-spine-prev="wraith" aria-label="Previous animation" style="flex:0 0 auto;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:transparent;border:none;border-radius:0;color:#f2f2f0;cursor:pointer;pointer-events:auto;">
+                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 1L1 7L7 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                      </button>
+                      <span class="spine-anim-label" data-spine-label="wraith" style="display:none;"></span>
+                      <button type="button" class="spine-anim-next" data-spine-next="wraith" aria-label="Next animation" style="flex:0 0 auto;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:transparent;border:none;border-radius:0;color:#f2f2f0;cursor:pointer;pointer-events:auto;">
+                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L7 7L1 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                      </button>
+                    </div>
+                  </div>
+                  <span style="display:block;text-align:center;font-family:'Gabarito',sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;margin-top:auto;padding-top:10px;">Animated Final</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section aria-label="More assets — landscape" style="max-width:1240px;margin:0 auto;padding:0 32px 22px;">
+          <div data-gallery-zoom="" style="background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:14px;overflow:hidden;position:relative;">
+            <div style="position:absolute;top:20px;left:20px;z-index:2;background:rgba(10,10,11,0.82);backdrop-filter:blur(6px);border-radius:8px;padding:12px 18px;">
+              <h2 style="font-family:'Gabarito',sans-serif;font-weight:700;font-size:1rem;margin:0;letter-spacing:.01em;">Level: Dark Forest</h2>
+              <span style="display:block;font-family:'JetBrains Mono',monospace;font-size:.66rem;letter-spacing:.06em;color:#9b9b9b;text-transform:uppercase;margin-top:6px;">Project: Shiba Story Go!</span>
+            </div>
+            <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/2d-assets/DarkForest_Location.mp4" style="display:block;width:100%;height:auto;aspect-ratio:1168/618;object-fit:cover;" autoPlay="{{true}}" muted="{{true}}" loop="{{true}}" playsInline="{{true}}" preload="metadata" aria-label="Level: Dark Forest animated background" ref="{{playVideo}}"></video>
+          </div>
+        </section>
+      </sc-if>
+
+      <sc-if value="{{showBatch2}}" hint-placeholder-val="{{false}}">
+        <section aria-label="More assets" style="max-width:1240px;margin:0 auto;padding:0 32px 22px;">
+          <div class="exyz-pairrow">
+            <div style="background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:28px;">
+              <div style="display:grid;grid-template-columns:1fr 1.55fr;gap:18px;align-items:stretch;">
+                <div style="display:flex;flex-direction:column;">
+                  <div style="margin-bottom:22px;">
+                    <h2 style="font-family:'Gabarito',sans-serif;font-weight:700;font-size:1.05rem;margin:0;letter-spacing:.01em;">Character: T-Rex</h2>
+                    <span style="display: block; font-family: Gabarito; font-size: .68rem; letter-spacing: .06em; color: #7a7a7a; text-transform: uppercase; margin-top: 6px">Project: Shiba Story Go!</span>
+                  </div>
+                  <div data-gallery-zoom="" style="aspect-ratio:1/1;overflow:hidden;border-radius:8px;position:relative;">
+                    <image-slot id="extra-9-sketch" style="width:100%;height:100%;" shape="rect" fit="contain" placeholder="T-Rex sketch, full body"></image-slot>
+                  </div>
+                  <span style="display:block;text-align:center;font-family:'Gabarito',sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;margin-top:auto;padding-top:10px;">Sketch</span>
+                </div>
+                <div style="display:flex;flex-direction:column;">
+                  <div style="flex:1;position:relative;width:100%;background:#141416;border-radius:8px;overflow:hidden;">
+                    <div class="spine-mount" data-spine-mount="trex" style="position:absolute;inset:0;"></div>
+                    <div class="spine-anim-switcher" data-spine-switcher="trex" style="position:absolute;inset:0;z-index:3;display:flex;align-items:center;justify-content:space-between;padding:0 10px;box-sizing:border-box;pointer-events:none;">
+                      <button type="button" class="spine-anim-prev" data-spine-prev="trex" aria-label="Previous animation" style="flex:0 0 auto;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:transparent;border:none;border-radius:0;color:#f2f2f0;cursor:pointer;pointer-events:auto;">
+                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 1L1 7L7 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                      </button>
+                      <span class="spine-anim-label" data-spine-label="trex" style="display:none;"></span>
+                      <button type="button" class="spine-anim-next" data-spine-next="trex" aria-label="Next animation" style="flex:0 0 auto;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:transparent;border:none;border-radius:0;color:#f2f2f0;cursor:pointer;pointer-events:auto;">
+                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L7 7L1 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                      </button>
+                    </div>
+                  </div>
+                  <span style="display:block;text-align:center;font-family:'Gabarito',sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;margin-top:auto;padding-top:10px;">Animated Final</span>
+                </div>
+              </div>
+            </div>
+            <div style="background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:28px;">
+              <div style="display:grid;grid-template-columns:1fr 1.55fr;gap:18px;align-items:stretch;">
+                <div style="display:flex;flex-direction:column;">
+                  <div style="margin-bottom:22px;">
+                    <h2 style="font-family:'Gabarito',sans-serif;font-weight:700;font-size:1.05rem;margin:0;letter-spacing:.01em;">Character: Rooster</h2>
+                    <span style="display: block; font-family: Gabarito; font-size: .68rem; letter-spacing: .06em; color: #7a7a7a; text-transform: uppercase; margin-top: 6px">Project: Shiba Story Go!</span>
+                  </div>
+                  <div data-gallery-zoom="" style="aspect-ratio:1/1;overflow:hidden;border-radius:8px;position:relative;">
+                    <image-slot id="extra-10-sketch" style="width:100%;height:100%;" shape="rect" fit="contain" placeholder="Rooster sketch, full body"></image-slot>
+                  </div>
+                  <span style="display:block;text-align:center;font-family:'Gabarito',sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;margin-top:auto;padding-top:10px;">Sketch</span>
+                </div>
+                <div style="display:flex;flex-direction:column;">
+                  <div style="flex:1;position:relative;width:100%;background:#141416;border-radius:8px;overflow:hidden;">
+                    <div class="spine-mount" data-spine-mount="rooster" style="position:absolute;inset:0;"></div>
+                    <div class="spine-anim-switcher" data-spine-switcher="rooster" style="position:absolute;inset:0;z-index:3;display:flex;align-items:center;justify-content:space-between;padding:0 10px;box-sizing:border-box;pointer-events:none;">
+                      <button type="button" class="spine-anim-prev" data-spine-prev="rooster" aria-label="Previous animation" style="flex:0 0 auto;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:transparent;border:none;border-radius:0;color:#f2f2f0;cursor:pointer;pointer-events:auto;">
+                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 1L1 7L7 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                      </button>
+                      <span class="spine-anim-label" data-spine-label="rooster" style="display:none;"></span>
+                      <button type="button" class="spine-anim-next" data-spine-next="rooster" aria-label="Next animation" style="flex:0 0 auto;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:transparent;border:none;border-radius:0;color:#f2f2f0;cursor:pointer;pointer-events:auto;">
+                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L7 7L1 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                      </button>
+                    </div>
+                  </div>
+                  <span style="display:block;text-align:center;font-family:'Gabarito',sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;margin-top:auto;padding-top:10px;">Animated Final</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section aria-label="More assets" style="max-width:1240px;margin:0 auto;padding:0 32px 22px;">
+          <div class="exyz-pairrow">
+            <div style="background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:28px;">
+              <div style="display:grid;grid-template-columns:1fr 1.55fr;gap:18px;align-items:stretch;">
+                <div style="display:flex;flex-direction:column;">
+                  <div style="margin-bottom:22px;">
+                    <h2 style="font-family:'Gabarito',sans-serif;font-weight:700;font-size:1.05rem;margin:0;letter-spacing:.01em;">Character: Gargoyle</h2>
+                    <span style="display: block; font-family: Gabarito; font-size: .68rem; letter-spacing: .06em; color: #7a7a7a; text-transform: uppercase; margin-top: 6px">Project: Shiba Story Go!</span>
+                  </div>
+                  <div data-gallery-zoom="" style="aspect-ratio:1/1;overflow:hidden;border-radius:8px;position:relative;">
+                    <image-slot id="extra-11-sketch" style="width:100%;height:100%;" shape="rect" fit="contain" placeholder="Gargoyle sketch, full body"></image-slot>
+                  </div>
+                  <span style="display:block;text-align:center;font-family:'Gabarito',sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;margin-top:auto;padding-top:10px;">Sketch</span>
+                </div>
+                <div style="display:flex;flex-direction:column;">
+                  <div style="flex:1;position:relative;width:100%;background:#141416;border-radius:8px;overflow:hidden;">
+                    <div class="spine-mount" data-spine-mount="gargoyle" style="position:absolute;inset:0;"></div>
+                    <div class="spine-anim-switcher" data-spine-switcher="gargoyle" style="position:absolute;inset:0;z-index:3;display:flex;align-items:center;justify-content:space-between;padding:0 10px;box-sizing:border-box;pointer-events:none;">
+                      <button type="button" class="spine-anim-prev" data-spine-prev="gargoyle" aria-label="Previous animation" style="flex:0 0 auto;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:transparent;border:none;border-radius:0;color:#f2f2f0;cursor:pointer;pointer-events:auto;">
+                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 1L1 7L7 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                      </button>
+                      <span class="spine-anim-label" data-spine-label="gargoyle" style="display:none;"></span>
+                      <button type="button" class="spine-anim-next" data-spine-next="gargoyle" aria-label="Next animation" style="flex:0 0 auto;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:transparent;border:none;border-radius:0;color:#f2f2f0;cursor:pointer;pointer-events:auto;">
+                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L7 7L1 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                      </button>
+                    </div>
+                  </div>
+                  <span style="display:block;text-align:center;font-family:'Gabarito',sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;margin-top:auto;padding-top:10px;">Animated Final</span>
+                </div>
+              </div>
+            </div>
+            <div style="background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:28px;">
+              <div style="display:grid;grid-template-columns:1fr 1.55fr;gap:18px;align-items:stretch;">
+                <div style="display:flex;flex-direction:column;">
+                  <div style="margin-bottom:22px;">
+                    <h2 style="font-family:'Gabarito',sans-serif;font-weight:700;font-size:1.05rem;margin:0;letter-spacing:.01em;">Character: Mechanical Golem</h2>
+                    <span style="display: block; font-family: Gabarito; font-size: .68rem; letter-spacing: .06em; color: #7a7a7a; text-transform: uppercase; margin-top: 6px">Project: Shiba Story Go!</span>
+                  </div>
+                  <div data-gallery-zoom="" style="aspect-ratio:1/1;overflow:hidden;border-radius:8px;position:relative;">
+                    <image-slot id="extra-12-sketch" style="width:100%;height:100%;" shape="rect" fit="contain" placeholder="Mechanical Golem sketch, full body"></image-slot>
+                  </div>
+                  <span style="display:block;text-align:center;font-family:'Gabarito',sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;margin-top:auto;padding-top:10px;">Sketch</span>
+                </div>
+                <div style="display:flex;flex-direction:column;">
+                  <div style="flex:1;position:relative;width:100%;background:#141416;border-radius:8px;overflow:hidden;">
+                    <div class="spine-mount" data-spine-mount="mechgolem" style="position:absolute;inset:0;"></div>
+                    <div class="spine-anim-switcher" data-spine-switcher="mechgolem" style="position:absolute;inset:0;z-index:3;display:flex;align-items:center;justify-content:space-between;padding:0 10px;box-sizing:border-box;pointer-events:none;">
+                      <button type="button" class="spine-anim-prev" data-spine-prev="mechgolem" aria-label="Previous animation" style="flex:0 0 auto;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:transparent;border:none;border-radius:0;color:#f2f2f0;cursor:pointer;pointer-events:auto;">
+                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 1L1 7L7 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                      </button>
+                      <span class="spine-anim-label" data-spine-label="mechgolem" style="display:none;"></span>
+                      <button type="button" class="spine-anim-next" data-spine-next="mechgolem" aria-label="Next animation" style="flex:0 0 auto;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:transparent;border:none;border-radius:0;color:#f2f2f0;cursor:pointer;pointer-events:auto;">
+                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L7 7L1 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                      </button>
+                    </div>
+                  </div>
+                  <span style="display:block;text-align:center;font-family:'Gabarito',sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;margin-top:auto;padding-top:10px;">Animated Final</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section aria-label="More assets — landscape" style="max-width:1240px;margin:0 auto;padding:0 32px 22px;">
+          <div data-gallery-zoom="" style="background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:14px;overflow:hidden;position:relative;">
+            <div style="position:absolute;top:20px;left:20px;z-index:2;background:rgba(10,10,11,0.82);backdrop-filter:blur(6px);border-radius:8px;padding:12px 18px;">
+              <h2 style="font-family:'Gabarito',sans-serif;font-weight:700;font-size:1rem;margin:0;letter-spacing:.01em;">Level: Lava Land</h2>
+              <span style="display:block;font-family:'JetBrains Mono',monospace;font-size:.66rem;letter-spacing:.06em;color:#9b9b9b;text-transform:uppercase;margin-top:6px;">Project: Shiba Story Go!</span>
+            </div>
+            <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/LavaLand_Location.mp4" style="display:block;width:100%;height:auto;aspect-ratio:1168/618;object-fit:cover;" autoPlay="{{true}}" muted="{{true}}" loop="{{true}}" playsInline="{{true}}" preload="metadata" aria-label="Level: Lava Land animated background" ref="{{playVideo}}"></video>
+          </div>
+        </section>
+      </sc-if>
+
+      <sc-if value="{{showBatch3}}" hint-placeholder-val="{{false}}">
+        <section aria-label="More assets" style="max-width:1240px;margin:0 auto;padding:0 32px 22px;">
+          <div class="exyz-pairrow">
+            <div style="background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:28px;">
+              <div style="display:grid;grid-template-columns:1fr 1.55fr;gap:18px;align-items:stretch;">
+                <div style="display:flex;flex-direction:column;">
+                  <div style="margin-bottom:22px;">
+                    <h2 style="font-family:'Gabarito',sans-serif;font-weight:700;font-size:1.05rem;margin:0;letter-spacing:.01em;">Character: Frog Bard</h2>
+                    <span style="display: block; font-family: Gabarito; font-size: .68rem; letter-spacing: .06em; color: #7a7a7a; text-transform: uppercase; margin-top: 6px">Project: Shiba Story Go!</span>
+                  </div>
+                  <div data-gallery-zoom="" style="aspect-ratio:1/1;overflow:hidden;border-radius:8px;position:relative;">
+                    <image-slot id="extra-13-sketch" style="width:100%;height:100%;" shape="rect" fit="contain" placeholder="Frog Bard sketch, full body"></image-slot>
+                  </div>
+                  <span style="display:block;text-align:center;font-family:'Gabarito',sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;margin-top:auto;padding-top:10px;">Sketch</span>
+                </div>
+                <div style="display:flex;flex-direction:column;">
+                  <div style="flex:1;position:relative;width:100%;background:#141416;border-radius:8px;overflow:hidden;">
+                    <div class="spine-mount" data-spine-mount="frogbard" style="position:absolute;inset:0;"></div>
+                    <div class="spine-anim-switcher" data-spine-switcher="frogbard" style="position:absolute;inset:0;z-index:3;display:flex;align-items:center;justify-content:space-between;padding:0 10px;box-sizing:border-box;pointer-events:none;">
+                      <button type="button" class="spine-anim-prev" data-spine-prev="frogbard" aria-label="Previous animation" style="flex:0 0 auto;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:transparent;border:none;border-radius:0;color:#f2f2f0;cursor:pointer;pointer-events:auto;">
+                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 1L1 7L7 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                      </button>
+                      <span class="spine-anim-label" data-spine-label="frogbard" style="display:none;"></span>
+                      <button type="button" class="spine-anim-next" data-spine-next="frogbard" aria-label="Next animation" style="flex:0 0 auto;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:transparent;border:none;border-radius:0;color:#f2f2f0;cursor:pointer;pointer-events:auto;">
+                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L7 7L1 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                      </button>
+                    </div>
+                  </div>
+                  <span style="display:block;text-align:center;font-family:'Gabarito',sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;margin-top:auto;padding-top:10px;">Animated Final</span>
+                </div>
+              </div>
+            </div>
+            <div style="background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:28px;">
+              <div style="display:grid;grid-template-columns:1fr 1.55fr;gap:18px;align-items:stretch;">
+                <div style="display:flex;flex-direction:column;">
+                  <div style="margin-bottom:22px;">
+                    <h2 style="font-family:'Gabarito',sans-serif;font-weight:700;font-size:1.05rem;margin:0;letter-spacing:.01em;">Character: Boss Plant</h2>
+                    <span style="display: block; font-family: Gabarito; font-size: .68rem; letter-spacing: .06em; color: #7a7a7a; text-transform: uppercase; margin-top: 6px">Project: Shiba Story Go!</span>
+                  </div>
+                  <div data-gallery-zoom="" style="aspect-ratio:1/1;overflow:hidden;border-radius:8px;position:relative;">
+                    <image-slot id="extra-14-sketch" style="width:100%;height:100%;" shape="rect" fit="contain" placeholder="Boss Plant sketch, full body"></image-slot>
+                  </div>
+                  <span style="display:block;text-align:center;font-family:'Gabarito',sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;margin-top:auto;padding-top:10px;">Sketch</span>
+                </div>
+                <div style="display:flex;flex-direction:column;">
+                  <div style="flex:1;position:relative;width:100%;background:#141416;border-radius:8px;overflow:hidden;">
+                    <div class="spine-mount" data-spine-mount="bossplant" style="position:absolute;inset:0;"></div>
+                    <div class="spine-anim-switcher" data-spine-switcher="bossplant" style="position:absolute;inset:0;z-index:3;display:flex;align-items:center;justify-content:space-between;padding:0 10px;box-sizing:border-box;pointer-events:none;">
+                      <button type="button" class="spine-anim-prev" data-spine-prev="bossplant" aria-label="Previous animation" style="flex:0 0 auto;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:transparent;border:none;border-radius:0;color:#f2f2f0;cursor:pointer;pointer-events:auto;">
+                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 1L1 7L7 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                      </button>
+                      <span class="spine-anim-label" data-spine-label="bossplant" style="display:none;"></span>
+                      <button type="button" class="spine-anim-next" data-spine-next="bossplant" aria-label="Next animation" style="flex:0 0 auto;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:transparent;border:none;border-radius:0;color:#f2f2f0;cursor:pointer;pointer-events:auto;">
+                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L7 7L1 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                      </button>
+                    </div>
+                  </div>
+                  <span style="display:block;text-align:center;font-family:'Gabarito',sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;margin-top:auto;padding-top:10px;">Animated Final</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section aria-label="More assets" style="max-width:1240px;margin:0 auto;padding:0 32px 22px;">
+          <div class="exyz-pairrow">
+            <div style="background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:28px;">
+              <div style="display:grid;grid-template-columns:1fr 1.55fr;gap:18px;align-items:stretch;">
+                <div style="display:flex;flex-direction:column;">
+                  <div style="margin-bottom:22px;">
+                    <h2 style="font-family:'Gabarito',sans-serif;font-weight:700;font-size:1.05rem;margin:0;letter-spacing:.01em;">Character: King of the Crow</h2>
+                    <span style="display: block; font-family: Gabarito; font-size: .68rem; letter-spacing: .06em; color: #7a7a7a; text-transform: uppercase; margin-top: 6px">Project: Shiba Story Go!</span>
+                  </div>
+                  <div data-gallery-zoom="" style="aspect-ratio:1/1;overflow:hidden;border-radius:8px;position:relative;">
+                    <image-slot id="extra-15-sketch" style="width:100%;height:100%;" shape="rect" fit="contain" placeholder="King of the Crow sketch, full body"></image-slot>
+                  </div>
+                  <span style="display:block;text-align:center;font-family:'Gabarito',sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;margin-top:auto;padding-top:10px;">Sketch</span>
+                </div>
+                <div style="display:flex;flex-direction:column;">
+                  <div style="flex:1;position:relative;width:100%;background:#141416;border-radius:8px;overflow:hidden;">
+                    <div class="spine-mount" data-spine-mount="kingcrow" style="position:absolute;inset:0;"></div>
+                    <div class="spine-anim-switcher" data-spine-switcher="kingcrow" style="position:absolute;inset:0;z-index:3;display:flex;align-items:center;justify-content:space-between;padding:0 10px;box-sizing:border-box;pointer-events:none;">
+                      <button type="button" class="spine-anim-prev" data-spine-prev="kingcrow" aria-label="Previous animation" style="flex:0 0 auto;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:transparent;border:none;border-radius:0;color:#f2f2f0;cursor:pointer;pointer-events:auto;">
+                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 1L1 7L7 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                      </button>
+                      <span class="spine-anim-label" data-spine-label="kingcrow" style="display:none;"></span>
+                      <button type="button" class="spine-anim-next" data-spine-next="kingcrow" aria-label="Next animation" style="flex:0 0 auto;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:transparent;border:none;border-radius:0;color:#f2f2f0;cursor:pointer;pointer-events:auto;">
+                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L7 7L1 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                      </button>
+                    </div>
+                  </div>
+                  <span style="display:block;text-align:center;font-family:'Gabarito',sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;margin-top:auto;padding-top:10px;">Animated Final</span>
+                </div>
+              </div>
+            </div>
+            <div style="background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:28px;">
+              <div style="display:grid;grid-template-columns:1fr 1.55fr;gap:18px;align-items:stretch;">
+                <div style="display:flex;flex-direction:column;">
+                  <div style="margin-bottom:22px;">
+                    <h2 style="font-family:'Gabarito',sans-serif;font-weight:700;font-size:1.05rem;margin:0;letter-spacing:.01em;">Character: Lava Elemental</h2>
+                    <span style="display: block; font-family: Gabarito; font-size: .68rem; letter-spacing: .06em; color: #7a7a7a; text-transform: uppercase; margin-top: 6px">Project: Shiba Story Go!</span>
+                  </div>
+                  <div data-gallery-zoom="" style="aspect-ratio:1/1;overflow:hidden;border-radius:8px;position:relative;">
+                    <image-slot id="extra-16-sketch" style="width:100%;height:100%;" shape="rect" fit="contain" placeholder="Lava Elemental sketch, full body"></image-slot>
+                  </div>
+                  <span style="display:block;text-align:center;font-family:'Gabarito',sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;margin-top:auto;padding-top:10px;">Sketch</span>
+                </div>
+                <div style="display:flex;flex-direction:column;">
+                  <div style="flex:1;position:relative;width:100%;background:#141416;border-radius:8px;overflow:hidden;">
+                    <div class="spine-mount" data-spine-mount="lavaelemental" style="position:absolute;inset:0;"></div>
+                    <div class="spine-anim-switcher" data-spine-switcher="lavaelemental" style="position:absolute;inset:0;z-index:3;display:flex;align-items:center;justify-content:space-between;padding:0 10px;box-sizing:border-box;pointer-events:none;">
+                      <button type="button" class="spine-anim-prev" data-spine-prev="lavaelemental" aria-label="Previous animation" style="flex:0 0 auto;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:transparent;border:none;border-radius:0;color:#f2f2f0;cursor:pointer;pointer-events:auto;">
+                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 1L1 7L7 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                      </button>
+                      <span class="spine-anim-label" data-spine-label="lavaelemental" style="display:none;"></span>
+                      <button type="button" class="spine-anim-next" data-spine-next="lavaelemental" aria-label="Next animation" style="flex:0 0 auto;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:transparent;border:none;border-radius:0;color:#f2f2f0;cursor:pointer;pointer-events:auto;">
+                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L7 7L1 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                      </button>
+                    </div>
+                  </div>
+                  <span style="display:block;text-align:center;font-family:'Gabarito',sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;margin-top:auto;padding-top:10px;">Animated Final</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section aria-label="More assets — landscape" style="max-width:1240px;margin:0 auto;padding:0 32px 22px;">
+          <div data-gallery-zoom="" style="background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:14px;overflow:hidden;position:relative;">
+            <div style="position:absolute;top:20px;left:20px;z-index:2;background:rgba(10,10,11,0.82);backdrop-filter:blur(6px);border-radius:8px;padding:12px 18px;">
+              <h2 style="font-family:'Gabarito',sans-serif;font-weight:700;font-size:1rem;margin:0;letter-spacing:.01em;">Level: Winter</h2>
+              <span style="display:block;font-family:'JetBrains Mono',monospace;font-size:.66rem;letter-spacing:.06em;color:#9b9b9b;text-transform:uppercase;margin-top:6px;">Project: Shiba Story Go!</span>
+            </div>
+            <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/Winter_Location.mp4" style="display:block;width:100%;height:auto;aspect-ratio:1168/618;object-fit:cover;" autoPlay="{{true}}" muted="{{true}}" loop="{{true}}" playsInline="{{true}}" preload="metadata" aria-label="Level: Winter animated background" ref="{{playVideo}}"></video>
+          </div>
+        </section>
+      </sc-if>
+
+      <sc-if value="{{showBatch4}}" hint-placeholder-val="{{false}}">
+        <section aria-label="More assets" style="max-width:1240px;margin:0 auto;padding:0 32px 22px;">
+          <div class="exyz-pairrow">
+            <div style="background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:28px;">
+              <div style="display:grid;grid-template-columns:1fr 1.55fr;gap:18px;align-items:stretch;">
+                <div style="display:flex;flex-direction:column;">
+                  <div style="margin-bottom:22px;">
+                    <h2 style="font-family:'Gabarito',sans-serif;font-weight:700;font-size:1.05rem;margin:0;letter-spacing:.01em;">Character: Unicorn</h2>
+                    <span style="display: block; font-family: Gabarito; font-size: .68rem; letter-spacing: .06em; color: #7a7a7a; text-transform: uppercase; margin-top: 6px">Project: Shiba Story Go!</span>
+                  </div>
+                  <div data-gallery-zoom="" style="aspect-ratio:1/1;overflow:hidden;border-radius:8px;position:relative;">
+                    <image-slot id="extra-17-sketch" style="width:100%;height:100%;" shape="rect" fit="contain" placeholder="Unicorn sketch, full body"></image-slot>
+                  </div>
+                  <span style="display:block;text-align:center;font-family:'Gabarito',sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;margin-top:auto;padding-top:10px;">Sketch</span>
+                </div>
+                <div style="display:flex;flex-direction:column;">
+                  <div style="flex:1;position:relative;width:100%;background:#141416;border-radius:8px;overflow:hidden;">
+                    <div class="spine-mount" data-spine-mount="unicorn" style="position:absolute;inset:0;"></div>
+                    <div class="spine-anim-switcher" data-spine-switcher="unicorn" style="position:absolute;inset:0;z-index:3;display:flex;align-items:center;justify-content:space-between;padding:0 10px;box-sizing:border-box;pointer-events:none;">
+                      <button type="button" class="spine-anim-prev" data-spine-prev="unicorn" aria-label="Previous animation" style="flex:0 0 auto;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:transparent;border:none;border-radius:0;color:#f2f2f0;cursor:pointer;pointer-events:auto;">
+                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 1L1 7L7 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                      </button>
+                      <span class="spine-anim-label" data-spine-label="unicorn" style="display:none;"></span>
+                      <button type="button" class="spine-anim-next" data-spine-next="unicorn" aria-label="Next animation" style="flex:0 0 auto;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:transparent;border:none;border-radius:0;color:#f2f2f0;cursor:pointer;pointer-events:auto;">
+                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L7 7L1 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                      </button>
+                    </div>
+                  </div>
+                  <span style="display:block;text-align:center;font-family:'Gabarito',sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;margin-top:auto;padding-top:10px;">Animated Final</span>
+                </div>
+              </div>
+            </div>
+            <div style="background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:28px;">
+              <div style="display:grid;grid-template-columns:1fr 1.55fr;gap:18px;align-items:stretch;">
+                <div style="display:flex;flex-direction:column;">
+                  <div style="margin-bottom:22px;">
+                    <h2 style="font-family:'Gabarito',sans-serif;font-weight:700;font-size:1.05rem;margin:0;letter-spacing:.01em;">Character: NPC Trader</h2>
+                    <span style="display: block; font-family: Gabarito; font-size: .68rem; letter-spacing: .06em; color: #7a7a7a; text-transform: uppercase; margin-top: 6px">Project: Shiba Story Go!</span>
+                  </div>
+                  <div data-gallery-zoom="" style="aspect-ratio:1/1;overflow:hidden;border-radius:8px;position:relative;">
+                    <image-slot id="extra-18-sketch" style="width:100%;height:100%;" shape="rect" fit="contain" placeholder="NPC Trader sketch, full body"></image-slot>
+                  </div>
+                  <span style="display:block;text-align:center;font-family:'Gabarito',sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;margin-top:auto;padding-top:10px;">Sketch</span>
+                </div>
+                <div style="display:flex;flex-direction:column;">
+                  <div style="flex:1;position:relative;width:100%;background:#141416;border-radius:8px;overflow:hidden;">
+                    <div class="spine-mount" data-spine-mount="npctrader" style="position:absolute;inset:0;"></div>
+                    <div class="spine-anim-switcher" data-spine-switcher="npctrader" style="position:absolute;inset:0;z-index:3;display:flex;align-items:center;justify-content:space-between;padding:0 10px;box-sizing:border-box;pointer-events:none;">
+                      <button type="button" class="spine-anim-prev" data-spine-prev="npctrader" aria-label="Previous animation" style="flex:0 0 auto;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:transparent;border:none;border-radius:0;color:#f2f2f0;cursor:pointer;pointer-events:auto;">
+                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 1L1 7L7 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                      </button>
+                      <span class="spine-anim-label" data-spine-label="npctrader" style="display:none;"></span>
+                      <button type="button" class="spine-anim-next" data-spine-next="npctrader" aria-label="Next animation" style="flex:0 0 auto;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:transparent;border:none;border-radius:0;color:#f2f2f0;cursor:pointer;pointer-events:auto;">
+                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L7 7L1 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                      </button>
+                    </div>
+                  </div>
+                  <span style="display:block;text-align:center;font-family:'Gabarito',sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;margin-top:auto;padding-top:10px;">Animated Final</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </sc-if>
+
+
+    <section aria-labelledby="seo-ap-h" style="max-width:1240px;margin:0 auto;padding:26px 32px 40px;">
+      <div style="border-top:1px solid rgba(255,255,255,0.08);padding-top:48px;">
+        <h2 id="seo-ap-h" style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.4rem;margin:0 0 18px;">Game asset outsourcing without the style drift</h2>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px;color:#9b9b9b;font-size:.95rem;">
+          <p style="margin:0;">EXYZ.Studio is a 2D game art studio producing concept art, character design, level backgrounds, and UI for mobile games. We work as an outsourced art department: from the first sketch to production-ready, engine-friendly files, keeping a single consistent art style across hundreds of assets.</p>
+          <p style="margin:0;">Our Spine animation team rigs and animates every character we design — idle, attack, hit, and custom sequences — delivered as Spine projects with atlases ready for Unity, Unreal, or your custom pipeline. The animated characters on this page are live Spine previews, not videos.</p>
+          <p style="margin:0;">Studios choose us for full-cycle asset production on titles like Shiba Story Go!, where we shipped 60+ characters, bosses, and levels on a weekly cadence. If you need reliable game art outsourcing that scales with your roadmap, start a project and we'll scope the first batch together.</p>
+        </div>
+      </div>
+    </section>
 
     <sc-if value="{{showLoadMore}}" hint-placeholder-val="{{true}}">
     <section aria-label="Load more" style="max-width:1240px;margin:0 auto;padding:0 32px 64px;display:flex;justify-content:center;">
@@ -440,17 +878,17 @@ image-slot::part(frame){ background:#141416 !important; }
     <div style="max-width:1240px;margin:0 auto;padding:0 32px;">
       <div style="display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;margin-bottom:56px;">
         <div style="max-width:320px;">
-          <div style="display:flex;align-items:center;gap:8px;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.05rem;letter-spacing:-0.01em;margin-bottom:14px;"><img src="exyz-logo.png" alt="" style="width:24px;height:24px;display:block;" />EXYZ.STUDIO</div>
+          <div style="display:flex;align-items:center;gap:8px;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.05rem;letter-spacing:-0.01em;margin-bottom:14px;"><img src="exyz-logo.png" alt="EXYZ.Studio" style="width:24px;height:24px;display:block;" />EXYZ.STUDIO</div>
           <p style="font-size:.9rem;color:#8a8a8a;font-family:'JetBrains Mono',monospace;line-height:1.6;">Premium game art production for studios worldwide. Characters, environments, weapons, and beyond.</p>
         </div>
         <div>
           <h4 style="font-family:'JetBrains Mono',monospace;letter-spacing:0.04em;text-transform:uppercase;font-size:.78rem;color:#8a8a8a;margin-bottom:16px;">Services</h4>
-          <a href="asset-production.dc.html" class="exyz-foot-link" style="display:block;color:#c7c7c7;font-size:.88rem;padding:5px 0;text-decoration:none;">Asset Production</a>
-          <a href="video-creatives.dc.html" class="exyz-foot-link" style="display:block;color:#c7c7c7;font-size:.88rem;padding:5px 0;text-decoration:none;">Video Creatives</a>
+          <a href="/asset-production" class="exyz-foot-link" style="display:block;color:#c7c7c7;font-size:.88rem;padding:5px 0;text-decoration:none;">Asset Production</a>
+          <a href="/video-creatives" class="exyz-foot-link" style="display:block;color:#c7c7c7;font-size:.88rem;padding:5px 0;text-decoration:none;">Video Creatives</a>
         </div>
         <div>
           <h4 style="font-family:'JetBrains Mono',monospace;letter-spacing:0.04em;text-transform:uppercase;font-size:.78rem;color:#8a8a8a;margin-bottom:16px;">Company</h4>
-          <a href="contact.dc.html" class="exyz-foot-link" style="display:block;color:#c7c7c7;font-size:.88rem;padding:5px 0;text-decoration:none;">Contact</a>
+          <a href="/contact" class="exyz-foot-link" style="display:block;color:#c7c7c7;font-size:.88rem;padding:5px 0;text-decoration:none;">Contact</a>
         </div>
         <div>
           <h4 style="font-family:'JetBrains Mono',monospace;letter-spacing:0.04em;text-transform:uppercase;font-size:.78rem;color:#8a8a8a;margin-bottom:16px;">Social</h4>
@@ -468,133 +906,23 @@ image-slot::part(frame){ background:#141416 !important; }
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
-  tags = ['Concept Art', 'Character Design', 'Levels', '2D Spine Animations'];
-
-  state = {
-    extraCount: 0,
-    mobileRow: (typeof window !== 'undefined' && window.innerWidth < 700),
-    rowFlip: {},
-    rowDrag: {}
-  };
-
-  onRowResize = () => {
-    const mobile = window.innerWidth < 700;
-    if (mobile !== this.state.mobileRow) this.setState({ mobileRow: mobile, rowFlip: {} });
-  };
-
-  goToRow(key, i) {
-    const idx = Math.min(Math.max(i, 0), 1);
-    this.setState(s => ({ rowFlip: { ...s.rowFlip, [key]: idx } }));
-  }
-  prevRow = (key) => () => this.goToRow(key, (this.state.rowFlip[key] || 0) - 1);
-  nextRow = (key) => () => this.goToRow(key, (this.state.rowFlip[key] || 0) + 1);
-
-  onRowDown = (key) => (e) => {
-    const x = e.touches ? e.touches[0].clientX : e.clientX;
-    this.setState(s => ({ rowDrag: { ...s.rowDrag, [key]: { dragging: true, startX: x, dx: 0 } } }));
-  };
-  onRowMove = (key) => (e) => {
-    const d = this.state.rowDrag[key];
-    if (!d || !d.dragging) return;
-    const x = e.touches ? e.touches[0].clientX : e.clientX;
-    this.setState(s => ({ rowDrag: { ...s.rowDrag, [key]: { ...d, dx: x - d.startX } } }));
-  };
-  onRowUp = (key) => () => {
-    const d = this.state.rowDrag[key];
-    if (!d || !d.dragging) return;
-    const dx = d.dx;
-    this.setState(s => ({ rowDrag: { ...s.rowDrag, [key]: { dragging: false, startX: 0, dx: 0 } } }));
-    if (dx < -50) this.goToRow(key, (this.state.rowFlip[key] || 0) + 1);
-    else if (dx > 50) this.goToRow(key, (this.state.rowFlip[key] || 0) - 1);
-  };
-
-  makeRowNav(key) {
-    const mobile = this.state.mobileRow;
-    return {
-      showArrows: false,
-      cardWrapStyle: { flex: mobile ? '0 0 100%' : '0 0 calc(50% - 11px)', minWidth: 0, boxSizing: 'border-box' },
-      trackStyle: mobile
-        ? { display: 'flex', flexDirection: 'column', gap: '22px' }
-        : { display: 'flex', gap: '22px' },
-      prev: this.prevRow(key),
-      next: this.nextRow(key),
-      onDown: () => {},
-      onMove: () => {},
-      onUp: () => {}
-    };
-  }
-
-  shibaSkinDefs = [
-    { name: 'Default Skin', ph: 'Shiba default skin, full body' },
-    { name: 'Sheep Skin', ph: 'Shiba sheep skin, full body' },
-    { name: 'Raincoat Skin', ph: 'Shiba raincoat skin, full body' },
-    { name: 'Cowboy Skin', ph: 'Shiba cowboy skin, full body' },
-    { name: 'Dark Mage Skin', ph: 'Shiba dark mage skin, full body' },
-    { name: 'Dragon Skin', ph: 'Shiba dragon skin, full body' }
-  ];
-
-  makeRow(groupIdx, rowIdx) {
-    const leftIdx = groupIdx * 4 + rowIdx * 2 + 1;
-    const rightIdx = leftIdx + 1;
-    const leftSpineKey = leftIdx === 1 ? 'prince' : (leftIdx === 3 ? 'mushroomeye' : (leftIdx === 5 ? 'maskedmage' : (leftIdx === 7 ? 'armadillo' : (leftIdx === 9 ? 'trex' : (leftIdx === 11 ? 'gargoyle' : (leftIdx === 13 ? 'frogbard' : (leftIdx === 15 ? 'kingcrow' : (leftIdx === 17 ? 'unicorn' : null))))))));
-    const rightSpineKey = rightIdx === 4 ? 'turtlecrab' : (rightIdx === 2 ? 'librarian' : (rightIdx === 6 ? 'nagasword' : (rightIdx === 8 ? 'wraith' : (rightIdx === 10 ? 'rooster' : (rightIdx === 12 ? 'mechgolem' : (rightIdx === 14 ? 'bossplant' : (rightIdx === 16 ? 'lavaelemental' : (rightIdx === 18 ? 'npctrader' : null))))))));
-    return {
-      leftName: 'Character: ' + (leftSpineKey === 'prince' ? 'Prince' : leftSpineKey === 'mushroomeye' ? 'Mushroom Eye' : leftSpineKey === 'maskedmage' ? 'Masked Mage' : leftSpineKey === 'armadillo' ? 'Mole' : leftSpineKey === 'trex' ? 'T-Rex' : leftSpineKey === 'gargoyle' ? 'Gargoyle' : leftSpineKey === 'frogbard' ? 'Frog Bard' : leftSpineKey === 'kingcrow' ? 'King of the Crow' : leftSpineKey === 'unicorn' ? 'Unicorn' : 'New Asset ' + leftIdx),
-      leftProject: 'Project: Shiba Story Go!',
-      leftSketchId: 'extra-' + leftIdx + '-sketch',
-      leftFinalId: 'extra-' + leftIdx + '-final',
-      leftSpineKey: leftSpineKey,
-      leftNoSpine: !leftSpineKey,
-      rightName: 'Character: ' + (rightSpineKey === 'librarian' ? 'NPC Librarian' : rightSpineKey === 'turtlecrab' ? 'Turtle Crab' : rightSpineKey === 'nagasword' ? 'Naga Sword' : rightSpineKey === 'wraith' ? 'Wraith' : rightSpineKey === 'rooster' ? 'Rooster' : rightSpineKey === 'mechgolem' ? 'Mechanical Golem' : rightSpineKey === 'bossplant' ? 'Boss Plant' : rightSpineKey === 'lavaelemental' ? 'Lava Elemental' : rightSpineKey === 'npctrader' ? 'NPC Trader' : 'New Asset ' + rightIdx),
-      rightProject: 'Project: Shiba Story Go!',
-      rightSketchId: 'extra-' + rightIdx + '-sketch',
-      rightFinalId: 'extra-' + rightIdx + '-final',
-      rightSpineKey: rightSpineKey,
-      rightNoSpine: !rightSpineKey
-    };
-  }
-
-  makeExtraBatch(i) {
-    const LEVEL_VIDEOS = {
-      0: 'https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/2d-assets/Skull_island_Location.mp4',
-      1: 'https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/2d-assets/DarkForest_Location.mp4',
-      2: 'https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/LavaLand_Location.mp4',
-      3: 'https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/Winter_Location.mp4'
-    };
-    const levelVideo = LEVEL_VIDEOS[i] || null;
-    return {
-      row1: { ...this.makeRow(i, 0), ...this.makeRowNav('r-' + i + '-0') },
-      row2: { ...this.makeRow(i, 1), ...this.makeRowNav('r-' + i + '-1') },
-      showRow2: i !== 4,
-      showLevel: i !== 4,
-      levelName: 'Level: New Level ' + (i + 1),
-      levelProject: 'Project: Shiba Story Go!',
-      levelId: 'extra-level-' + (i + 1),
-      levelVideo: levelVideo,
-      levelNoVideo: !levelVideo
-    };
-  }
+  state = { extraCount: 0 };
 
   renderVals() {
-    const shibaSkins = this.shibaSkinDefs.map(s => ({
-      id: 'shiba-' + s.name.toLowerCase().replace(/\s+skin$/, '').replace(/\s+/g, '-'),
-      name: s.name,
-      ph: s.ph
-    }));
-    const extraBatches = [];
-    for (let i = 0; i < this.state.extraCount; i++) extraBatches.push(this.makeExtraBatch(i));
+    const n = this.state.extraCount;
     return {
-      tags: this.tags,
-      shibaSkins,
-      extraBatches,
-      showLoadMore: this.state.extraCount < 5,
+      showBatch0: n > 0,
+      showBatch1: n > 1,
+      showBatch2: n > 2,
+      showBatch3: n > 3,
+      showBatch4: n > 4,
+      showLoadMore: n < 5,
       loadMore: () => this.setState(s => ({ extraCount: Math.min(s.extraCount + 1, 5) })),
       playVideo: (el) => { if (el) { const p = el.play(); if (p && p.catch) p.catch(() => {}); } }
     };
   }
 
   componentDidMount() {
-    window.addEventListener('resize', this.onRowResize);
     this._spineInited = this._spineInited || new Set();
     this._initSpinePlayers();
     this._spineMountObserver = setInterval(() => this._initSpinePlayers(), 400);
@@ -602,7 +930,6 @@ class Component extends DCLogic {
 
   componentWillUnmount() {
     if (this._spineMountObserver) clearInterval(this._spineMountObserver);
-    window.removeEventListener('resize', this.onRowResize);
   }
 
   componentDidUpdate() {
