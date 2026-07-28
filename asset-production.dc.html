@@ -923,27 +923,39 @@ class Component extends DCLogic {
 
   componentDidMount() {
     this._wireStatic();
-    this._spineInited = this._spineInited || new Set();
-    this._initSpinePlayers();
-    this._spineMountObserver = setInterval(() => this._initSpinePlayers(), 400);
+    this._spineVisible = new Map();
+    this._spinePlayers = new Map();
+    this._io = new IntersectionObserver(entries => {
+      entries.forEach(en => this._spineVisible.set(en.target, en.isIntersecting));
+      this._syncSpine();
+    }, { rootMargin: '250px 0px' });
+    document.querySelectorAll('[data-spine-mount]').forEach(m => this._io.observe(m));
+    this._spineMountObserver = setInterval(() => this._syncSpine(), 500);
   }
 
   componentWillUnmount() {
     if (this._spineMountObserver) clearInterval(this._spineMountObserver);
+    if (this._io) this._io.disconnect();
   }
 
-  componentDidUpdate() {
-    this._initSpinePlayers();
-  }
-
-  _initSpinePlayers() {
+  _syncSpine() {
     if (typeof spine === 'undefined' || !spine.SpinePlayer) return;
-    this._spineInited = this._spineInited || new Set();
-    const mounts = document.querySelectorAll('[data-spine-mount]');
-    mounts.forEach(mountEl => {
+    this._spineVisible.forEach((vis, mountEl) => {
+      const has = this._spinePlayers.has(mountEl);
+      if (vis && !has) this._createSpine(mountEl);
+      else if (!vis && has) {
+        const p = this._spinePlayers.get(mountEl);
+        this._spinePlayers.delete(mountEl);
+        try { if (p && p.dispose) p.dispose(); } catch (e) {}
+        mountEl.innerHTML = '';
+      }
+    });
+  }
+
+  _createSpine(mountEl) {
+    this._spinePlayers.set(mountEl, null);
+    {
       const key = mountEl.getAttribute('data-spine-mount');
-      if (this._spineInited.has(key)) return;
-      this._spineInited.add(key);
       const switcherEl = document.querySelector('[data-spine-switcher="' + key + '"]');
       const labelEl = document.querySelector('[data-spine-label="' + key + '"]');
       const prevBtn = document.querySelector('[data-spine-prev="' + key + '"]');
@@ -1066,7 +1078,7 @@ class Component extends DCLogic {
       };
       const cfg = SPINE_CONFIGS[key] || SPINE_CONFIGS.main;
       try {
-        new spine.SpinePlayer(mountEl, {
+        const pl = new spine.SpinePlayer(mountEl, {
           skeleton: cfg.skeleton,
           atlas: cfg.atlas,
           animation: 'idle',
@@ -1079,6 +1091,7 @@ class Component extends DCLogic {
             this._spineLoaded = this._spineLoaded || new Set();
             this._spineLoaded.add(key);
             clearTimeout(timeoutId);
+            if (switcherEl) switcherEl.style.display = 'flex';
             if (!labelEl || !player.skeleton) return;
             const names = player.skeleton.data.animations.map(a => a.name).filter((n) => !(key === 'trashbot' && n === 'land'));
             let idx = names.indexOf('idle');
@@ -1096,11 +1109,12 @@ class Component extends DCLogic {
             showFallback('Animation preview unavailable<br>(' + (msg || 'load error') + ')');
           }
         });
+        this._spinePlayers.set(mountEl, pl);
       } catch (e) {
         clearTimeout(timeoutId);
         showFallback('Animation preview unavailable');
       }
-    });
+    }
   }
 }
 
