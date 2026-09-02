@@ -47,9 +47,7 @@
 .exyz-strip{ display:flex; gap:28px; overflow-x:auto; scroll-snap-type:x mandatory; scrollbar-width:none; -webkit-overflow-scrolling:touch; }
 .exyz-strip::-webkit-scrollbar{ display:none; }
 .exyz-strip > *{ flex:0 0 calc((100% - 28px)/2); min-width:0; scroll-snap-align:start; }
-.exyz-strip-v > *{ flex:0 0 calc((100% - 4*28px)/5); }
-@media (max-width:700px){ .exyz-strip > *{ flex:0 0 100% !important; } .exyz-strip-v > *{ flex:0 0 calc((100% - 28px)/2) !important; } }
-@media (min-width:701px) and (max-width:1000px){ .exyz-strip-v > *{ flex:0 0 calc((100% - 2*28px)/3) !important; } }
+@media (max-width:700px){ .exyz-strip > *{ flex:0 0 100% !important; } }
 image-slot{ display:block; }
 image-slot::part(frame){ background:#141416 !important; color:#9b9b9b !important; }
 </style>
@@ -105,9 +103,6 @@ image-slot::part(frame){ background:#141416 !important; color:#9b9b9b !important
         <span style="display:flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:#9b9b9b;"><span style="width:6px;height:6px;background:#eb6c2b;display:inline-block;"></span>Cinematics</span>
         <span style="display:flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:#9b9b9b;"><span style="width:6px;height:6px;background:#eb6c2b;display:inline-block;"></span>Citybuilders</span>
         <span style="display:flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:#9b9b9b;"><span style="width:6px;height:6px;background:#eb6c2b;display:inline-block;"></span>2D Creatives</span>
-        <span style="display:flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:#9b9b9b;"><span style="width:6px;height:6px;background:#eb6c2b;display:inline-block;"></span>AI Video</span>
-        <span style="display:flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:#9b9b9b;"><span style="width:6px;height:6px;background:#eb6c2b;display:inline-block;"></span>AI UGC</span>
-        <span style="display:flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:#9b9b9b;"><span style="width:6px;height:6px;background:#eb6c2b;display:inline-block;"></span>Hooks</span>
       </div>
     </section>
 
@@ -123,12 +118,12 @@ image-slot::part(frame){ background:#141416 !important; color:#9b9b9b !important
             </div>
             <h3 style="margin:16px 0 0;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.05rem;text-transform:uppercase;letter-spacing:.01em;">Shiba - Main Trailer</h3>
           </div>
-          <div class="exyz-vcard" data-video-card="" data-src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Shiba - From LVL1.mp4" data-title="Shiba - From LVL1" aria-label="Open Shiba - From LVL1">
+          <div class="exyz-vcard" data-video-card="" data-src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Shiba - Mob Snake.mp4" data-title="Shiba - Mob Snake" aria-label="Open Shiba - Mob Snake">
             <div class="exyz-vhover" style="position:relative;overflow:hidden;border-radius:14px;background:#141416;border:1px solid rgba(255,255,255,0.08);aspect-ratio:16/9;">
-              <image-slot id="v-7-poster" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;" shape="rect" fit="cover" placeholder="Shiba - From LVL1 poster frame"></image-slot>
-              <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Shiba - From LVL1.mp4" preload="metadata" muted="true" loop="true" playsinline="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;"></video>
+              <image-slot id="v-1-poster" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;" shape="rect" fit="cover" placeholder="Shiba - Mob Snake poster frame"></image-slot>
+              <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Shiba - Mob Snake.mp4" preload="metadata" muted="true" loop="true" playsinline="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;"></video>
             </div>
-            <h3 style="margin:16px 0 0;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.05rem;text-transform:uppercase;letter-spacing:.01em;">Shiba - From LVL1</h3>
+            <h3 style="margin:16px 0 0;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.05rem;text-transform:uppercase;letter-spacing:.01em;">Shiba - Mob Snake</h3>
           </div>
           <div class="exyz-vcard" data-video-card="" data-src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Shiba - Mob Slayer.mp4" data-title="Shiba - Mob Slayer" aria-label="Open Shiba - Mob Slayer">
             <div class="exyz-vhover" style="position:relative;overflow:hidden;border-radius:14px;background:#141416;border:1px solid rgba(255,255,255,0.08);aspect-ratio:16/9;">
@@ -165,12 +160,12 @@ image-slot::part(frame){ background:#141416 !important; color:#9b9b9b !important
             </div>
             <h3 style="margin:16px 0 0;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.05rem;text-transform:uppercase;letter-spacing:.01em;">Shiba - Dungeon</h3>
           </div>
-          <div class="exyz-vcard" data-video-card="" data-src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Shiba - Mob Snake.mp4" data-title="Shiba - Mob Snake" aria-label="Open Shiba - Mob Snake">
+          <div class="exyz-vcard" data-video-card="" data-src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Shiba - From LVL1.mp4" data-title="Shiba - From LVL1" aria-label="Open Shiba - From LVL1">
             <div class="exyz-vhover" style="position:relative;overflow:hidden;border-radius:14px;background:#141416;border:1px solid rgba(255,255,255,0.08);aspect-ratio:16/9;">
-              <image-slot id="v-1-poster" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;" shape="rect" fit="cover" placeholder="Shiba - Mob Snake poster frame"></image-slot>
-              <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Shiba - Mob Snake.mp4" preload="metadata" muted="true" loop="true" playsinline="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;"></video>
+              <image-slot id="v-7-poster" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;" shape="rect" fit="cover" placeholder="Shiba - From LVL1 poster frame"></image-slot>
+              <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Shiba - From LVL1.mp4" preload="metadata" muted="true" loop="true" playsinline="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;"></video>
             </div>
-            <h3 style="margin:16px 0 0;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.05rem;text-transform:uppercase;letter-spacing:.01em;">Shiba - Mob Snake</h3>
+            <h3 style="margin:16px 0 0;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.05rem;text-transform:uppercase;letter-spacing:.01em;">Shiba - From LVL1</h3>
           </div>
           <div class="exyz-vcard" data-video-card="" data-src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Shiba - Burning Village.mp4" data-title="Shiba - Burning Village" aria-label="Open Shiba - Burning Village">
             <div class="exyz-vhover" style="position:relative;overflow:hidden;border-radius:14px;background:#141416;border:1px solid rgba(255,255,255,0.08);aspect-ratio:16/9;">
@@ -182,81 +177,6 @@ image-slot::part(frame){ background:#141416 !important; color:#9b9b9b !important
         </div>
         <button aria-label="Previous Shiba Story Go! videos" data-strip-prev="" style="position:absolute;top:50%;left:-18px;transform:translateY(-50%);width:36px;height:36px;border-radius:50%;background:#1c1c1f;border:1px solid rgba(255,255,255,0.16);color:#f2f2f0;font-size:1.2rem;line-height:1;cursor:pointer;z-index:2;display:flex;align-items:center;justify-content:center;">‹</button>
         <button aria-label="Next Shiba Story Go! videos" data-strip-next="" style="position:absolute;top:50%;right:-18px;transform:translateY(-50%);width:36px;height:36px;border-radius:50%;background:#1c1c1f;border:1px solid rgba(255,255,255,0.16);color:#f2f2f0;font-size:1.2rem;line-height:1;cursor:pointer;z-index:2;display:flex;align-items:center;justify-content:center;">›</button>
-      </div>
-    </section>
-
-
-    <section aria-label="AI Hooks showcase" style="max-width:1240px;margin:0 auto;padding:0 32px 40px;">
-      <h2 style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.6rem;margin:0;">AI Hooks</h2>
-      <span style="display:block;font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:#eb6c2b;margin-top:6px;">9:16 · AI Video / UGC</span>
-      <div style="position:relative;margin-top:28px;" data-strip-wrap="">
-        <div class="exyz-strip exyz-strip-v" data-strip="">
-          <div class="exyz-vcard" data-video-card="" data-src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/exyz_ai_video_hook_garden_01.mp4" data-title="AI Hook - Garden 01" aria-label="Open AI Hook - Garden 01">
-            <div class="exyz-vhover" style="position:relative;overflow:hidden;border-radius:14px;background:#141416;border:1px solid rgba(255,255,255,0.08);aspect-ratio:9/16;">
-              <image-slot id="h-3-poster" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;" shape="rect" fit="cover" placeholder="AI Hook - Garden 01 poster frame"></image-slot>
-              <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/exyz_ai_video_hook_garden_01.mp4" preload="metadata" muted="true" loop="true" playsinline="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;"></video>
-            </div>
-            <h3 style="margin:14px 0 0;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.85rem;text-transform:uppercase;letter-spacing:.01em;">AI Hook - Garden 01</h3>
-          </div>
-          <div class="exyz-vcard" data-video-card="" data-src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Farm%20Hook%202.mp4" data-title="AI Hook - Farm 02" aria-label="Open AI Hook - Farm 02">
-            <div class="exyz-vhover" style="position:relative;overflow:hidden;border-radius:14px;background:#141416;border:1px solid rgba(255,255,255,0.08);aspect-ratio:9/16;">
-              <image-slot id="fh-1-poster" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;" shape="rect" fit="cover" placeholder="AI Hook - Farm 02 poster frame"></image-slot>
-              <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Farm%20Hook%202.mp4" preload="metadata" muted="true" loop="true" playsinline="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;"></video>
-            </div>
-            <h3 style="margin:14px 0 0;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.85rem;text-transform:uppercase;letter-spacing:.01em;">AI Hook - Farm 02</h3>
-          </div>
-          <div class="exyz-vcard" data-video-card="" data-src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/exyz_ai_video_hook_garden_02.mp4" data-title="AI Hook - Garden 02" aria-label="Open AI Hook - Garden 02">
-            <div class="exyz-vhover" style="position:relative;overflow:hidden;border-radius:14px;background:#141416;border:1px solid rgba(255,255,255,0.08);aspect-ratio:9/16;">
-              <image-slot id="h-1-poster" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;" shape="rect" fit="cover" placeholder="AI Hook - Garden 02 poster frame"></image-slot>
-              <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/exyz_ai_video_hook_garden_02.mp4" preload="metadata" muted="true" loop="true" playsinline="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;"></video>
-            </div>
-            <h3 style="margin:14px 0 0;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.85rem;text-transform:uppercase;letter-spacing:.01em;">AI Hook - Garden 02</h3>
-          </div>
-          <div class="exyz-vcard" data-video-card="" data-src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Farm%20Hook%201.mp4" data-title="AI Hook - Farm 01" aria-label="Open AI Hook - Farm 01">
-            <div class="exyz-vhover" style="position:relative;overflow:hidden;border-radius:14px;background:#141416;border:1px solid rgba(255,255,255,0.08);aspect-ratio:9/16;">
-              <image-slot id="fh-3-poster" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;" shape="rect" fit="cover" placeholder="AI Hook - Farm 01 poster frame"></image-slot>
-              <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Farm%20Hook%201.mp4" preload="metadata" muted="true" loop="true" playsinline="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;"></video>
-            </div>
-            <h3 style="margin:14px 0 0;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.85rem;text-transform:uppercase;letter-spacing:.01em;">AI Hook - Farm 01</h3>
-          </div>
-          <div class="exyz-vcard" data-video-card="" data-src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/exyz_ai_video_hook_garden_04.mp4" data-title="AI Hook - Garden 04" aria-label="Open AI Hook - Garden 04">
-            <div class="exyz-vhover" style="position:relative;overflow:hidden;border-radius:14px;background:#141416;border:1px solid rgba(255,255,255,0.08);aspect-ratio:9/16;">
-              <image-slot id="h-5-poster" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;" shape="rect" fit="cover" placeholder="AI Hook - Garden 04 poster frame"></image-slot>
-              <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/exyz_ai_video_hook_garden_04.mp4" preload="metadata" muted="true" loop="true" playsinline="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;"></video>
-            </div>
-            <h3 style="margin:14px 0 0;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.85rem;text-transform:uppercase;letter-spacing:.01em;">AI Hook - Garden 04</h3>
-          </div>
-          <div class="exyz-vcard" data-video-card="" data-src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Farm%20Hook%204.mp4" data-title="AI Hook - Farm 04" aria-label="Open AI Hook - Farm 04">
-            <div class="exyz-vhover" style="position:relative;overflow:hidden;border-radius:14px;background:#141416;border:1px solid rgba(255,255,255,0.08);aspect-ratio:9/16;">
-              <image-slot id="fh-5-poster" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;" shape="rect" fit="cover" placeholder="AI Hook - Farm 04 poster frame"></image-slot>
-              <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Farm%20Hook%204.mp4" preload="metadata" muted="true" loop="true" playsinline="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;"></video>
-            </div>
-            <h3 style="margin:14px 0 0;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.85rem;text-transform:uppercase;letter-spacing:.01em;">AI Hook - Farm 04</h3>
-          </div>
-          <div class="exyz-vcard" data-video-card="" data-src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Farm%20Hook%203.mp4" data-title="AI Hook - Farm 03" aria-label="Open AI Hook - Farm 03">
-            <div class="exyz-vhover" style="position:relative;overflow:hidden;border-radius:14px;background:#141416;border:1px solid rgba(255,255,255,0.08);aspect-ratio:9/16;">
-              <image-slot id="fh-2-poster" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;" shape="rect" fit="cover" placeholder="AI Hook - Farm 03 poster frame"></image-slot>
-              <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Farm%20Hook%203.mp4" preload="metadata" muted="true" loop="true" playsinline="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;"></video>
-            </div>
-            <h3 style="margin:14px 0 0;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.85rem;text-transform:uppercase;letter-spacing:.01em;">AI Hook - Farm 03</h3>
-          </div>
-          <div class="exyz-vcard" data-video-card="" data-src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/exyz_ai_video_hook_garden_03.mp4" data-title="AI Hook - Garden 03" aria-label="Open AI Hook - Garden 03">
-            <div class="exyz-vhover" style="position:relative;overflow:hidden;border-radius:14px;background:#141416;border:1px solid rgba(255,255,255,0.08);aspect-ratio:9/16;">
-              <image-slot id="h-6-poster" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;" shape="rect" fit="cover" placeholder="AI Hook - Garden 03 poster frame"></image-slot>
-              <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/exyz_ai_video_hook_garden_03.mp4" preload="metadata" muted="true" loop="true" playsinline="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;"></video>
-            </div>
-            <h3 style="margin:14px 0 0;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.85rem;text-transform:uppercase;letter-spacing:.01em;">AI Hook - Garden 03</h3>
-          </div>
-          <div class="exyz-vcard" data-video-card="" data-src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Farm%20Hook%205.mp4" data-title="AI Hook - Farm 05" aria-label="Open AI Hook - Farm 05">
-            <div class="exyz-vhover" style="position:relative;overflow:hidden;border-radius:14px;background:#141416;border:1px solid rgba(255,255,255,0.08);aspect-ratio:9/16;">
-              <image-slot id="fh-4-poster" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;" shape="rect" fit="cover" placeholder="AI Hook - Farm 05 poster frame"></image-slot>
-              <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Farm%20Hook%205.mp4" preload="metadata" muted="true" loop="true" playsinline="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;"></video>
-            </div>
-            <h3 style="margin:14px 0 0;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.85rem;text-transform:uppercase;letter-spacing:.01em;">AI Hook - Farm 05</h3>
-          </div>
-        </div>
-        <button aria-label="Previous AI Hooks videos" data-strip-prev="" style="position:absolute;top:50%;left:-18px;transform:translateY(-50%);width:36px;height:36px;border-radius:50%;background:#1c1c1f;border:1px solid rgba(255,255,255,0.16);color:#f2f2f0;font-size:1.2rem;line-height:1;cursor:pointer;z-index:2;display:flex;align-items:center;justify-content:center;">‹</button>
-        <button aria-label="Next AI Hooks videos" data-strip-next="" style="position:absolute;top:50%;right:-18px;transform:translateY(-50%);width:36px;height:36px;border-radius:50%;background:#1c1c1f;border:1px solid rgba(255,255,255,0.16);color:#f2f2f0;font-size:1.2rem;line-height:1;cursor:pointer;z-index:2;display:flex;align-items:center;justify-content:center;">›</button>
       </div>
     </section>
 
@@ -369,75 +289,45 @@ image-slot::part(frame){ background:#141416 !important; color:#9b9b9b !important
       </div>
     </section>
 
-
-    <section aria-label="IRL AI Hooks showcase" style="max-width:1240px;margin:0 auto;padding:0 32px 40px;">
-      <h2 style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.6rem;margin:0;">IRL AI Hooks</h2>
-      <span style="display:block;font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:#eb6c2b;margin-top:6px;">9:16 · Live-action AI / UGC</span>
+    <section aria-label="Video showcase 3" style="max-width:1240px;margin:0 auto;padding:0 32px 40px;">
+      <h2 style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.6rem;margin:0;">Firstborn</h2>
+      <span style="display:block;font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:#eb6c2b;margin-top:6px;">Action RPG</span>
       <div style="position:relative;margin-top:28px;" data-strip-wrap="">
-        <div class="exyz-strip exyz-strip-v" data-strip="">
-          <div class="exyz-vcard" data-video-card="" data-src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/exyz_ai_video_hook_lords03.MP4" data-title="AI Hook - Lords 03" aria-label="Open AI Hook - Lords 03">
-            <div class="exyz-vhover" style="position:relative;overflow:hidden;border-radius:14px;background:#141416;border:1px solid rgba(255,255,255,0.08);aspect-ratio:9/16;">
-              <image-slot id="h-2-poster" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;" shape="rect" fit="cover" placeholder="AI Hook - Lords 03 poster frame"></image-slot>
-              <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/exyz_ai_video_hook_lords03.MP4" preload="metadata" muted="true" loop="true" playsinline="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;"></video>
+        <div class="exyz-strip" data-strip="">
+          <div class="exyz-vcard" data-video-card="" data-src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Firstborn - Viking Origin.mp4" data-title="Firstborn - Viking Origin" aria-label="Open Firstborn - Viking Origin">
+            <div class="exyz-vhover" style="position:relative;overflow:hidden;border-radius:14px;background:#141416;border:1px solid rgba(255,255,255,0.08);aspect-ratio:16/9;">
+              <image-slot id="f-1-poster" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;" shape="rect" fit="cover" placeholder="Firstborn - Viking Origin poster frame"></image-slot>
+              <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Firstborn - Viking Origin.mp4" preload="metadata" muted="true" loop="true" playsinline="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;"></video>
             </div>
-            <h3 style="margin:14px 0 0;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.85rem;text-transform:uppercase;letter-spacing:.01em;">AI Hook - Lords 03</h3>
+            <h3 style="margin:16px 0 0;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.05rem;text-transform:uppercase;letter-spacing:.01em;">Firstborn - Viking Origin</h3>
           </div>
-          <div class="exyz-vcard" data-video-card="" data-src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/irl_hook_ai_exyz_01.mp4" data-title="IRL Hook 01" aria-label="Open IRL Hook 01">
-            <div class="exyz-vhover" style="position:relative;overflow:hidden;border-radius:14px;background:#141416;border:1px solid rgba(255,255,255,0.08);aspect-ratio:9/16;">
-              <image-slot id="ih-4-poster" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;" shape="rect" fit="cover" placeholder="IRL Hook 01 poster frame"></image-slot>
-              <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/irl_hook_ai_exyz_01.mp4" preload="metadata" muted="true" loop="true" playsinline="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;"></video>
+          <div class="exyz-vcard" data-video-card="" data-src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Firstborn - Gameplay.mp4" data-title="Firstborn - Gameplay" aria-label="Open Firstborn - Gameplay">
+            <div class="exyz-vhover" style="position:relative;overflow:hidden;border-radius:14px;background:#141416;border:1px solid rgba(255,255,255,0.08);aspect-ratio:16/9;">
+              <image-slot id="f-2-poster" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;" shape="rect" fit="cover" placeholder="Firstborn - Gameplay poster frame"></image-slot>
+              <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Firstborn - Gameplay.mp4" preload="metadata" muted="true" loop="true" playsinline="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;"></video>
             </div>
-            <h3 style="margin:14px 0 0;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.85rem;text-transform:uppercase;letter-spacing:.01em;">IRL Hook 01</h3>
+            <h3 style="margin:16px 0 0;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.05rem;text-transform:uppercase;letter-spacing:.01em;">Firstborn - Gameplay</h3>
           </div>
-          <div class="exyz-vcard" data-video-card="" data-src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/History_Channel_9x16.mp4" data-title="History Channel" aria-label="Open History Channel">
-            <div class="exyz-vhover" style="position:relative;overflow:hidden;border-radius:14px;background:#141416;border:1px solid rgba(255,255,255,0.08);aspect-ratio:9/16;">
-              <image-slot id="ih-2-poster" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;" shape="rect" fit="cover" placeholder="History Channel poster frame"></image-slot>
-              <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/History_Channel_9x16.mp4" preload="metadata" muted="true" loop="true" playsinline="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;"></video>
+          <div class="exyz-vcard" data-video-card="" data-src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Firstborn - Castle Siege.mp4" data-title="Firstborn - Castle Siege" aria-label="Open Firstborn - Castle Siege">
+            <div class="exyz-vhover" style="position:relative;overflow:hidden;border-radius:14px;background:#141416;border:1px solid rgba(255,255,255,0.08);aspect-ratio:16/9;">
+              <image-slot id="f-3-poster" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;" shape="rect" fit="cover" placeholder="Firstborn - Castle Siege poster frame"></image-slot>
+              <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Firstborn - Castle Siege.mp4" preload="metadata" muted="true" loop="true" playsinline="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;"></video>
             </div>
-            <h3 style="margin:14px 0 0;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.85rem;text-transform:uppercase;letter-spacing:.01em;">History Channel</h3>
+            <h3 style="margin:16px 0 0;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.05rem;text-transform:uppercase;letter-spacing:.01em;">Firstborn - Castle Siege</h3>
           </div>
-          <div class="exyz-vcard" data-video-card="" data-src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/exyz_ai_video_hook_lords02.MP4" data-title="AI Hook - Lords 02" aria-label="Open AI Hook - Lords 02">
-            <div class="exyz-vhover" style="position:relative;overflow:hidden;border-radius:14px;background:#141416;border:1px solid rgba(255,255,255,0.08);aspect-ratio:9/16;">
-              <image-slot id="h-4-poster" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;" shape="rect" fit="cover" placeholder="AI Hook - Lords 02 poster frame"></image-slot>
-              <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/exyz_ai_video_hook_lords02.MP4" preload="metadata" muted="true" loop="true" playsinline="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;"></video>
+          <div class="exyz-vcard" data-video-card="" data-src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Firstborn - Packshot.mp4" data-title="Firstborn - Packshot" aria-label="Open Firstborn - Packshot">
+            <div class="exyz-vhover" style="position:relative;overflow:hidden;border-radius:14px;background:#141416;border:1px solid rgba(255,255,255,0.08);aspect-ratio:16/9;">
+              <image-slot id="f-4-poster" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;" shape="rect" fit="cover" placeholder="Firstborn - Packshot poster frame"></image-slot>
+              <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Firstborn - Packshot.mp4" preload="metadata" muted="true" loop="true" playsinline="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;"></video>
             </div>
-            <h3 style="margin:14px 0 0;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.85rem;text-transform:uppercase;letter-spacing:.01em;">AI Hook - Lords 02</h3>
-          </div>
-          <div class="exyz-vcard" data-video-card="" data-src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/irl_hook_ai_exyz_02.mp4" data-title="IRL Hook 02" aria-label="Open IRL Hook 02">
-            <div class="exyz-vhover" style="position:relative;overflow:hidden;border-radius:14px;background:#141416;border:1px solid rgba(255,255,255,0.08);aspect-ratio:9/16;">
-              <image-slot id="ih-5-poster" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;" shape="rect" fit="cover" placeholder="IRL Hook 02 poster frame"></image-slot>
-              <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/irl_hook_ai_exyz_02.mp4" preload="metadata" muted="true" loop="true" playsinline="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;"></video>
-            </div>
-            <h3 style="margin:14px 0 0;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.85rem;text-transform:uppercase;letter-spacing:.01em;">IRL Hook 02</h3>
-          </div>
-          <div class="exyz-vcard" data-video-card="" data-src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/exyz_ai_video_hook_lords01.MP4" data-title="AI Hook - Lords 01" aria-label="Open AI Hook - Lords 01">
-            <div class="exyz-vhover" style="position:relative;overflow:hidden;border-radius:14px;background:#141416;border:1px solid rgba(255,255,255,0.08);aspect-ratio:9/16;">
-              <image-slot id="h-7-poster" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;" shape="rect" fit="cover" placeholder="AI Hook - Lords 01 poster frame"></image-slot>
-              <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/exyz_ai_video_hook_lords01.MP4" preload="metadata" muted="true" loop="true" playsinline="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;"></video>
-            </div>
-            <h3 style="margin:14px 0 0;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.85rem;text-transform:uppercase;letter-spacing:.01em;">AI Hook - Lords 01</h3>
-          </div>
-          <div class="exyz-vcard" data-video-card="" data-src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Historian_Comments_9x16.mp4" data-title="Historian Comments" aria-label="Open Historian Comments">
-            <div class="exyz-vhover" style="position:relative;overflow:hidden;border-radius:14px;background:#141416;border:1px solid rgba(255,255,255,0.08);aspect-ratio:9/16;">
-              <image-slot id="ih-1-poster" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;" shape="rect" fit="cover" placeholder="Historian Comments poster frame"></image-slot>
-              <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Historian_Comments_9x16.mp4" preload="metadata" muted="true" loop="true" playsinline="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;"></video>
-            </div>
-            <h3 style="margin:14px 0 0;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.85rem;text-transform:uppercase;letter-spacing:.01em;">Historian Comments</h3>
-          </div>
-          <div class="exyz-vcard" data-video-card="" data-src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/History_Channel_Splitscreen_9x16.mp4" data-title="History Channel Splitscreen" aria-label="Open History Channel Splitscreen">
-            <div class="exyz-vhover" style="position:relative;overflow:hidden;border-radius:14px;background:#141416;border:1px solid rgba(255,255,255,0.08);aspect-ratio:9/16;">
-              <image-slot id="ih-3-poster" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;" shape="rect" fit="cover" placeholder="History Channel Splitscreen poster frame"></image-slot>
-              <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/History_Channel_Splitscreen_9x16.mp4" preload="metadata" muted="true" loop="true" playsinline="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;"></video>
-            </div>
-            <h3 style="margin:14px 0 0;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.85rem;text-transform:uppercase;letter-spacing:.01em;">History Channel Splitscreen</h3>
+            <h3 style="margin:16px 0 0;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.05rem;text-transform:uppercase;letter-spacing:.01em;">Firstborn - Packshot</h3>
           </div>
         </div>
-        <button aria-label="Previous IRL AI Hooks videos" data-strip-prev="" style="position:absolute;top:50%;left:-18px;transform:translateY(-50%);width:36px;height:36px;border-radius:50%;background:#1c1c1f;border:1px solid rgba(255,255,255,0.16);color:#f2f2f0;font-size:1.2rem;line-height:1;cursor:pointer;z-index:2;display:flex;align-items:center;justify-content:center;">‹</button>
-        <button aria-label="Next IRL AI Hooks videos" data-strip-next="" style="position:absolute;top:50%;right:-18px;transform:translateY(-50%);width:36px;height:36px;border-radius:50%;background:#1c1c1f;border:1px solid rgba(255,255,255,0.16);color:#f2f2f0;font-size:1.2rem;line-height:1;cursor:pointer;z-index:2;display:flex;align-items:center;justify-content:center;">›</button>
+        <button aria-label="Previous Firstborn videos" data-strip-prev="" style="position:absolute;top:50%;left:-18px;transform:translateY(-50%);width:36px;height:36px;border-radius:50%;background:#1c1c1f;border:1px solid rgba(255,255,255,0.16);color:#f2f2f0;font-size:1.2rem;line-height:1;cursor:pointer;z-index:2;display:flex;align-items:center;justify-content:center;">‹</button>
+        <button aria-label="Next Firstborn videos" data-strip-next="" style="position:absolute;top:50%;right:-18px;transform:translateY(-50%);width:36px;height:36px;border-radius:50%;background:#1c1c1f;border:1px solid rgba(255,255,255,0.16);color:#f2f2f0;font-size:1.2rem;line-height:1;cursor:pointer;z-index:2;display:flex;align-items:center;justify-content:center;">›</button>
       </div>
-</section>
+    </section>
 
-    
     <section aria-label="Video showcase 4" style="max-width:1240px;margin:0 auto;padding:0 32px 40px;">
       <h2 style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.6rem;margin:0;">Word Puzzle</h2>
       <span style="display:block;font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:#eb6c2b;margin-top:6px;">Casual Puzzle</span>
@@ -476,45 +366,6 @@ image-slot::part(frame){ background:#141416 !important; color:#9b9b9b !important
         <button aria-label="Next Word Puzzle videos" data-strip-next="" style="position:absolute;top:50%;right:-18px;transform:translateY(-50%);width:36px;height:36px;border-radius:50%;background:#1c1c1f;border:1px solid rgba(255,255,255,0.16);color:#f2f2f0;font-size:1.2rem;line-height:1;cursor:pointer;z-index:2;display:flex;align-items:center;justify-content:center;">›</button>
       </div>
     </section>
-
-<section aria-label="Video showcase 3" style="max-width:1240px;margin:0 auto;padding:0 32px 40px;">
-      <h2 style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.6rem;margin:0;">Firstborn</h2>
-      <span style="display:block;font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:#eb6c2b;margin-top:6px;">Action RPG</span>
-      <div style="position:relative;margin-top:28px;" data-strip-wrap="">
-        <div class="exyz-strip" data-strip="">
-          <div class="exyz-vcard" data-video-card="" data-src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Firstborn - Gameplay.mp4" data-title="Firstborn - Gameplay" aria-label="Open Firstborn - Gameplay">
-            <div class="exyz-vhover" style="position:relative;overflow:hidden;border-radius:14px;background:#141416;border:1px solid rgba(255,255,255,0.08);aspect-ratio:16/9;">
-              <image-slot id="f-2-poster" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;" shape="rect" fit="cover" placeholder="Firstborn - Gameplay poster frame"></image-slot>
-              <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Firstborn - Gameplay.mp4" preload="metadata" muted="true" loop="true" playsinline="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;"></video>
-            </div>
-            <h3 style="margin:16px 0 0;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.05rem;text-transform:uppercase;letter-spacing:.01em;">Firstborn - Gameplay</h3>
-          </div>
-          <div class="exyz-vcard" data-video-card="" data-src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Firstborn - Castle Siege.mp4" data-title="Firstborn - Castle Siege" aria-label="Open Firstborn - Castle Siege">
-            <div class="exyz-vhover" style="position:relative;overflow:hidden;border-radius:14px;background:#141416;border:1px solid rgba(255,255,255,0.08);aspect-ratio:16/9;">
-              <image-slot id="f-3-poster" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;" shape="rect" fit="cover" placeholder="Firstborn - Castle Siege poster frame"></image-slot>
-              <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Firstborn - Castle Siege.mp4" preload="metadata" muted="true" loop="true" playsinline="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;"></video>
-            </div>
-            <h3 style="margin:16px 0 0;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.05rem;text-transform:uppercase;letter-spacing:.01em;">Firstborn - Castle Siege</h3>
-          </div>
-          <div class="exyz-vcard" data-video-card="" data-src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Firstborn - Packshot.mp4" data-title="Firstborn - Packshot" aria-label="Open Firstborn - Packshot">
-            <div class="exyz-vhover" style="position:relative;overflow:hidden;border-radius:14px;background:#141416;border:1px solid rgba(255,255,255,0.08);aspect-ratio:16/9;">
-              <image-slot id="f-4-poster" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;" shape="rect" fit="cover" placeholder="Firstborn - Packshot poster frame"></image-slot>
-              <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Firstborn - Packshot.mp4" preload="metadata" muted="true" loop="true" playsinline="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;"></video>
-            </div>
-            <h3 style="margin:16px 0 0;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.05rem;text-transform:uppercase;letter-spacing:.01em;">Firstborn - Packshot</h3>
-          </div>
-          <div class="exyz-vcard" data-video-card="" data-src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Firstborn - Viking Origin.mp4" data-title="Firstborn - Viking Origin" aria-label="Open Firstborn - Viking Origin">
-            <div class="exyz-vhover" style="position:relative;overflow:hidden;border-radius:14px;background:#141416;border:1px solid rgba(255,255,255,0.08);aspect-ratio:16/9;">
-              <image-slot id="f-1-poster" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;" shape="rect" fit="cover" placeholder="Firstborn - Viking Origin poster frame"></image-slot>
-              <video src="https://pub-e6766bf0cac94e7b859cc3b617195b02.r2.dev/videos/Firstborn - Viking Origin.mp4" preload="metadata" muted="true" loop="true" playsinline="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;"></video>
-            </div>
-            <h3 style="margin:16px 0 0;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.05rem;text-transform:uppercase;letter-spacing:.01em;">Firstborn - Viking Origin</h3>
-          </div>
-        </div>
-        <button aria-label="Previous Firstborn videos" data-strip-prev="" style="position:absolute;top:50%;left:-18px;transform:translateY(-50%);width:36px;height:36px;border-radius:50%;background:#1c1c1f;border:1px solid rgba(255,255,255,0.16);color:#f2f2f0;font-size:1.2rem;line-height:1;cursor:pointer;z-index:2;display:flex;align-items:center;justify-content:center;">‹</button>
-        <button aria-label="Next Firstborn videos" data-strip-next="" style="position:absolute;top:50%;right:-18px;transform:translateY(-50%);width:36px;height:36px;border-radius:50%;background:#1c1c1f;border:1px solid rgba(255,255,255,0.16);color:#f2f2f0;font-size:1.2rem;line-height:1;cursor:pointer;z-index:2;display:flex;align-items:center;justify-content:center;">›</button>
-      </div>
-</section>
 
     <section aria-label="Video showcase 5" style="max-width:1240px;margin:0 auto;padding:0 32px 40px;">
       <h2 style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.6rem;margin:0;">Others</h2>
