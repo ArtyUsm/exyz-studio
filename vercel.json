@@ -19,13 +19,36 @@
       "source": "/contact.dc.html",
       "destination": "/contact",
       "permanent": true
+    },
+    {
+      "source": "/pricing.dc.html",
+      "destination": "/pricing",
+      "permanent": true
+    },
+    {
+      "source": "/playables.dc.html",
+      "destination": "/playables",
+      "permanent": true
+    },
+    {
+      "source": "/ai-policy.dc.html",
+      "destination": "/ai-policy",
+      "permanent": true
+    },
+    {
+      "source": "/case-shiba-story-go.dc.html",
+      "destination": "/case/shiba-story-go",
+      "permanent": true
     }
   ],
   "headers": [
     {
       "source": "/play/(.*)",
       "headers": [
-        { "key": "X-Robots-Tag", "value": "noindex, nofollow" }
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
       ]
     }
   ],
@@ -45,6 +68,22 @@
     {
       "source": "/contact",
       "destination": "/contact.dc.html"
+    },
+    {
+      "source": "/pricing",
+      "destination": "/pricing.dc.html"
+    },
+    {
+      "source": "/playables",
+      "destination": "/playables.dc.html"
+    },
+    {
+      "source": "/ai-policy",
+      "destination": "/ai-policy.dc.html"
+    },
+    {
+      "source": "/case/shiba-story-go",
+      "destination": "/case-shiba-story-go.dc.html"
     }
   ]
 }
