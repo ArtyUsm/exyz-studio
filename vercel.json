@@ -43,6 +43,15 @@
   ],
   "headers": [
     {
+      "source": "/fishfactory",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
+    {
       "source": "/kingdomsurvival",
       "headers": [
         {
@@ -71,6 +80,10 @@
     }
   ],
   "rewrites": [
+    {
+      "source": "/fishfactory",
+      "destination": "/play/fish-factory-survival/index.html"
+    },
     {
       "source": "/kingdomsurvival",
       "destination": "/play/kingdom-survival/index.html"
