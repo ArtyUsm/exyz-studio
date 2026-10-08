@@ -21,6 +21,10 @@ body{ margin:0; background:#0a0a0b; }
 a{ color:#eb6c2b; } a:hover{ color:#ff7f3f; }
 image-slot{ display:block; }
 image-slot::part(frame){ background:#141416 !important; color:#9b9b9b !important; }
+@keyframes wl-sheen{ 0%,72%{ background-position:160% 0; } 100%{ background-position:-60% 0; } }
+@keyframes wl-glow{ 0%,100%{ opacity:.55; } 50%{ opacity:.9; } }
+@media (max-width:860px){ [data-hero-art]{ opacity:.28; right:-160px !important; } }
+@media (prefers-reduced-motion: reduce){ [data-hero-art] *{ animation:none !important; } }
 </style>
 </helmet>
 <div style="background:#0a0a0b;color:#f2f2f0;font-family:'IBM Plex Sans',-apple-system,sans-serif;font-size:16px;line-height:1.6;min-height:100vh;overflow-x:hidden;">
@@ -32,11 +36,12 @@ image-slot::part(frame){ background:#141416 !important; color:#9b9b9b !important
   </header>
 
   <main>
-    <section style="max-width:1240px;margin:0 auto;padding:64px 32px 40px;">
-      <div style="font-family:'JetBrains Mono',monospace;font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:#eb6c2b;margin-bottom:18px;">Ideation · UA creatives</div>
-      <h1 style="font-family:'Space Grotesk',sans-serif;font-weight:800;line-height:1;letter-spacing:-0.02em;margin:0;font-size:clamp(2.4rem,6vw,4.6rem);text-transform:uppercase;text-wrap:balance;">Westland Survival: Cowboy Game</h1>
-      <p style="max-width:62ch;font-size:1.05rem;color:#b7b7b7;margin:22px 0 0;">Brief summary of the task: goals, target audience, formats.</p>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:12px;margin-top:32px;">
+    <section style="max-width:1240px;margin:0 auto;padding:64px 32px 40px;position:relative;">
+      {{ heroArt }}
+      <div style="position:relative;z-index:1;font-family:'JetBrains Mono',monospace;font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:#eb6c2b;margin-bottom:18px;">Ideation · UA creatives</div>
+      <h1 style="font-family:'Space Grotesk',sans-serif;font-weight:800;line-height:1;letter-spacing:-0.02em;margin:0;font-size:clamp(2.4rem,6vw,4.6rem);text-transform:uppercase;text-wrap:balance;max-width:12ch;position:relative;z-index:1;">Westland Survival: Cowboy Game</h1>
+      <p style="max-width:46ch;font-size:1.05rem;color:#b7b7b7;margin:22px 0 0;position:relative;z-index:1;">Brief summary of the task: goals, target audience, formats.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:12px;margin-top:32px;position:relative;z-index:1;">
         <div style="background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:16px 18px;"><div style="font-family:'JetBrains Mono',monospace;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:#8a8a8a;">Client</div><div style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:1.05rem;margin-top:4px;">Helio Games</div></div>
         <div style="background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:16px 18px;"><div style="font-family:'JetBrains Mono',monospace;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:#8a8a8a;">Formats</div><div style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:1.05rem;margin-top:4px;">16:9 · 9:16 · 1:1</div></div>
         <div style="background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:16px 18px;"><div style="font-family:'JetBrains Mono',monospace;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:#8a8a8a;">Status</div><div style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:1.05rem;margin-top:4px;">In progress</div></div>
@@ -44,11 +49,11 @@ image-slot::part(frame){ background:#141416 !important; color:#9b9b9b !important
       </div>
     </section>
 
-    <section style="max-width:1240px;margin:0 auto;padding:56px 32px 40px;">
+    <section style="max-width:1240px;margin:0 auto;padding:56px 32px 88px;">
       <h2 style="font-family:'JetBrains Mono',monospace;font-weight:500;font-size:1rem;letter-spacing:.04em;margin:0 0 28px;padding:8px 14px;border:1px solid rgba(255,255,255,0.18);border-radius:4px;display:inline-block;">[IDEAS]</h2>
       <div style="display:flex;flex-direction:column;gap:20px;">
         <article style="background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:clamp(18px,3vw,28px);display:flex;flex-wrap:wrap;gap:28px;align-items:flex-start;">
-          <div style="flex:0 1 300px;min-width:0;aspect-ratio:9/16;border-radius:10px;overflow:hidden;background:#0f0f11;"><img src="westland-01.png" alt="Раскадровка идеи 01" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+          <div style="flex:0 1 300px;min-width:0;aspect-ratio:9/16;border-radius:10px;overflow:hidden;background:#0f0f11;"><img src="westland-01.jpg" alt="Раскадровка идеи 01" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
           <div style="flex:1 1 340px;min-width:0;display:flex;flex-direction:column;gap:14px;">
             <div style="font-family:'JetBrains Mono',monospace;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:#eb6c2b;">Идея 01 · Idle RPG</div>
             <h3 style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.6rem;line-height:1.15;margin:0;">Город на золоте</h3>
@@ -61,7 +66,7 @@ image-slot::part(frame){ background:#141416 !important; color:#9b9b9b !important
           </div>
         </article>
         <article style="background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:clamp(18px,3vw,28px);display:flex;flex-wrap:wrap;gap:28px;align-items:flex-start;">
-          <div style="flex:0 1 300px;min-width:0;aspect-ratio:9/16;border-radius:10px;overflow:hidden;background:#0f0f11;"><img src="westland-02.png" alt="Раскадровка идеи 02" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+          <div style="flex:0 1 300px;min-width:0;aspect-ratio:9/16;border-radius:10px;overflow:hidden;background:#0f0f11;"><img src="westland-02.jpg" alt="Раскадровка идеи 02" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
           <div style="flex:1 1 340px;min-width:0;display:flex;flex-direction:column;gap:14px;">
             <div style="font-family:'JetBrains Mono',monospace;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:#eb6c2b;">Идея 02 · Idle RPG</div>
             <h3 style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.6rem;line-height:1.15;margin:0;">Налёты на дороге</h3>
@@ -74,7 +79,7 @@ image-slot::part(frame){ background:#141416 !important; color:#9b9b9b !important
           </div>
         </article>
         <article style="background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:clamp(18px,3vw,28px);display:flex;flex-wrap:wrap;gap:28px;align-items:flex-start;">
-          <div style="flex:0 1 300px;min-width:0;aspect-ratio:9/16;border-radius:10px;overflow:hidden;background:#0f0f11;"><img src="westland-03.png" alt="Раскадровка идеи 03" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+          <div style="flex:0 1 300px;min-width:0;aspect-ratio:9/16;border-radius:10px;overflow:hidden;background:#0f0f11;"><img src="westland-03.jpg" alt="Раскадровка идеи 03" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
           <div style="flex:1 1 340px;min-width:0;display:flex;flex-direction:column;gap:14px;">
             <div style="font-family:'JetBrains Mono',monospace;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:#eb6c2b;">Идея 03 · Idle RPG</div>
             <h3 style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.6rem;line-height:1.15;margin:0;">Конное ранчо</h3>
@@ -87,7 +92,7 @@ image-slot::part(frame){ background:#141416 !important; color:#9b9b9b !important
           </div>
         </article>
         <article style="background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:clamp(18px,3vw,28px);display:flex;flex-wrap:wrap;gap:28px;align-items:flex-start;">
-          <div style="flex:0 1 300px;min-width:0;aspect-ratio:9/16;border-radius:10px;overflow:hidden;background:#0f0f11;"><img src="westland-04.png" alt="Раскадровка идеи 04" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+          <div style="flex:0 1 300px;min-width:0;aspect-ratio:9/16;border-radius:10px;overflow:hidden;background:#0f0f11;"><img src="westland-04.jpg" alt="Раскадровка идеи 04" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
           <div style="flex:1 1 340px;min-width:0;display:flex;flex-direction:column;gap:14px;">
             <div style="font-family:'JetBrains Mono',monospace;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:#eb6c2b;">Идея 04 · Arcade idle</div>
             <h3 style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.6rem;line-height:1.15;margin:0;">Поезд под обстрелом</h3>
@@ -100,7 +105,7 @@ image-slot::part(frame){ background:#141416 !important; color:#9b9b9b !important
           </div>
         </article>
         <article style="background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:clamp(18px,3vw,28px);display:flex;flex-wrap:wrap;gap:28px;align-items:flex-start;">
-          <div style="flex:0 1 300px;min-width:0;aspect-ratio:9/16;border-radius:10px;overflow:hidden;background:#0f0f11;"><img src="westland-05.png" alt="Раскадровка идеи 05" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+          <div style="flex:0 1 300px;min-width:0;aspect-ratio:9/16;border-radius:10px;overflow:hidden;background:#0f0f11;"><img src="westland-05.jpg" alt="Раскадровка идеи 05" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
           <div style="flex:1 1 340px;min-width:0;display:flex;flex-direction:column;gap:14px;">
             <div style="font-family:'JetBrains Mono',monospace;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:#eb6c2b;">Идея 05 · Idle tycoon</div>
             <h3 style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.6rem;line-height:1.15;margin:0;">Тюрьма шерифа</h3>
@@ -113,7 +118,7 @@ image-slot::part(frame){ background:#141416 !important; color:#9b9b9b !important
           </div>
         </article>
         <article style="background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:clamp(18px,3vw,28px);display:flex;flex-wrap:wrap;gap:28px;align-items:flex-start;">
-          <div style="flex:0 1 300px;min-width:0;aspect-ratio:9/16;border-radius:10px;overflow:hidden;background:#0f0f11;"><img src="westland-06.png" alt="Раскадровка идеи 06" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+          <div style="flex:0 1 300px;min-width:0;aspect-ratio:9/16;border-radius:10px;overflow:hidden;background:#0f0f11;"><img src="westland-06.jpg" alt="Раскадровка идеи 06" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
           <div style="flex:1 1 340px;min-width:0;display:flex;flex-direction:column;gap:14px;">
             <div style="font-family:'JetBrains Mono',monospace;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:#eb6c2b;">Идея 06 · Survival</div>
             <h3 style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.6rem;line-height:1.15;margin:0;">Песчаная буря</h3>
@@ -126,7 +131,7 @@ image-slot::part(frame){ background:#141416 !important; color:#9b9b9b !important
           </div>
         </article>
         <article style="background:#141416;border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:clamp(18px,3vw,28px);display:flex;flex-wrap:wrap;gap:28px;align-items:flex-start;">
-          <div style="flex:0 1 300px;min-width:0;aspect-ratio:9/16;border-radius:10px;overflow:hidden;background:#0f0f11;"><img src="westland-07.png" alt="Раскадровка идеи 07" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+          <div style="flex:0 1 300px;min-width:0;aspect-ratio:9/16;border-radius:10px;overflow:hidden;background:#0f0f11;"><img src="westland-07.jpg" alt="Раскадровка идеи 07" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
           <div style="flex:1 1 340px;min-width:0;display:flex;flex-direction:column;gap:14px;">
             <div style="font-family:'JetBrains Mono',monospace;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:#eb6c2b;">Идея 07 · Arcade idle</div>
             <h3 style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.6rem;line-height:1.15;margin:0;">Салун</h3>
@@ -140,16 +145,6 @@ image-slot::part(frame){ background:#141416 !important; color:#9b9b9b !important
         </article>
       </div>
     </section>
-
-    <section style="max-width:1240px;margin:0 auto;padding:40px 32px 88px;">
-      <h2 style="font-family:'JetBrains Mono',monospace;font-weight:500;font-size:1rem;letter-spacing:.04em;margin:0 0 28px;padding:8px 14px;border:1px solid rgba(255,255,255,0.18);border-radius:4px;display:inline-block;">[REFERENCES]</h2>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:14px;">
-        <div style="aspect-ratio:1/1;border-radius:10px;overflow:hidden;"><image-slot id="westland-ref-01" placeholder="Reference" shape="rounded" radius="10" style="width:100%;height:100%;"></image-slot></div>
-        <div style="aspect-ratio:1/1;border-radius:10px;overflow:hidden;"><image-slot id="westland-ref-02" placeholder="Reference" shape="rounded" radius="10" style="width:100%;height:100%;"></image-slot></div>
-        <div style="aspect-ratio:1/1;border-radius:10px;overflow:hidden;"><image-slot id="westland-ref-03" placeholder="Reference" shape="rounded" radius="10" style="width:100%;height:100%;"></image-slot></div>
-        <div style="aspect-ratio:1/1;border-radius:10px;overflow:hidden;"><image-slot id="westland-ref-04" placeholder="Reference" shape="rounded" radius="10" style="width:100%;height:100%;"></image-slot></div>
-      </div>
-    </section>
   </main>
 
   <footer style="border-top:1px solid rgba(255,255,255,0.08);">
@@ -159,5 +154,21 @@ image-slot::part(frame){ background:#141416 !important; color:#9b9b9b !important
   </footer>
 </div>
 </x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    const e = React.createElement;
+    const src = 'westland-hero.png';
+    const fill = { position:'absolute', inset:0 };
+    const mask = { WebkitMaskImage:`url(${src})`, maskImage:`url(${src})`, WebkitMaskSize:'cover', maskSize:'cover', WebkitMaskPosition:'center', maskPosition:'center', WebkitMaskRepeat:'no-repeat', maskRepeat:'no-repeat' };
+    const heroArt = e('div', { 'data-hero-art':'', 'aria-hidden':'true', style:{ position:'absolute', top:0, right:'-60px', width:'min(640px,60%)', height:'calc(100% - 110px)', minHeight:'420px', pointerEvents:'none', zIndex:0, WebkitMaskImage:'linear-gradient(#000 78%,transparent)', maskImage:'linear-gradient(#000 78%,transparent)' } },
+      e('div', { style:{ ...fill, background:'radial-gradient(closest-side at 50% 55%, rgba(235,108,43,0.28), transparent)', animation:'wl-glow 6s ease-in-out infinite' } }),
+      e('img', { src, alt:'', style:{ ...fill, width:'100%', height:'100%', objectFit:'cover', objectPosition:'center' } }),
+      e('div', { style:{ ...fill, ...mask, background:'linear-gradient(105deg, transparent 42%, rgba(255,214,150,0.75) 50%, transparent 58%)', backgroundSize:'250% 100%', mixBlendMode:'screen', animation:'wl-sheen 7s ease-in-out infinite' } })
+    );
+    return { heroArt };
+  }
+}
+</script>
 </body>
 </html>
