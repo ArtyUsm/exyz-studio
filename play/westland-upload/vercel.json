@@ -1,0 +1,147 @@
+{
+  "redirects": [
+    {
+      "source": "/index.dc.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/asset-production.dc.html",
+      "destination": "/asset-production",
+      "permanent": true
+    },
+    {
+      "source": "/video-creatives.dc.html",
+      "destination": "/video-creatives",
+      "permanent": true
+    },
+    {
+      "source": "/contact.dc.html",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/pricing.dc.html",
+      "destination": "/pricing",
+      "permanent": true
+    },
+    {
+      "source": "/playables.dc.html",
+      "destination": "/playables",
+      "permanent": true
+    },
+    {
+      "source": "/ai-policy.dc.html",
+      "destination": "/ai-policy",
+      "permanent": true
+    },
+    {
+      "source": "/case-shiba-story-go.dc.html",
+      "destination": "/case/shiba-story-go",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/westland-k7q2",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow, noarchive"
+        }
+      ]
+    },
+    {
+      "source": "/ideation-westland.dc.html",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow, noarchive"
+        }
+      ]
+    },
+    {
+      "source": "/fishfactory",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
+    {
+      "source": "/kingdomsurvival",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
+    {
+      "source": "/play/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
+    {
+      "source": "/(llms.txt|robots.txt|sitemap.xml)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600"
+        }
+      ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/westland-k7q2",
+      "destination": "/ideation-westland.dc.html"
+    },
+    {
+      "source": "/fishfactory",
+      "destination": "/play/fish-factory-survival/index.html"
+    },
+    {
+      "source": "/kingdomsurvival",
+      "destination": "/play/kingdom-survival/index.html"
+    },
+    {
+      "source": "/",
+      "destination": "/index.dc.html"
+    },
+    {
+      "source": "/asset-production",
+      "destination": "/asset-production.dc.html"
+    },
+    {
+      "source": "/video-creatives",
+      "destination": "/video-creatives.dc.html"
+    },
+    {
+      "source": "/contact",
+      "destination": "/contact.dc.html"
+    },
+    {
+      "source": "/pricing",
+      "destination": "/pricing.dc.html"
+    },
+    {
+      "source": "/playables",
+      "destination": "/playables.dc.html"
+    },
+    {
+      "source": "/ai-policy",
+      "destination": "/ai-policy.dc.html"
+    },
+    {
+      "source": "/case/shiba-story-go",
+      "destination": "/case-shiba-story-go.dc.html"
+    }
+  ],
+  "trailingSlash": false
+}
