@@ -43,6 +43,24 @@
   ],
   "headers": [
     {
+      "source": "/westland-k7q2",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow, noarchive"
+        }
+      ]
+    },
+    {
+      "source": "/ideation-westland.dc.html",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow, noarchive"
+        }
+      ]
+    },
+    {
       "source": "/fishfactory",
       "headers": [
         {
@@ -80,6 +98,10 @@
     }
   ],
   "rewrites": [
+    {
+      "source": "/westland-k7q2",
+      "destination": "/ideation-westland.dc.html"
+    },
     {
       "source": "/fishfactory",
       "destination": "/play/fish-factory-survival/index.html"
