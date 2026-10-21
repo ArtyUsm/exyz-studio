@@ -39,6 +39,11 @@
       "source": "/case-shiba-story-go.dc.html",
       "destination": "/case/shiba-story-go",
       "permanent": true
+    },
+    {
+      "source": "/mob-control-ideation.html",
+      "destination": "/mob-control-ideation",
+      "permanent": true
     }
   ],
   "headers": [
@@ -53,6 +58,15 @@
     },
     {
       "source": "/ideation-westland.dc.html",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow, noarchive"
+        }
+      ]
+    },
+    {
+      "source": "/(mob-control-ideation|mob-control-ideation.html|m/.*)",
       "headers": [
         {
           "key": "X-Robots-Tag",
@@ -101,6 +115,10 @@
     {
       "source": "/westland-k7q2",
       "destination": "/ideation-westland.dc.html"
+    },
+    {
+      "source": "/mob-control-ideation",
+      "destination": "/mob-control-ideation.html"
     },
     {
       "source": "/fishfactory",
