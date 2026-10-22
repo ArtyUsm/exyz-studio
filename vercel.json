@@ -44,9 +44,31 @@
       "source": "/mob-control-ideation.html",
       "destination": "/mob-control-ideation",
       "permanent": true
+    },
+    {
+      "source": "/bridge-ideas-fndgtm.html",
+      "destination": "/bridge-ideas-fndgtm",
+      "permanent": true
     }
   ],
   "headers": [
+    {
+      "source": "/(bridge-ideas-fndgtm|bridge-ideas-fndgtm.html)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow, noarchive"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "no-referrer"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "private, no-store"
+        }
+      ]
+    },
     {
       "source": "/westland-k7q2",
       "headers": [
@@ -127,6 +149,10 @@
     {
       "source": "/kingdomsurvival",
       "destination": "/play/kingdom-survival/index.html"
+    },
+    {
+      "source": "/bridge-ideas-fndgtm",
+      "destination": "/bridge-ideas-fndgtm.html"
     },
     {
       "source": "/",
